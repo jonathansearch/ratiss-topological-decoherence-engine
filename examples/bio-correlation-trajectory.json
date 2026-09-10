@@ -1,0 +1,8 @@
+{
+  "source": {"dataset": "declared-local-fixture", "measurement_protocol": "Fixture demonstrating normalized relation matrices only; no biological conclusion."},
+  "labels": ["signal_0", "signal_1", "signal_2"],
+  "trajectory": [
+    {"step": 0, "label": "window_0", "correlation_matrix": [[1.0, 0.2, 0.1], [0.2, 1.0, 0.3], [0.1, 0.3, 1.0]]},
+    {"step": 1, "label": "window_1", "correlation_matrix": [[1.0, 0.8, 0.1], [0.8, 1.0, 0.2], [0.1, 0.2, 1.0]]}
+  ]
+}

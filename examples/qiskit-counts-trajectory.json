@@ -1,0 +1,8 @@
+{
+  "source": {"framework": "Qiskit", "kind": "counts", "note": "Local fixture only; no job submission or hardware claim."},
+  "bit_order": "qiskit_little_endian",
+  "trajectory": [
+    {"step": 0, "gate": "measurement-baseline", "counts": {"00": 1000}},
+    {"step": 1, "gate": "bell-like-measurement", "counts": {"00": 501, "11": 499}}
+  ]
+}

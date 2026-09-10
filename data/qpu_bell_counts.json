@@ -1,0 +1,12 @@
+{
+  "job_id": "da53s4jotlns739bfgu0",
+  "backend": "ibm_marrakesh",
+  "counts": {
+    "11": 526,
+    "00": 491,
+    "01": 4,
+    "10": 3
+  },
+  "shots": 1024,
+  "circuit": "h(0); cx(0,1); measure_all"
+}

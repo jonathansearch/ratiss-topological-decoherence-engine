@@ -1,0 +1,167 @@
+{
+  "schema": "ratiss.topological-decoherence.timeline.v1",
+  "provenance": {
+    "mode": "external_qiskit_counts",
+    "engine": "ratiss-topological-decoherence-engine",
+    "simulation": "classical_counts_association",
+    "validated_on_hardware": false,
+    "claim_boundary": "Simulation and topological post-processing only; not a hardware topological-qubit certification or an error-correction command."
+  },
+  "encoding": {
+    "profile": "external_qiskit_counts",
+    "description": "Diagonal probability association computed from declared Qiskit counts; not density-matrix tomography or entanglement.",
+    "hardware_claim": "none"
+  },
+  "config": {
+    "n_qubits": 2,
+    "scenario": "external_qiskit_counts",
+    "t1_seconds": 0.0001,
+    "t2_seconds": 5e-05,
+    "single_gate_seconds": 4e-06,
+    "two_gate_seconds": 1.2e-05,
+    "one_qubit_depolarizing": 0.001,
+    "two_qubit_depolarizing": 0.01,
+    "edge_threshold": 0.04,
+    "criticality_threshold": 0.38,
+    "rips_max_edge": null
+  },
+  "cube": {
+    "axes": [
+      "step",
+      "source_qubit",
+      "target_qubit"
+    ],
+    "metric": "classical_count_cooccurrence_association",
+    "normalization": "declared association normalized to [0, 1]"
+  },
+  "steps": [
+    {
+      "step": 0,
+      "gate": "h(0); cx(0,1); measure_all",
+      "qubits": [
+        {
+          "id": 0,
+          "position": [
+            2.8,
+            0.0,
+            0.0
+          ],
+          "fidelity_to_ideal": null,
+          "local_decoherence": null,
+          "purity": null,
+          "topology_support": 0.993390433,
+          "psig": 0.993390433,
+          "degree": 1,
+          "criticality": 0.004957175,
+          "criticality_terms": {
+            "structural_support_deficit": 0.006609567,
+            "link_break_ratio": 0.0
+          }
+        },
+        {
+          "id": 1,
+          "position": [
+            -2.8,
+            0.0,
+            -0.0
+          ],
+          "fidelity_to_ideal": null,
+          "local_decoherence": null,
+          "purity": null,
+          "topology_support": 0.993390433,
+          "psig": 0.993390433,
+          "degree": 1,
+          "criticality": 0.004957175,
+          "criticality_terms": {
+            "structural_support_deficit": 0.006609567,
+            "link_break_ratio": 0.0
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": 0,
+          "target": 1,
+          "mutual_information": 0.993390433,
+          "pauli_correlation": 0.0,
+          "concurrence": 0.0,
+          "correlation": 0.993390433,
+          "type": "declared_association",
+          "stability": 1.0,
+          "active": true
+        }
+      ],
+      "avg_psig": 0.993390433,
+      "decoherence_detected": false,
+      "topology": {
+        "psig": 0.0,
+        "betti": [
+          1,
+          0,
+          0
+        ],
+        "diagrams": {
+          "H0": [
+            [
+              0.0,
+              0.00934733865718925
+            ],
+            [
+              0.0,
+              null
+            ]
+          ],
+          "H1": []
+        },
+        "n_finite_h1": 0,
+        "max_edge": 0.00934733865718925,
+        "distance_model": "euclidean_distance_between_correlation_profiles",
+        "metric_scope": "Diagonal probability association computed from declared Qiskit counts; not density-matrix tomography or entanglement."
+      },
+      "logical_topology": {
+        "P_sig": null,
+        "scope": "not_applicable_external_non_density_input"
+      },
+      "tsp_inspection": {
+        "path": [],
+        "cost": 0.0,
+        "method": "trivial",
+        "nodes": []
+      },
+      "cube_slice": [
+        [
+          1.0,
+          0.993390433
+        ],
+        [
+          0.993390433,
+          1.0
+        ]
+      ],
+      "metric_scope": {
+        "density_metrics_available": false,
+        "fidelity": "not_available",
+        "purity": "not_available",
+        "concurrence": "not_available",
+        "criticality": "structural_priority_from_declared_association_not_quantum_decoherence",
+        "association": "Diagonal probability association computed from declared Qiskit counts; not density-matrix tomography or entanglement."
+      },
+      "tsp_scope": "criticality_nodes"
+    }
+  ],
+  "design_context": {
+    "source": {
+      "mode": "external_qiskit_counts",
+      "declared_source": {
+        "backend": "ibm_marrakesh",
+        "job_id": "da53s4jotlns739bfgu0"
+      }
+    },
+    "labels": null,
+    "compilation": {
+      "kind": "external_association_import",
+      "hardware_calibrated": false,
+      "scope": "Diagonal probability association computed from declared Qiskit counts; not density-matrix tomography or entanglement."
+    }
+  }
+}

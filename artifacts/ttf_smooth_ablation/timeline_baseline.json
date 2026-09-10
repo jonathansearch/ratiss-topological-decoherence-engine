@@ -1,0 +1,3083 @@
+{
+  "schema": "ratiss.topological-decoherence.timeline.v1",
+  "provenance": {
+    "mode": "ttf_smooth_baseline",
+    "engine": "ratiss-topological-decoherence-engine",
+    "simulation": "correlation_graph_ablation",
+    "validated_on_hardware": false,
+    "claim_boundary": "Simulation and topological post-processing only; not a hardware topological-qubit certification or an error-correction command."
+  },
+  "encoding": {
+    "profile": "ttf_smooth_correlation_ablation",
+    "description": "Before/after correlation-graph regularization inspired by relation-first TTF analysis.",
+    "hardware_claim": "none",
+    "preprint_reference": {
+      "shell_ttf_psig_recorded": 2.0524951073,
+      "fixed_graph_psig_recorded": 1.4639,
+      "interpretation": "recorded values retained as protocol references, not targets"
+    }
+  },
+  "config": {
+    "n_qubits": 5,
+    "scenario": "accelerated_decoherence_stress_demo",
+    "t1_seconds": 0.0001,
+    "t2_seconds": 5e-05,
+    "single_gate_seconds": 4e-06,
+    "two_gate_seconds": 1.2e-05,
+    "one_qubit_depolarizing": 0.001,
+    "two_qubit_depolarizing": 0.01,
+    "edge_threshold": 0.04,
+    "criticality_threshold": 0.38,
+    "rips_max_edge": null,
+    "ttf_smooth_ablation": {
+      "variation_threshold": 0.025,
+      "slope": 18.0,
+      "strength": 0.3,
+      "max_boundary_nodes": 6
+    },
+    "ttf_smooth_enabled": false
+  },
+  "cube": {
+    "axes": [
+      "step",
+      "source_qubit",
+      "target_qubit"
+    ],
+    "metric": "normalized_mutual_information_baseline_replay",
+    "normalization": "input relation values remain bounded in [0,1]"
+  },
+  "steps": [
+    {
+      "step": 0,
+      "gate": "initial",
+      "qubits": [
+        {
+          "id": 0,
+          "position": [
+            2.8,
+            0.0,
+            0.0
+          ],
+          "fidelity_to_ideal": null,
+          "local_decoherence": null,
+          "purity": null,
+          "topology_support": 0.0,
+          "psig": 0.0,
+          "degree": 0,
+          "criticality": 0.75,
+          "criticality_terms": {
+            "structural_support_deficit": 1.0,
+            "link_break_ratio": 0.0
+          }
+        },
+        {
+          "id": 1,
+          "position": [
+            0.865248,
+            2.662958,
+            0.205725
+          ],
+          "fidelity_to_ideal": null,
+          "local_decoherence": null,
+          "purity": null,
+          "topology_support": 0.0,
+          "psig": 0.0,
+          "degree": 0,
+          "criticality": 0.75,
+          "criticality_terms": {
+            "structural_support_deficit": 1.0,
+            "link_break_ratio": 0.0
+          }
+        },
+        {
+          "id": 2,
+          "position": [
+            -2.265248,
+            1.645799,
+            -0.33287
+          ],
+          "fidelity_to_ideal": null,
+          "local_decoherence": null,
+          "purity": null,
+          "topology_support": 0.0,
+          "psig": 0.0,
+          "degree": 0,
+          "criticality": 0.75,
+          "criticality_terms": {
+            "structural_support_deficit": 1.0,
+            "link_break_ratio": 0.0
+          }
+        },
+        {
+          "id": 3,
+          "position": [
+            -2.265248,
+            -1.645799,
+            0.33287
+          ],
+          "fidelity_to_ideal": null,
+          "local_decoherence": null,
+          "purity": null,
+          "topology_support": 0.0,
+          "psig": 0.0,
+          "degree": 0,
+          "criticality": 0.75,
+          "criticality_terms": {
+            "structural_support_deficit": 1.0,
+            "link_break_ratio": 0.0
+          }
+        },
+        {
+          "id": 4,
+          "position": [
+            0.865248,
+            -2.662958,
+            -0.205725
+          ],
+          "fidelity_to_ideal": null,
+          "local_decoherence": null,
+          "purity": null,
+          "topology_support": 0.0,
+          "psig": 0.0,
+          "degree": 0,
+          "criticality": 0.75,
+          "criticality_terms": {
+            "structural_support_deficit": 1.0,
+            "link_break_ratio": 0.0
+          }
+        }
+      ],
+      "edges": [],
+      "avg_psig": 0.0,
+      "decoherence_detected": true,
+      "topology": {
+        "psig": 0.0,
+        "betti": [
+          1,
+          0,
+          0
+        ],
+        "diagrams": {
+          "H0": [
+            [
+              0.0,
+              1.4142135623730951
+            ],
+            [
+              0.0,
+              1.4142135623730951
+            ],
+            [
+              0.0,
+              1.4142135623730951
+            ],
+            [
+              0.0,
+              1.4142135623730951
+            ],
+            [
+              0.0,
+              null
+            ]
+          ],
+          "H1": [
+            [
+              1.4142135623730951,
+              1.4142135623730951
+            ],
+            [
+              1.4142135623730951,
+              1.4142135623730951
+            ],
+            [
+              1.4142135623730951,
+              1.4142135623730951
+            ],
+            [
+              1.4142135623730951,
+              1.4142135623730951
+            ],
+            [
+              1.4142135623730951,
+              1.4142135623730951
+            ],
+            [
+              1.4142135623730951,
+              1.4142135623730951
+            ]
+          ]
+        },
+        "n_finite_h1": 0,
+        "max_edge": 1.4142135623730951,
+        "distance_model": "euclidean_distance_between_correlation_profiles",
+        "metric_scope": "TTF-inspired smooth correlation regularization ablation; no density-matrix, error-correction or hardware-protection claim."
+      },
+      "logical_topology": {
+        "P_sig": null,
+        "scope": "not_applicable_external_non_density_input"
+      },
+      "tsp_inspection": {
+        "path": [],
+        "cost": 0.0,
+        "method": "trivial",
+        "nodes": []
+      },
+      "cube_slice": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "metric_scope": {
+        "density_metrics_available": false,
+        "fidelity": "not_available",
+        "purity": "not_available",
+        "concurrence": "not_available",
+        "criticality": "structural_priority_from_declared_association_not_quantum_decoherence",
+        "association": "TTF-inspired smooth correlation regularization ablation; no density-matrix, error-correction or hardware-protection claim."
+      },
+      "tsp_scope": "variation_boundary",
+      "ttf_smooth_ablation": {
+        "enabled": false,
+        "variation": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "boundary_nodes": [],
+        "activation": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "parameters": {
+          "variation_threshold": 0.025,
+          "slope": 18.0,
+          "strength": 0.3,
+          "max_boundary_nodes": 6
+        },
+        "interpretation": "algorithmic_correlation_regularization_only"
+      }
+    },
+    {
+      "step": 1,
+      "gate": "h(0)",
+      "qubits": [
+        {
+          "id": 0,
+          "position": [
+            2.8,
+            0.0,
+            0.0
+          ],
+          "fidelity_to_ideal": null,
+          "local_decoherence": null,
+          "purity": null,
+          "topology_support": 0.0,
+          "psig": 0.0,
+          "degree": 0,
+          "criticality": 0.75,
+          "criticality_terms": {
+            "structural_support_deficit": 1.0,
+            "link_break_ratio": 0.0
+          }
+        },
+        {
+          "id": 1,
+          "position": [
+            0.865248,
+            2.662958,
+            0.205725
+          ],
+          "fidelity_to_ideal": null,
+          "local_decoherence": null,
+          "purity": null,
+          "topology_support": 0.0,
+          "psig": 0.0,
+          "degree": 0,
+          "criticality": 0.75,
+          "criticality_terms": {
+            "structural_support_deficit": 1.0,
+            "link_break_ratio": 0.0
+          }
+        },
+        {
+          "id": 2,
+          "position": [
+            -2.265248,
+            1.645799,
+            -0.33287
+          ],
+          "fidelity_to_ideal": null,
+          "local_decoherence": null,
+          "purity": null,
+          "topology_support": 0.0,
+          "psig": 0.0,
+          "degree": 0,
+          "criticality": 0.75,
+          "criticality_terms": {
+            "structural_support_deficit": 1.0,
+            "link_break_ratio": 0.0
+          }
+        },
+        {
+          "id": 3,
+          "position": [
+            -2.265248,
+            -1.645799,
+            0.33287
+          ],
+          "fidelity_to_ideal": null,
+          "local_decoherence": null,
+          "purity": null,
+          "topology_support": 0.0,
+          "psig": 0.0,
+          "degree": 0,
+          "criticality": 0.75,
+          "criticality_terms": {
+            "structural_support_deficit": 1.0,
+            "link_break_ratio": 0.0
+          }
+        },
+        {
+          "id": 4,
+          "position": [
+            0.865248,
+            -2.662958,
+            -0.205725
+          ],
+          "fidelity_to_ideal": null,
+          "local_decoherence": null,
+          "purity": null,
+          "topology_support": 0.0,
+          "psig": 0.0,
+          "degree": 0,
+          "criticality": 0.75,
+          "criticality_terms": {
+            "structural_support_deficit": 1.0,
+            "link_break_ratio": 0.0
+          }
+        }
+      ],
+      "edges": [],
+      "avg_psig": 0.0,
+      "decoherence_detected": true,
+      "topology": {
+        "psig": 0.0,
+        "betti": [
+          1,
+          0,
+          0
+        ],
+        "diagrams": {
+          "H0": [
+            [
+              0.0,
+              1.4142135623730951
+            ],
+            [
+              0.0,
+              1.4142135623730951
+            ],
+            [
+              0.0,
+              1.4142135623730951
+            ],
+            [
+              0.0,
+              1.4142135623730951
+            ],
+            [
+              0.0,
+              null
+            ]
+          ],
+          "H1": [
+            [
+              1.4142135623730951,
+              1.4142135623730951
+            ],
+            [
+              1.4142135623730951,
+              1.4142135623730951
+            ],
+            [
+              1.4142135623730951,
+              1.4142135623730951
+            ],
+            [
+              1.4142135623730951,
+              1.4142135623730951
+            ],
+            [
+              1.4142135623730951,
+              1.4142135623730951
+            ],
+            [
+              1.4142135623730951,
+              1.4142135623730951
+            ]
+          ]
+        },
+        "n_finite_h1": 0,
+        "max_edge": 1.4142135623730951,
+        "distance_model": "euclidean_distance_between_correlation_profiles",
+        "metric_scope": "TTF-inspired smooth correlation regularization ablation; no density-matrix, error-correction or hardware-protection claim."
+      },
+      "logical_topology": {
+        "P_sig": null,
+        "scope": "not_applicable_external_non_density_input"
+      },
+      "tsp_inspection": {
+        "path": [],
+        "cost": 0.0,
+        "method": "trivial",
+        "nodes": []
+      },
+      "cube_slice": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "metric_scope": {
+        "density_metrics_available": false,
+        "fidelity": "not_available",
+        "purity": "not_available",
+        "concurrence": "not_available",
+        "criticality": "structural_priority_from_declared_association_not_quantum_decoherence",
+        "association": "TTF-inspired smooth correlation regularization ablation; no density-matrix, error-correction or hardware-protection claim."
+      },
+      "tsp_scope": "variation_boundary",
+      "ttf_smooth_ablation": {
+        "enabled": false,
+        "variation": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "boundary_nodes": [],
+        "activation": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "parameters": {
+          "variation_threshold": 0.025,
+          "slope": 18.0,
+          "strength": 0.3,
+          "max_boundary_nodes": 6
+        },
+        "interpretation": "algorithmic_correlation_regularization_only"
+      }
+    },
+    {
+      "step": 2,
+      "gate": "cx(0,1)",
+      "qubits": [
+        {
+          "id": 0,
+          "position": [
+            2.8,
+            0.0,
+            0.0
+          ],
+          "fidelity_to_ideal": null,
+          "local_decoherence": null,
+          "purity": null,
+          "topology_support": 0.09939805,
+          "psig": 0.09939805,
+          "degree": 1,
+          "criticality": 0.675451462,
+          "criticality_terms": {
+            "structural_support_deficit": 0.90060195,
+            "link_break_ratio": 0.0
+          }
+        },
+        {
+          "id": 1,
+          "position": [
+            0.865248,
+            2.662958,
+            0.205725
+          ],
+          "fidelity_to_ideal": null,
+          "local_decoherence": null,
+          "purity": null,
+          "topology_support": 0.09939805,
+          "psig": 0.09939805,
+          "degree": 1,
+          "criticality": 0.675451462,
+          "criticality_terms": {
+            "structural_support_deficit": 0.90060195,
+            "link_break_ratio": 0.0
+          }
+        },
+        {
+          "id": 2,
+          "position": [
+            -2.265248,
+            1.645799,
+            -0.33287
+          ],
+          "fidelity_to_ideal": null,
+          "local_decoherence": null,
+          "purity": null,
+          "topology_support": 0.0,
+          "psig": 0.0,
+          "degree": 0,
+          "criticality": 0.75,
+          "criticality_terms": {
+            "structural_support_deficit": 1.0,
+            "link_break_ratio": 0.0
+          }
+        },
+        {
+          "id": 3,
+          "position": [
+            -2.265248,
+            -1.645799,
+            0.33287
+          ],
+          "fidelity_to_ideal": null,
+          "local_decoherence": null,
+          "purity": null,
+          "topology_support": 0.0,
+          "psig": 0.0,
+          "degree": 0,
+          "criticality": 0.75,
+          "criticality_terms": {
+            "structural_support_deficit": 1.0,
+            "link_break_ratio": 0.0
+          }
+        },
+        {
+          "id": 4,
+          "position": [
+            0.865248,
+            -2.662958,
+            -0.205725
+          ],
+          "fidelity_to_ideal": null,
+          "local_decoherence": null,
+          "purity": null,
+          "topology_support": 0.0,
+          "psig": 0.0,
+          "degree": 0,
+          "criticality": 0.75,
+          "criticality_terms": {
+            "structural_support_deficit": 1.0,
+            "link_break_ratio": 0.0
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": 0,
+          "target": 1,
+          "mutual_information": 0.3975922,
+          "pauli_correlation": 0.0,
+          "concurrence": 0.0,
+          "correlation": 0.3975922,
+          "type": "declared_association",
+          "stability": 1.0,
+          "active": true
+        }
+      ],
+      "avg_psig": 0.03975922,
+      "decoherence_detected": true,
+      "topology": {
+        "psig": 0.0,
+        "betti": [
+          1,
+          0,
+          0
+        ],
+        "diagrams": {
+          "H0": [
+            [
+              0.0,
+              0.851933280839339
+            ],
+            [
+              0.0,
+              1.4142135623730951
+            ],
+            [
+              0.0,
+              1.4142135623730951
+            ],
+            [
+              0.0,
+              1.469040352577437
+            ],
+            [
+              0.0,
+              null
+            ]
+          ],
+          "H1": [
+            [
+              1.4142135623730951,
+              1.4142135623730951
+            ],
+            [
+              1.469040352577437,
+              1.469040352577437
+            ],
+            [
+              1.469040352577437,
+              1.469040352577437
+            ],
+            [
+              1.469040352577437,
+              1.469040352577437
+            ],
+            [
+              1.469040352577437,
+              1.469040352577437
+            ],
+            [
+              1.469040352577437,
+              1.469040352577437
+            ]
+          ]
+        },
+        "n_finite_h1": 0,
+        "max_edge": 1.469040352577437,
+        "distance_model": "euclidean_distance_between_correlation_profiles",
+        "metric_scope": "TTF-inspired smooth correlation regularization ablation; no density-matrix, error-correction or hardware-protection claim."
+      },
+      "logical_topology": {
+        "P_sig": null,
+        "scope": "not_applicable_external_non_density_input"
+      },
+      "tsp_inspection": {
+        "path": [
+          0,
+          1,
+          0
+        ],
+        "cost": 6.596039232,
+        "method": "held_karp_exact",
+        "nodes": [
+          0,
+          1
+        ]
+      },
+      "cube_slice": [
+        [
+          1.0,
+          0.3975922,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.3975922,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "metric_scope": {
+        "density_metrics_available": false,
+        "fidelity": "not_available",
+        "purity": "not_available",
+        "concurrence": "not_available",
+        "criticality": "structural_priority_from_declared_association_not_quantum_decoherence",
+        "association": "TTF-inspired smooth correlation regularization ablation; no density-matrix, error-correction or hardware-protection claim."
+      },
+      "tsp_scope": "variation_boundary",
+      "ttf_smooth_ablation": {
+        "enabled": false,
+        "variation": [
+          0.09939805,
+          0.09939805,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "boundary_nodes": [
+          0,
+          1
+        ],
+        "activation": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "parameters": {
+          "variation_threshold": 0.025,
+          "slope": 18.0,
+          "strength": 0.3,
+          "max_boundary_nodes": 6
+        },
+        "interpretation": "algorithmic_correlation_regularization_only"
+      }
+    },
+    {
+      "step": 3,
+      "gate": "cx(1,2)",
+      "qubits": [
+        {
+          "id": 0,
+          "position": [
+            2.8,
+            0.0,
+            0.0
+          ],
+          "fidelity_to_ideal": null,
+          "local_decoherence": null,
+          "purity": null,
+          "topology_support": 0.099728423,
+          "psig": 0.099728423,
+          "degree": 2,
+          "criticality": 0.675203682,
+          "criticality_terms": {
+            "structural_support_deficit": 0.900271577,
+            "link_break_ratio": 0.0
+          }
+        },
+        {
+          "id": 1,
+          "position": [
+            0.865248,
+            2.662958,
+            0.205725
+          ],
+          "fidelity_to_ideal": null,
+          "local_decoherence": null,
+          "purity": null,
+          "topology_support": 0.115672711,
+          "psig": 0.115672711,
+          "degree": 2,
+          "criticality": 0.663245467,
+          "criticality_terms": {
+            "structural_support_deficit": 0.884327289,
+            "link_break_ratio": 0.0
+          }
+        },
+        {
+          "id": 2,
+          "position": [
+            -2.265248,
+            1.645799,
+            -0.33287
+          ],
+          "fidelity_to_ideal": null,
+          "local_decoherence": null,
+          "purity": null,
+          "topology_support": 0.115672711,
+          "psig": 0.115672711,
+          "degree": 2,
+          "criticality": 0.663245467,
+          "criticality_terms": {
+            "structural_support_deficit": 0.884327289,
+            "link_break_ratio": 0.0
+          }
+        },
+        {
+          "id": 3,
+          "position": [
+            -2.265248,
+            -1.645799,
+            0.33287
+          ],
+          "fidelity_to_ideal": null,
+          "local_decoherence": null,
+          "purity": null,
+          "topology_support": 0.0,
+          "psig": 0.0,
+          "degree": 0,
+          "criticality": 0.75,
+          "criticality_terms": {
+            "structural_support_deficit": 1.0,
+            "link_break_ratio": 0.0
+          }
+        },
+        {
+          "id": 4,
+          "position": [
+            0.865248,
+            -2.662958,
+            -0.205725
+          ],
+          "fidelity_to_ideal": null,
+          "local_decoherence": null,
+          "purity": null,
+          "topology_support": 0.0,
+          "psig": 0.0,
+          "degree": 0,
+          "criticality": 0.75,
+          "criticality_terms": {
+            "structural_support_deficit": 1.0,
+            "link_break_ratio": 0.0
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": 0,
+          "target": 1,
+          "mutual_information": 0.199456847,
+          "pauli_correlation": 0.0,
+          "concurrence": 0.0,
+          "correlation": 0.199456847,
+          "type": "declared_association",
+          "stability": 1.0,
+          "active": true
+        },
+        {
+          "source": 0,
+          "target": 2,
+          "mutual_information": 0.199456847,
+          "pauli_correlation": 0.0,
+          "concurrence": 0.0,
+          "correlation": 0.199456847,
+          "type": "declared_association",
+          "stability": 1.0,
+          "active": true
+        },
+        {
+          "source": 1,
+          "target": 2,
+          "mutual_information": 0.263233996,
+          "pauli_correlation": 0.0,
+          "concurrence": 0.0,
+          "correlation": 0.263233996,
+          "type": "declared_association",
+          "stability": 1.0,
+          "active": true
+        }
+      ],
+      "avg_psig": 0.066214769,
+      "decoherence_detected": true,
+      "topology": {
+        "psig": 0.0,
+        "betti": [
+          1,
+          0,
+          0
+        ],
+        "diagrams": {
+          "H0": [
+            [
+              0.0,
+              1.0419444751522298
+            ],
+            [
+              0.0,
+              1.1339339506183468
+            ],
+            [
+              0.0,
+              1.4142135623730951
+            ],
+            [
+              0.0,
+              1.4420700633569656
+            ],
+            [
+              0.0,
+              null
+            ]
+          ],
+          "H1": [
+            [
+              1.1339339506183468,
+              1.1339339506183468
+            ],
+            [
+              1.4420700633569656,
+              1.4420700633569656
+            ],
+            [
+              1.4522655302889032,
+              1.4522655302889032
+            ],
+            [
+              1.4522655302889032,
+              1.4522655302889032
+            ],
+            [
+              1.4522655302889032,
+              1.4522655302889032
+            ],
+            [
+              1.4522655302889032,
+              1.4522655302889032
+            ]
+          ]
+        },
+        "n_finite_h1": 0,
+        "max_edge": 1.4522655302889032,
+        "distance_model": "euclidean_distance_between_correlation_profiles",
+        "metric_scope": "TTF-inspired smooth correlation regularization ablation; no density-matrix, error-correction or hardware-protection claim."
+      },
+      "logical_topology": {
+        "P_sig": null,
+        "scope": "not_applicable_external_non_density_input"
+      },
+      "tsp_inspection": {
+        "path": [
+          0,
+          1,
+          2,
+          0
+        ],
+        "cost": 11.969700023,
+        "method": "held_karp_exact",
+        "nodes": [
+          0,
+          1,
+          2
+        ]
+      },
+      "cube_slice": [
+        [
+          1.0,
+          0.199456847,
+          0.199456847,
+          0.0,
+          0.0
+        ],
+        [
+          0.199456847,
+          1.0,
+          0.263233996,
+          0.0,
+          0.0
+        ],
+        [
+          0.199456847,
+          0.263233996,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "metric_scope": {
+        "density_metrics_available": false,
+        "fidelity": "not_available",
+        "purity": "not_available",
+        "concurrence": "not_available",
+        "criticality": "structural_priority_from_declared_association_not_quantum_decoherence",
+        "association": "TTF-inspired smooth correlation regularization ablation; no density-matrix, error-correction or hardware-protection claim."
+      },
+      "tsp_scope": "variation_boundary",
+      "ttf_smooth_ablation": {
+        "enabled": false,
+        "variation": [
+          0.09939805,
+          0.115342337,
+          0.115672711,
+          0.0,
+          0.0
+        ],
+        "boundary_nodes": [
+          2,
+          1,
+          0
+        ],
+        "activation": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "parameters": {
+          "variation_threshold": 0.025,
+          "slope": 18.0,
+          "strength": 0.3,
+          "max_boundary_nodes": 6
+        },
+        "interpretation": "algorithmic_correlation_regularization_only"
+      }
+    },
+    {
+      "step": 4,
+      "gate": "h(3)",
+      "qubits": [
+        {
+          "id": 0,
+          "position": [
+            2.8,
+            0.0,
+            0.0
+          ],
+          "fidelity_to_ideal": null,
+          "local_decoherence": null,
+          "purity": null,
+          "topology_support": 0.099728423,
+          "psig": 0.099728423,
+          "degree": 2,
+          "criticality": 0.675203682,
+          "criticality_terms": {
+            "structural_support_deficit": 0.900271577,
+            "link_break_ratio": 0.0
+          }
+        },
+        {
+          "id": 1,
+          "position": [
+            0.865248,
+            2.662958,
+            0.205725
+          ],
+          "fidelity_to_ideal": null,
+          "local_decoherence": null,
+          "purity": null,
+          "topology_support": 0.115672711,
+          "psig": 0.115672711,
+          "degree": 2,
+          "criticality": 0.663245467,
+          "criticality_terms": {
+            "structural_support_deficit": 0.884327289,
+            "link_break_ratio": 0.0
+          }
+        },
+        {
+          "id": 2,
+          "position": [
+            -2.265248,
+            1.645799,
+            -0.33287
+          ],
+          "fidelity_to_ideal": null,
+          "local_decoherence": null,
+          "purity": null,
+          "topology_support": 0.115672711,
+          "psig": 0.115672711,
+          "degree": 2,
+          "criticality": 0.663245467,
+          "criticality_terms": {
+            "structural_support_deficit": 0.884327289,
+            "link_break_ratio": 0.0
+          }
+        },
+        {
+          "id": 3,
+          "position": [
+            -2.265248,
+            -1.645799,
+            0.33287
+          ],
+          "fidelity_to_ideal": null,
+          "local_decoherence": null,
+          "purity": null,
+          "topology_support": 0.0,
+          "psig": 0.0,
+          "degree": 0,
+          "criticality": 0.75,
+          "criticality_terms": {
+            "structural_support_deficit": 1.0,
+            "link_break_ratio": 0.0
+          }
+        },
+        {
+          "id": 4,
+          "position": [
+            0.865248,
+            -2.662958,
+            -0.205725
+          ],
+          "fidelity_to_ideal": null,
+          "local_decoherence": null,
+          "purity": null,
+          "topology_support": 0.0,
+          "psig": 0.0,
+          "degree": 0,
+          "criticality": 0.75,
+          "criticality_terms": {
+            "structural_support_deficit": 1.0,
+            "link_break_ratio": 0.0
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": 0,
+          "target": 1,
+          "mutual_information": 0.199456847,
+          "pauli_correlation": 0.0,
+          "concurrence": 0.0,
+          "correlation": 0.199456847,
+          "type": "declared_association",
+          "stability": 1.0,
+          "active": true
+        },
+        {
+          "source": 0,
+          "target": 2,
+          "mutual_information": 0.199456847,
+          "pauli_correlation": 0.0,
+          "concurrence": 0.0,
+          "correlation": 0.199456847,
+          "type": "declared_association",
+          "stability": 1.0,
+          "active": true
+        },
+        {
+          "source": 1,
+          "target": 2,
+          "mutual_information": 0.263233996,
+          "pauli_correlation": 0.0,
+          "concurrence": 0.0,
+          "correlation": 0.263233996,
+          "type": "declared_association",
+          "stability": 1.0,
+          "active": true
+        }
+      ],
+      "avg_psig": 0.066214769,
+      "decoherence_detected": true,
+      "topology": {
+        "psig": 0.0,
+        "betti": [
+          1,
+          0,
+          0
+        ],
+        "diagrams": {
+          "H0": [
+            [
+              0.0,
+              1.0419444751522298
+            ],
+            [
+              0.0,
+              1.1339339506183468
+            ],
+            [
+              0.0,
+              1.4142135623730951
+            ],
+            [
+              0.0,
+              1.4420700633569656
+            ],
+            [
+              0.0,
+              null
+            ]
+          ],
+          "H1": [
+            [
+              1.1339339506183468,
+              1.1339339506183468
+            ],
+            [
+              1.4420700633569656,
+              1.4420700633569656
+            ],
+            [
+              1.4522655302889032,
+              1.4522655302889032
+            ],
+            [
+              1.4522655302889032,
+              1.4522655302889032
+            ],
+            [
+              1.4522655302889032,
+              1.4522655302889032
+            ],
+            [
+              1.4522655302889032,
+              1.4522655302889032
+            ]
+          ]
+        },
+        "n_finite_h1": 0,
+        "max_edge": 1.4522655302889032,
+        "distance_model": "euclidean_distance_between_correlation_profiles",
+        "metric_scope": "TTF-inspired smooth correlation regularization ablation; no density-matrix, error-correction or hardware-protection claim."
+      },
+      "logical_topology": {
+        "P_sig": null,
+        "scope": "not_applicable_external_non_density_input"
+      },
+      "tsp_inspection": {
+        "path": [],
+        "cost": 0.0,
+        "method": "trivial",
+        "nodes": []
+      },
+      "cube_slice": [
+        [
+          1.0,
+          0.199456847,
+          0.199456847,
+          0.0,
+          0.0
+        ],
+        [
+          0.199456847,
+          1.0,
+          0.263233996,
+          0.0,
+          0.0
+        ],
+        [
+          0.199456847,
+          0.263233996,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "metric_scope": {
+        "density_metrics_available": false,
+        "fidelity": "not_available",
+        "purity": "not_available",
+        "concurrence": "not_available",
+        "criticality": "structural_priority_from_declared_association_not_quantum_decoherence",
+        "association": "TTF-inspired smooth correlation regularization ablation; no density-matrix, error-correction or hardware-protection claim."
+      },
+      "tsp_scope": "variation_boundary",
+      "ttf_smooth_ablation": {
+        "enabled": false,
+        "variation": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "boundary_nodes": [],
+        "activation": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "parameters": {
+          "variation_threshold": 0.025,
+          "slope": 18.0,
+          "strength": 0.3,
+          "max_boundary_nodes": 6
+        },
+        "interpretation": "algorithmic_correlation_regularization_only"
+      }
+    },
+    {
+      "step": 5,
+      "gate": "cx(3,4)",
+      "qubits": [
+        {
+          "id": 0,
+          "position": [
+            2.8,
+            0.0,
+            0.0
+          ],
+          "fidelity_to_ideal": null,
+          "local_decoherence": null,
+          "purity": null,
+          "topology_support": 0.099728423,
+          "psig": 0.099728423,
+          "degree": 2,
+          "criticality": 0.675203682,
+          "criticality_terms": {
+            "structural_support_deficit": 0.900271577,
+            "link_break_ratio": 0.0
+          }
+        },
+        {
+          "id": 1,
+          "position": [
+            0.865248,
+            2.662958,
+            0.205725
+          ],
+          "fidelity_to_ideal": null,
+          "local_decoherence": null,
+          "purity": null,
+          "topology_support": 0.115672711,
+          "psig": 0.115672711,
+          "degree": 2,
+          "criticality": 0.663245467,
+          "criticality_terms": {
+            "structural_support_deficit": 0.884327289,
+            "link_break_ratio": 0.0
+          }
+        },
+        {
+          "id": 2,
+          "position": [
+            -2.265248,
+            1.645799,
+            -0.33287
+          ],
+          "fidelity_to_ideal": null,
+          "local_decoherence": null,
+          "purity": null,
+          "topology_support": 0.115672711,
+          "psig": 0.115672711,
+          "degree": 2,
+          "criticality": 0.663245467,
+          "criticality_terms": {
+            "structural_support_deficit": 0.884327289,
+            "link_break_ratio": 0.0
+          }
+        },
+        {
+          "id": 3,
+          "position": [
+            -2.265248,
+            -1.645799,
+            0.33287
+          ],
+          "fidelity_to_ideal": null,
+          "local_decoherence": null,
+          "purity": null,
+          "topology_support": 0.09939805,
+          "psig": 0.09939805,
+          "degree": 1,
+          "criticality": 0.675451462,
+          "criticality_terms": {
+            "structural_support_deficit": 0.90060195,
+            "link_break_ratio": 0.0
+          }
+        },
+        {
+          "id": 4,
+          "position": [
+            0.865248,
+            -2.662958,
+            -0.205725
+          ],
+          "fidelity_to_ideal": null,
+          "local_decoherence": null,
+          "purity": null,
+          "topology_support": 0.09939805,
+          "psig": 0.09939805,
+          "degree": 1,
+          "criticality": 0.675451462,
+          "criticality_terms": {
+            "structural_support_deficit": 0.90060195,
+            "link_break_ratio": 0.0
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": 0,
+          "target": 1,
+          "mutual_information": 0.199456847,
+          "pauli_correlation": 0.0,
+          "concurrence": 0.0,
+          "correlation": 0.199456847,
+          "type": "declared_association",
+          "stability": 1.0,
+          "active": true
+        },
+        {
+          "source": 0,
+          "target": 2,
+          "mutual_information": 0.199456847,
+          "pauli_correlation": 0.0,
+          "concurrence": 0.0,
+          "correlation": 0.199456847,
+          "type": "declared_association",
+          "stability": 1.0,
+          "active": true
+        },
+        {
+          "source": 1,
+          "target": 2,
+          "mutual_information": 0.263233996,
+          "pauli_correlation": 0.0,
+          "concurrence": 0.0,
+          "correlation": 0.263233996,
+          "type": "declared_association",
+          "stability": 1.0,
+          "active": true
+        },
+        {
+          "source": 3,
+          "target": 4,
+          "mutual_information": 0.3975922,
+          "pauli_correlation": 0.0,
+          "concurrence": 0.0,
+          "correlation": 0.3975922,
+          "type": "declared_association",
+          "stability": 1.0,
+          "active": true
+        }
+      ],
+      "avg_psig": 0.105973989,
+      "decoherence_detected": true,
+      "topology": {
+        "psig": 0.0,
+        "betti": [
+          1,
+          0,
+          0
+        ],
+        "diagrams": {
+          "H0": [
+            [
+              0.0,
+              0.851933280839339
+            ],
+            [
+              0.0,
+              1.0419444751522298
+            ],
+            [
+              0.0,
+              1.1339339506183468
+            ],
+            [
+              0.0,
+              1.4958762064860858
+            ],
+            [
+              0.0,
+              null
+            ]
+          ],
+          "H1": [
+            [
+              1.1339339506183468,
+              1.1339339506183468
+            ],
+            [
+              1.4958762064860858,
+              1.4958762064860858
+            ],
+            [
+              1.5057073845758178,
+              1.5057073845758178
+            ],
+            [
+              1.5057073845758178,
+              1.5057073845758178
+            ],
+            [
+              1.5057073845758178,
+              1.5057073845758178
+            ],
+            [
+              1.5057073845758178,
+              1.5057073845758178
+            ]
+          ]
+        },
+        "n_finite_h1": 0,
+        "max_edge": 1.5057073845758178,
+        "distance_model": "euclidean_distance_between_correlation_profiles",
+        "metric_scope": "TTF-inspired smooth correlation regularization ablation; no density-matrix, error-correction or hardware-protection claim."
+      },
+      "logical_topology": {
+        "P_sig": null,
+        "scope": "not_applicable_external_non_density_input"
+      },
+      "tsp_inspection": {
+        "path": [
+          3,
+          4,
+          3
+        ],
+        "cost": 6.670742751,
+        "method": "held_karp_exact",
+        "nodes": [
+          3,
+          4
+        ]
+      },
+      "cube_slice": [
+        [
+          1.0,
+          0.199456847,
+          0.199456847,
+          0.0,
+          0.0
+        ],
+        [
+          0.199456847,
+          1.0,
+          0.263233996,
+          0.0,
+          0.0
+        ],
+        [
+          0.199456847,
+          0.263233996,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.3975922
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.3975922,
+          1.0
+        ]
+      ],
+      "metric_scope": {
+        "density_metrics_available": false,
+        "fidelity": "not_available",
+        "purity": "not_available",
+        "concurrence": "not_available",
+        "criticality": "structural_priority_from_declared_association_not_quantum_decoherence",
+        "association": "TTF-inspired smooth correlation regularization ablation; no density-matrix, error-correction or hardware-protection claim."
+      },
+      "tsp_scope": "variation_boundary",
+      "ttf_smooth_ablation": {
+        "enabled": false,
+        "variation": [
+          0.0,
+          0.0,
+          0.0,
+          0.09939805,
+          0.09939805
+        ],
+        "boundary_nodes": [
+          3,
+          4
+        ],
+        "activation": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "parameters": {
+          "variation_threshold": 0.025,
+          "slope": 18.0,
+          "strength": 0.3,
+          "max_boundary_nodes": 6
+        },
+        "interpretation": "algorithmic_correlation_regularization_only"
+      }
+    },
+    {
+      "step": 6,
+      "gate": "cx(4,0)",
+      "qubits": [
+        {
+          "id": 0,
+          "position": [
+            2.8,
+            0.0,
+            0.0
+          ],
+          "fidelity_to_ideal": null,
+          "local_decoherence": null,
+          "purity": null,
+          "topology_support": 0.0,
+          "psig": 0.0,
+          "degree": 0,
+          "criticality": 1.0,
+          "criticality_terms": {
+            "structural_support_deficit": 1.0,
+            "link_break_ratio": 1.0
+          }
+        },
+        {
+          "id": 1,
+          "position": [
+            0.865248,
+            2.662958,
+            0.205725
+          ],
+          "fidelity_to_ideal": null,
+          "local_decoherence": null,
+          "purity": null,
+          "topology_support": 0.065808499,
+          "psig": 0.065808499,
+          "degree": 1,
+          "criticality": 0.825643626,
+          "criticality_terms": {
+            "structural_support_deficit": 0.934191501,
+            "link_break_ratio": 0.5
+          }
+        },
+        {
+          "id": 2,
+          "position": [
+            -2.265248,
+            1.645799,
+            -0.33287
+          ],
+          "fidelity_to_ideal": null,
+          "local_decoherence": null,
+          "purity": null,
+          "topology_support": 0.065808499,
+          "psig": 0.065808499,
+          "degree": 1,
+          "criticality": 0.825643626,
+          "criticality_terms": {
+            "structural_support_deficit": 0.934191501,
+            "link_break_ratio": 0.5
+          }
+        },
+        {
+          "id": 3,
+          "position": [
+            -2.265248,
+            -1.645799,
+            0.33287
+          ],
+          "fidelity_to_ideal": null,
+          "local_decoherence": null,
+          "purity": null,
+          "topology_support": 0.049864212,
+          "psig": 0.049864212,
+          "degree": 1,
+          "criticality": 0.712601841,
+          "criticality_terms": {
+            "structural_support_deficit": 0.950135788,
+            "link_break_ratio": 0.0
+          }
+        },
+        {
+          "id": 4,
+          "position": [
+            0.865248,
+            -2.662958,
+            -0.205725
+          ],
+          "fidelity_to_ideal": null,
+          "local_decoherence": null,
+          "purity": null,
+          "topology_support": 0.049864212,
+          "psig": 0.049864212,
+          "degree": 1,
+          "criticality": 0.712601841,
+          "criticality_terms": {
+            "structural_support_deficit": 0.950135788,
+            "link_break_ratio": 0.0
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": 1,
+          "target": 2,
+          "mutual_information": 0.263233996,
+          "pauli_correlation": 0.0,
+          "concurrence": 0.0,
+          "correlation": 0.263233996,
+          "type": "declared_association",
+          "stability": 1.0,
+          "active": true
+        },
+        {
+          "source": 3,
+          "target": 4,
+          "mutual_information": 0.199456847,
+          "pauli_correlation": 0.0,
+          "concurrence": 0.0,
+          "correlation": 0.199456847,
+          "type": "declared_association",
+          "stability": 1.0,
+          "active": true
+        }
+      ],
+      "avg_psig": 0.046269084,
+      "decoherence_detected": true,
+      "topology": {
+        "psig": 0.0,
+        "betti": [
+          1,
+          0,
+          0
+        ],
+        "diagrams": {
+          "H0": [
+            [
+              0.0,
+              1.0419444751522298
+            ],
+            [
+              0.0,
+              1.1321395366295242
+            ],
+            [
+              0.0,
+              1.4208883086228672
+            ],
+            [
+              0.0,
+              1.4338096545059809
+            ],
+            [
+              0.0,
+              null
+            ]
+          ],
+          "H1": [
+            [
+              1.4223014231657434,
+              1.4223014231657434
+            ],
+            [
+              1.4338096545059809,
+              1.4338096545059809
+            ],
+            [
+              1.4522657240871513,
+              1.4522657240871513
+            ],
+            [
+              1.4522657240871513,
+              1.4522657240871513
+            ],
+            [
+              1.4522667324843461,
+              1.4522667324843461
+            ],
+            [
+              1.4522667324843461,
+              1.4522667324843461
+            ]
+          ]
+        },
+        "n_finite_h1": 0,
+        "max_edge": 1.4522667324843461,
+        "distance_model": "euclidean_distance_between_correlation_profiles",
+        "metric_scope": "TTF-inspired smooth correlation regularization ablation; no density-matrix, error-correction or hardware-protection claim."
+      },
+      "logical_topology": {
+        "P_sig": null,
+        "scope": "not_applicable_external_non_density_input"
+      },
+      "tsp_inspection": {
+        "path": [
+          0,
+          4,
+          3,
+          2,
+          1,
+          0
+        ],
+        "cost": 16.625029612,
+        "method": "held_karp_exact",
+        "nodes": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "cube_slice": [
+        [
+          1.0,
+          0.002992736,
+          0.002992736,
+          0.003742998,
+          0.004861376
+        ],
+        [
+          0.002992736,
+          1.0,
+          0.263233996,
+          0.0,
+          0.0
+        ],
+        [
+          0.002992736,
+          0.263233996,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.003742998,
+          0.0,
+          0.0,
+          1.0,
+          0.199456847
+        ],
+        [
+          0.004861376,
+          0.0,
+          0.0,
+          0.199456847,
+          1.0
+        ]
+      ],
+      "metric_scope": {
+        "density_metrics_available": false,
+        "fidelity": "not_available",
+        "purity": "not_available",
+        "concurrence": "not_available",
+        "criticality": "structural_priority_from_declared_association_not_quantum_decoherence",
+        "association": "TTF-inspired smooth correlation regularization ablation; no density-matrix, error-correction or hardware-protection claim."
+      },
+      "tsp_scope": "variation_boundary",
+      "ttf_smooth_ablation": {
+        "enabled": false,
+        "variation": [
+          0.100383149,
+          0.049116028,
+          0.049116028,
+          0.050469588,
+          0.050749182
+        ],
+        "boundary_nodes": [
+          0,
+          4,
+          3,
+          1,
+          2
+        ],
+        "activation": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "parameters": {
+          "variation_threshold": 0.025,
+          "slope": 18.0,
+          "strength": 0.3,
+          "max_boundary_nodes": 6
+        },
+        "interpretation": "algorithmic_correlation_regularization_only"
+      }
+    },
+    {
+      "step": 7,
+      "gate": "cz(2,3)",
+      "qubits": [
+        {
+          "id": 0,
+          "position": [
+            2.8,
+            0.0,
+            0.0
+          ],
+          "fidelity_to_ideal": null,
+          "local_decoherence": null,
+          "purity": null,
+          "topology_support": 0.0,
+          "psig": 0.0,
+          "degree": 0,
+          "criticality": 0.75,
+          "criticality_terms": {
+            "structural_support_deficit": 1.0,
+            "link_break_ratio": 0.0
+          }
+        },
+        {
+          "id": 1,
+          "position": [
+            0.865248,
+            2.662958,
+            0.205725
+          ],
+          "fidelity_to_ideal": null,
+          "local_decoherence": null,
+          "purity": null,
+          "topology_support": 0.051325373,
+          "psig": 0.051325373,
+          "degree": 1,
+          "criticality": 0.71150597,
+          "criticality_terms": {
+            "structural_support_deficit": 0.948674627,
+            "link_break_ratio": 0.0
+          }
+        },
+        {
+          "id": 2,
+          "position": [
+            -2.265248,
+            1.645799,
+            -0.33287
+          ],
+          "fidelity_to_ideal": null,
+          "local_decoherence": null,
+          "purity": null,
+          "topology_support": 0.051325373,
+          "psig": 0.051325373,
+          "degree": 1,
+          "criticality": 0.71150597,
+          "criticality_terms": {
+            "structural_support_deficit": 0.948674627,
+            "link_break_ratio": 0.0
+          }
+        },
+        {
+          "id": 3,
+          "position": [
+            -2.265248,
+            -1.645799,
+            0.33287
+          ],
+          "fidelity_to_ideal": null,
+          "local_decoherence": null,
+          "purity": null,
+          "topology_support": 0.038278253,
+          "psig": 0.038278253,
+          "degree": 1,
+          "criticality": 0.72129131,
+          "criticality_terms": {
+            "structural_support_deficit": 0.961721747,
+            "link_break_ratio": 0.0
+          }
+        },
+        {
+          "id": 4,
+          "position": [
+            0.865248,
+            -2.662958,
+            -0.205725
+          ],
+          "fidelity_to_ideal": null,
+          "local_decoherence": null,
+          "purity": null,
+          "topology_support": 0.038278253,
+          "psig": 0.038278253,
+          "degree": 1,
+          "criticality": 0.72129131,
+          "criticality_terms": {
+            "structural_support_deficit": 0.961721747,
+            "link_break_ratio": 0.0
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": 1,
+          "target": 2,
+          "mutual_information": 0.205301492,
+          "pauli_correlation": 0.0,
+          "concurrence": 0.0,
+          "correlation": 0.205301492,
+          "type": "declared_association",
+          "stability": 1.0,
+          "active": true
+        },
+        {
+          "source": 3,
+          "target": 4,
+          "mutual_information": 0.153113013,
+          "pauli_correlation": 0.0,
+          "concurrence": 0.0,
+          "correlation": 0.153113013,
+          "type": "declared_association",
+          "stability": 1.0,
+          "active": true
+        }
+      ],
+      "avg_psig": 0.03584145,
+      "decoherence_detected": true,
+      "topology": {
+        "psig": 0.0,
+        "betti": [
+          1,
+          0,
+          0
+        ],
+        "diagrams": {
+          "H0": [
+            [
+              0.0,
+              1.1238735515470026
+            ],
+            [
+              0.0,
+              1.1976805205543735
+            ],
+            [
+              0.0,
+              1.4153277695640938
+            ],
+            [
+              0.0,
+              1.424513439511284
+            ],
+            [
+              0.0,
+              null
+            ]
+          ],
+          "H1": [
+            [
+              1.4177589186158772,
+              1.4177589186158772
+            ],
+            [
+              1.42522779345864,
+              1.42522779345864
+            ],
+            [
+              1.4372166044126593,
+              1.4372166044126593
+            ],
+            [
+              1.437216820587224,
+              1.437216820587224
+            ],
+            [
+              1.4372180729391117,
+              1.4372180729391117
+            ],
+            [
+              1.4372188956726777,
+              1.4372188956726777
+            ]
+          ]
+        },
+        "n_finite_h1": 0,
+        "max_edge": 1.4372188956726777,
+        "distance_model": "euclidean_distance_between_correlation_profiles",
+        "metric_scope": "TTF-inspired smooth correlation regularization ablation; no density-matrix, error-correction or hardware-protection claim."
+      },
+      "logical_topology": {
+        "P_sig": null,
+        "scope": "not_applicable_external_non_density_input"
+      },
+      "tsp_inspection": {
+        "path": [],
+        "cost": 0.0,
+        "method": "trivial",
+        "nodes": []
+      },
+      "cube_slice": [
+        [
+          1.0,
+          0.002992736,
+          0.002424729,
+          0.002992736,
+          0.004861376
+        ],
+        [
+          0.002992736,
+          1.0,
+          0.205301492,
+          0.0,
+          0.0
+        ],
+        [
+          0.002424729,
+          0.205301492,
+          1.0,
+          2.63e-07,
+          0.0
+        ],
+        [
+          0.002992736,
+          0.0,
+          2.63e-07,
+          1.0,
+          0.153113013
+        ],
+        [
+          0.004861376,
+          0.0,
+          0.0,
+          0.153113013,
+          1.0
+        ]
+      ],
+      "metric_scope": {
+        "density_metrics_available": false,
+        "fidelity": "not_available",
+        "purity": "not_available",
+        "concurrence": "not_available",
+        "criticality": "structural_priority_from_declared_association_not_quantum_decoherence",
+        "association": "TTF-inspired smooth correlation regularization ablation; no density-matrix, error-correction or hardware-protection claim."
+      },
+      "tsp_scope": "variation_boundary",
+      "ttf_smooth_ablation": {
+        "enabled": false,
+        "variation": [
+          0.000329567,
+          0.014483126,
+          0.014625194,
+          0.01177359,
+          0.011585959
+        ],
+        "boundary_nodes": [],
+        "activation": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "parameters": {
+          "variation_threshold": 0.025,
+          "slope": 18.0,
+          "strength": 0.3,
+          "max_boundary_nodes": 6
+        },
+        "interpretation": "algorithmic_correlation_regularization_only"
+      }
+    },
+    {
+      "step": 8,
+      "gate": "ry(0.449; 0)",
+      "qubits": [
+        {
+          "id": 0,
+          "position": [
+            2.8,
+            0.0,
+            0.0
+          ],
+          "fidelity_to_ideal": null,
+          "local_decoherence": null,
+          "purity": null,
+          "topology_support": 0.0,
+          "psig": 0.0,
+          "degree": 0,
+          "criticality": 0.75,
+          "criticality_terms": {
+            "structural_support_deficit": 1.0,
+            "link_break_ratio": 0.0
+          }
+        },
+        {
+          "id": 1,
+          "position": [
+            0.865248,
+            2.662958,
+            0.205725
+          ],
+          "fidelity_to_ideal": null,
+          "local_decoherence": null,
+          "purity": null,
+          "topology_support": 0.051325373,
+          "psig": 0.051325373,
+          "degree": 1,
+          "criticality": 0.71150597,
+          "criticality_terms": {
+            "structural_support_deficit": 0.948674627,
+            "link_break_ratio": 0.0
+          }
+        },
+        {
+          "id": 2,
+          "position": [
+            -2.265248,
+            1.645799,
+            -0.33287
+          ],
+          "fidelity_to_ideal": null,
+          "local_decoherence": null,
+          "purity": null,
+          "topology_support": 0.051325373,
+          "psig": 0.051325373,
+          "degree": 1,
+          "criticality": 0.71150597,
+          "criticality_terms": {
+            "structural_support_deficit": 0.948674627,
+            "link_break_ratio": 0.0
+          }
+        },
+        {
+          "id": 3,
+          "position": [
+            -2.265248,
+            -1.645799,
+            0.33287
+          ],
+          "fidelity_to_ideal": null,
+          "local_decoherence": null,
+          "purity": null,
+          "topology_support": 0.038278253,
+          "psig": 0.038278253,
+          "degree": 1,
+          "criticality": 0.72129131,
+          "criticality_terms": {
+            "structural_support_deficit": 0.961721747,
+            "link_break_ratio": 0.0
+          }
+        },
+        {
+          "id": 4,
+          "position": [
+            0.865248,
+            -2.662958,
+            -0.205725
+          ],
+          "fidelity_to_ideal": null,
+          "local_decoherence": null,
+          "purity": null,
+          "topology_support": 0.038278253,
+          "psig": 0.038278253,
+          "degree": 1,
+          "criticality": 0.72129131,
+          "criticality_terms": {
+            "structural_support_deficit": 0.961721747,
+            "link_break_ratio": 0.0
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": 1,
+          "target": 2,
+          "mutual_information": 0.205301492,
+          "pauli_correlation": 0.0,
+          "concurrence": 0.0,
+          "correlation": 0.205301492,
+          "type": "declared_association",
+          "stability": 1.0,
+          "active": true
+        },
+        {
+          "source": 3,
+          "target": 4,
+          "mutual_information": 0.153113013,
+          "pauli_correlation": 0.0,
+          "concurrence": 0.0,
+          "correlation": 0.153113013,
+          "type": "declared_association",
+          "stability": 1.0,
+          "active": true
+        }
+      ],
+      "avg_psig": 0.03584145,
+      "decoherence_detected": true,
+      "topology": {
+        "psig": 0.0,
+        "betti": [
+          1,
+          0,
+          0
+        ],
+        "diagrams": {
+          "H0": [
+            [
+              0.0,
+              1.1238735284206043
+            ],
+            [
+              0.0,
+              1.197680282269199
+            ],
+            [
+              0.0,
+              1.4159348550866486
+            ],
+            [
+              0.0,
+              1.4248959496990086
+            ],
+            [
+              0.0,
+              null
+            ]
+          ],
+          "H1": [
+            [
+              1.4181580563251461,
+              1.4181580563251461
+            ],
+            [
+              1.4255501515578468,
+              1.4255501515578468
+            ],
+            [
+              1.437216586328296,
+              1.437216586328296
+            ],
+            [
+              1.437216820587224,
+              1.437216820587224
+            ],
+            [
+              1.4372178743683393,
+              1.4372178743683393
+            ],
+            [
+              1.4372185591637268,
+              1.4372185591637268
+            ]
+          ]
+        },
+        "n_finite_h1": 0,
+        "max_edge": 1.4372185591637268,
+        "distance_model": "euclidean_distance_between_correlation_profiles",
+        "metric_scope": "TTF-inspired smooth correlation regularization ablation; no density-matrix, error-correction or hardware-protection claim."
+      },
+      "logical_topology": {
+        "P_sig": null,
+        "scope": "not_applicable_external_non_density_input"
+      },
+      "tsp_inspection": {
+        "path": [],
+        "cost": 0.0,
+        "method": "trivial",
+        "nodes": []
+      },
+      "cube_slice": [
+        [
+          1.0,
+          0.002739096,
+          0.002218856,
+          0.002739096,
+          0.0044482
+        ],
+        [
+          0.002739096,
+          1.0,
+          0.205301492,
+          0.0,
+          0.0
+        ],
+        [
+          0.002218856,
+          0.205301492,
+          1.0,
+          2.63e-07,
+          0.0
+        ],
+        [
+          0.002739096,
+          0.0,
+          2.63e-07,
+          1.0,
+          0.153113013
+        ],
+        [
+          0.0044482,
+          0.0,
+          0.0,
+          0.153113013,
+          1.0
+        ]
+      ],
+      "metric_scope": {
+        "density_metrics_available": false,
+        "fidelity": "not_available",
+        "purity": "not_available",
+        "concurrence": "not_available",
+        "criticality": "structural_priority_from_declared_association_not_quantum_decoherence",
+        "association": "TTF-inspired smooth correlation regularization ablation; no density-matrix, error-correction or hardware-protection claim."
+      },
+      "tsp_scope": "variation_boundary",
+      "ttf_smooth_ablation": {
+        "enabled": false,
+        "variation": [
+          0.000281582,
+          6.341e-05,
+          5.1468e-05,
+          6.341e-05,
+          0.000103294
+        ],
+        "boundary_nodes": [],
+        "activation": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "parameters": {
+          "variation_threshold": 0.025,
+          "slope": 18.0,
+          "strength": 0.3,
+          "max_boundary_nodes": 6
+        },
+        "interpretation": "algorithmic_correlation_regularization_only"
+      }
+    },
+    {
+      "step": 9,
+      "gate": "rz(0.349; 3)",
+      "qubits": [
+        {
+          "id": 0,
+          "position": [
+            2.8,
+            0.0,
+            0.0
+          ],
+          "fidelity_to_ideal": null,
+          "local_decoherence": null,
+          "purity": null,
+          "topology_support": 0.0,
+          "psig": 0.0,
+          "degree": 0,
+          "criticality": 0.75,
+          "criticality_terms": {
+            "structural_support_deficit": 1.0,
+            "link_break_ratio": 0.0
+          }
+        },
+        {
+          "id": 1,
+          "position": [
+            0.865248,
+            2.662958,
+            0.205725
+          ],
+          "fidelity_to_ideal": null,
+          "local_decoherence": null,
+          "purity": null,
+          "topology_support": 0.051325373,
+          "psig": 0.051325373,
+          "degree": 1,
+          "criticality": 0.71150597,
+          "criticality_terms": {
+            "structural_support_deficit": 0.948674627,
+            "link_break_ratio": 0.0
+          }
+        },
+        {
+          "id": 2,
+          "position": [
+            -2.265248,
+            1.645799,
+            -0.33287
+          ],
+          "fidelity_to_ideal": null,
+          "local_decoherence": null,
+          "purity": null,
+          "topology_support": 0.051325373,
+          "psig": 0.051325373,
+          "degree": 1,
+          "criticality": 0.71150597,
+          "criticality_terms": {
+            "structural_support_deficit": 0.948674627,
+            "link_break_ratio": 0.0
+          }
+        },
+        {
+          "id": 3,
+          "position": [
+            -2.265248,
+            -1.645799,
+            0.33287
+          ],
+          "fidelity_to_ideal": null,
+          "local_decoherence": null,
+          "purity": null,
+          "topology_support": 0.035526094,
+          "psig": 0.035526094,
+          "degree": 1,
+          "criticality": 0.723355429,
+          "criticality_terms": {
+            "structural_support_deficit": 0.964473906,
+            "link_break_ratio": 0.0
+          }
+        },
+        {
+          "id": 4,
+          "position": [
+            0.865248,
+            -2.662958,
+            -0.205725
+          ],
+          "fidelity_to_ideal": null,
+          "local_decoherence": null,
+          "purity": null,
+          "topology_support": 0.035526094,
+          "psig": 0.035526094,
+          "degree": 1,
+          "criticality": 0.723355429,
+          "criticality_terms": {
+            "structural_support_deficit": 0.964473906,
+            "link_break_ratio": 0.0
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": 1,
+          "target": 2,
+          "mutual_information": 0.205301492,
+          "pauli_correlation": 0.0,
+          "concurrence": 0.0,
+          "correlation": 0.205301492,
+          "type": "declared_association",
+          "stability": 1.0,
+          "active": true
+        },
+        {
+          "source": 3,
+          "target": 4,
+          "mutual_information": 0.142104377,
+          "pauli_correlation": 0.0,
+          "concurrence": 0.0,
+          "correlation": 0.142104377,
+          "type": "declared_association",
+          "stability": 1.0,
+          "active": true
+        }
+      ],
+      "avg_psig": 0.034740587,
+      "decoherence_detected": true,
+      "topology": {
+        "psig": 0.0,
+        "betti": [
+          1,
+          0,
+          0
+        ],
+        "diagrams": {
+          "H0": [
+            [
+              0.0,
+              1.1238735284206005
+            ],
+            [
+              0.0,
+              1.2132490894239603
+            ],
+            [
+              0.0,
+              1.414825405134263
+            ],
+            [
+              0.0,
+              1.4248956225058802
+            ],
+            [
+              0.0,
+              null
+            ]
+          ],
+          "H1": [
+            [
+              1.4172938355799192,
+              1.4172938355799192
+            ],
+            [
+              1.4255498245778784,
+              1.4255498245778784
+            ],
+            [
+              1.4360854748873797,
+              1.4360854748873797
+            ],
+            [
+              1.4360857517906054,
+              1.4360857517906054
+            ],
+            [
+              1.436086793204529,
+              1.436086793204529
+            ],
+            [
+              1.4360874822375416,
+              1.4360874822375416
+            ]
+          ]
+        },
+        "n_finite_h1": 0,
+        "max_edge": 1.4360874822375416,
+        "distance_model": "euclidean_distance_between_correlation_profiles",
+        "metric_scope": "TTF-inspired smooth correlation regularization ablation; no density-matrix, error-correction or hardware-protection claim."
+      },
+      "logical_topology": {
+        "P_sig": null,
+        "scope": "not_applicable_external_non_density_input"
+      },
+      "tsp_inspection": {
+        "path": [],
+        "cost": 0.0,
+        "method": "trivial",
+        "nodes": []
+      },
+      "cube_slice": [
+        [
+          1.0,
+          0.002739096,
+          0.002218856,
+          0.002563243,
+          0.0044482
+        ],
+        [
+          0.002739096,
+          1.0,
+          0.205301492,
+          0.0,
+          0.0
+        ],
+        [
+          0.002218856,
+          0.205301492,
+          1.0,
+          2.46e-07,
+          0.0
+        ],
+        [
+          0.002563243,
+          0.0,
+          2.46e-07,
+          1.0,
+          0.142104377
+        ],
+        [
+          0.0044482,
+          0.0,
+          0.0,
+          0.142104377,
+          1.0
+        ]
+      ],
+      "metric_scope": {
+        "density_metrics_available": false,
+        "fidelity": "not_available",
+        "purity": "not_available",
+        "concurrence": "not_available",
+        "criticality": "structural_priority_from_declared_association_not_quantum_decoherence",
+        "association": "TTF-inspired smooth correlation regularization ablation; no density-matrix, error-correction or hardware-protection claim."
+      },
+      "tsp_scope": "variation_boundary",
+      "ttf_smooth_ablation": {
+        "enabled": false,
+        "variation": [
+          4.3963e-05,
+          0.0,
+          4e-09,
+          0.002796126,
+          0.002752159
+        ],
+        "boundary_nodes": [],
+        "activation": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "parameters": {
+          "variation_threshold": 0.025,
+          "slope": 18.0,
+          "strength": 0.3,
+          "max_boundary_nodes": 6
+        },
+        "interpretation": "algorithmic_correlation_regularization_only"
+      }
+    },
+    {
+      "step": 10,
+      "gate": "cx(2,4)",
+      "qubits": [
+        {
+          "id": 0,
+          "position": [
+            2.8,
+            0.0,
+            0.0
+          ],
+          "fidelity_to_ideal": null,
+          "local_decoherence": null,
+          "purity": null,
+          "topology_support": 0.017942411,
+          "psig": 0.017942411,
+          "degree": 1,
+          "criticality": 0.736543192,
+          "criticality_terms": {
+            "structural_support_deficit": 0.982057589,
+            "link_break_ratio": 0.0
+          }
+        },
+        {
+          "id": 1,
+          "position": [
+            0.865248,
+            2.662958,
+            0.205725
+          ],
+          "fidelity_to_ideal": null,
+          "local_decoherence": null,
+          "purity": null,
+          "topology_support": 0.041098284,
+          "psig": 0.041098284,
+          "degree": 1,
+          "criticality": 0.719176287,
+          "criticality_terms": {
+            "structural_support_deficit": 0.958901716,
+            "link_break_ratio": 0.0
+          }
+        },
+        {
+          "id": 2,
+          "position": [
+            -2.265248,
+            1.645799,
+            -0.33287
+          ],
+          "fidelity_to_ideal": null,
+          "local_decoherence": null,
+          "purity": null,
+          "topology_support": 0.041098284,
+          "psig": 0.041098284,
+          "degree": 1,
+          "criticality": 0.719176287,
+          "criticality_terms": {
+            "structural_support_deficit": 0.958901716,
+            "link_break_ratio": 0.0
+          }
+        },
+        {
+          "id": 3,
+          "position": [
+            -2.265248,
+            -1.645799,
+            0.33287
+          ],
+          "fidelity_to_ideal": null,
+          "local_decoherence": null,
+          "purity": null,
+          "topology_support": 0.0,
+          "psig": 0.0,
+          "degree": 0,
+          "criticality": 1.0,
+          "criticality_terms": {
+            "structural_support_deficit": 1.0,
+            "link_break_ratio": 1.0
+          }
+        },
+        {
+          "id": 4,
+          "position": [
+            0.865248,
+            -2.662958,
+            -0.205725
+          ],
+          "fidelity_to_ideal": null,
+          "local_decoherence": null,
+          "purity": null,
+          "topology_support": 0.017942411,
+          "psig": 0.017942411,
+          "degree": 1,
+          "criticality": 0.986543192,
+          "criticality_terms": {
+            "structural_support_deficit": 0.982057589,
+            "link_break_ratio": 1.0
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": 0,
+          "target": 4,
+          "mutual_information": 0.071769644,
+          "pauli_correlation": 0.0,
+          "concurrence": 0.0,
+          "correlation": 0.071769644,
+          "type": "declared_association",
+          "stability": 1.0,
+          "active": true
+        },
+        {
+          "source": 1,
+          "target": 2,
+          "mutual_information": 0.164393135,
+          "pauli_correlation": 0.0,
+          "concurrence": 0.0,
+          "correlation": 0.164393135,
+          "type": "declared_association",
+          "stability": 1.0,
+          "active": true
+        }
+      ],
+      "avg_psig": 0.023616278,
+      "decoherence_detected": true,
+      "topology": {
+        "psig": 0.0,
+        "betti": [
+          1,
+          0,
+          0
+        ],
+        "diagrams": {
+          "H0": [
+            [
+              0.0,
+              1.1817356714934555
+            ],
+            [
+              0.0,
+              1.3127953846191627
+            ],
+            [
+              0.0,
+              1.4005798884858258
+            ],
+            [
+              0.0,
+              1.407168287188974
+            ],
+            [
+              0.0,
+              null
+            ]
+          ],
+          "H1": [
+            [
+              1.4119049107640693,
+              1.4119049107640693
+            ],
+            [
+              1.413009448466519,
+              1.413009448466519
+            ],
+            [
+              1.4211189923964955,
+              1.4211189923964955
+            ],
+            [
+              1.4221138210055835,
+              1.4221138210055835
+            ],
+            [
+              1.4237370412279722,
+              1.4237370412279722
+            ],
+            [
+              1.4237395256987997,
+              1.4237395256987997
+            ]
+          ]
+        },
+        "n_finite_h1": 0,
+        "max_edge": 1.4237395256987997,
+        "distance_model": "euclidean_distance_between_correlation_profiles",
+        "metric_scope": "TTF-inspired smooth correlation regularization ablation; no density-matrix, error-correction or hardware-protection claim."
+      },
+      "logical_topology": {
+        "P_sig": null,
+        "scope": "not_applicable_external_non_density_input"
+      },
+      "tsp_inspection": {
+        "path": [
+          3,
+          4,
+          3
+        ],
+        "cost": 6.670742751,
+        "method": "held_karp_exact",
+        "nodes": [
+          3,
+          4
+        ]
+      },
+      "cube_slice": [
+        [
+          1.0,
+          0.002739096,
+          0.001814842,
+          0.002563243,
+          0.071769644
+        ],
+        [
+          0.002739096,
+          1.0,
+          0.164393135,
+          0.0,
+          0.007876783
+        ],
+        [
+          0.001814842,
+          0.164393135,
+          1.0,
+          2.02e-07,
+          0.01242402
+        ],
+        [
+          0.002563243,
+          0.0,
+          2.02e-07,
+          1.0,
+          0.010904933
+        ],
+        [
+          0.071769644,
+          0.007876783,
+          0.01242402,
+          0.010904933,
+          1.0
+        ]
+      ],
+      "metric_scope": {
+        "density_metrics_available": false,
+        "fidelity": "not_available",
+        "purity": "not_available",
+        "concurrence": "not_available",
+        "criticality": "structural_priority_from_declared_association_not_quantum_decoherence",
+        "association": "TTF-inspired smooth correlation regularization ablation; no density-matrix, error-correction or hardware-protection claim."
+      },
+      "tsp_scope": "variation_boundary",
+      "ttf_smooth_ablation": {
+        "enabled": false,
+        "variation": [
+          0.016931364,
+          0.012196285,
+          0.013434109,
+          0.032799872,
+          0.054705423
+        ],
+        "boundary_nodes": [
+          4,
+          3
+        ],
+        "activation": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "parameters": {
+          "variation_threshold": 0.025,
+          "slope": 18.0,
+          "strength": 0.3,
+          "max_boundary_nodes": 6
+        },
+        "interpretation": "algorithmic_correlation_regularization_only"
+      }
+    }
+  ],
+  "design_context": {
+    "source_timeline_provenance": {
+      "mode": "local",
+      "engine": "ratiss-topological-decoherence-engine",
+      "simulation": "density_matrix",
+      "validated_on_hardware": false,
+      "claim_boundary": "Simulation and topological post-processing only; not a hardware topological-qubit certification or an error-correction command."
+    },
+    "ablation": {
+      "enabled": false,
+      "scope": "software correlation graph only"
+    }
+  }
+}

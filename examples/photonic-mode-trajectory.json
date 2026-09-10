@@ -1,0 +1,8 @@
+{
+  "source": {"framework": "declared-local-photonic-fixture", "kind": "mode-probabilities", "note": "Test fixture; not an external photonic device result."},
+  "mode_labels": ["m0", "m1", "m2"],
+  "trajectory": [
+    {"step": 0, "label": "separated_modes", "outcomes": [{"occupation": [1, 0, 0], "probability": 0.5}, {"occupation": [0, 1, 0], "probability": 0.5}]},
+    {"step": 1, "label": "cooccupied_modes", "outcomes": [{"occupation": [1, 1, 0], "probability": 0.8}, {"occupation": [0, 0, 1], "probability": 0.2}]}
+  ]
+}

@@ -1,0 +1,389 @@
+{
+  "schema": "ratiss.topological-decoherence.timeline.v1",
+  "provenance": {
+    "mode": "external_qiskit_counts",
+    "engine": "ratiss-topological-decoherence-engine",
+    "simulation": "classical_counts_association",
+    "validated_on_hardware": false,
+    "claim_boundary": "Simulation and topological post-processing only; not a hardware topological-qubit certification or an error-correction command."
+  },
+  "encoding": {
+    "profile": "external_qiskit_counts",
+    "description": "Diagonal probability association computed from declared Qiskit counts; not density-matrix tomography or entanglement.",
+    "hardware_claim": "none"
+  },
+  "config": {
+    "n_qubits": 5,
+    "scenario": "external_qiskit_counts",
+    "t1_seconds": 0.0001,
+    "t2_seconds": 5e-05,
+    "single_gate_seconds": 4e-06,
+    "two_gate_seconds": 1.2e-05,
+    "one_qubit_depolarizing": 0.001,
+    "two_qubit_depolarizing": 0.01,
+    "edge_threshold": 0.04,
+    "criticality_threshold": 0.38,
+    "rips_max_edge": null
+  },
+  "cube": {
+    "axes": [
+      "step",
+      "source_qubit",
+      "target_qubit"
+    ],
+    "metric": "classical_count_cooccurrence_association",
+    "normalization": "declared association normalized to [0, 1]"
+  },
+  "steps": [
+    {
+      "step": 0,
+      "gate": "5q_10g_final",
+      "qubits": [
+        {
+          "id": 0,
+          "position": [
+            2.8,
+            0.0,
+            0.0
+          ],
+          "fidelity_to_ideal": null,
+          "local_decoherence": null,
+          "purity": null,
+          "topology_support": 0.599408048,
+          "psig": 0.599408048,
+          "degree": 4,
+          "criticality": 0.300443964,
+          "criticality_terms": {
+            "structural_support_deficit": 0.400591952,
+            "link_break_ratio": 0.0
+          }
+        },
+        {
+          "id": 1,
+          "position": [
+            0.865248,
+            2.662958,
+            0.205725
+          ],
+          "fidelity_to_ideal": null,
+          "local_decoherence": null,
+          "purity": null,
+          "topology_support": 0.612016447,
+          "psig": 0.612016447,
+          "degree": 4,
+          "criticality": 0.290987665,
+          "criticality_terms": {
+            "structural_support_deficit": 0.387983553,
+            "link_break_ratio": 0.0
+          }
+        },
+        {
+          "id": 2,
+          "position": [
+            -2.265248,
+            1.645799,
+            -0.33287
+          ],
+          "fidelity_to_ideal": null,
+          "local_decoherence": null,
+          "purity": null,
+          "topology_support": 0.607606293,
+          "psig": 0.607606293,
+          "degree": 4,
+          "criticality": 0.29429528,
+          "criticality_terms": {
+            "structural_support_deficit": 0.392393707,
+            "link_break_ratio": 0.0
+          }
+        },
+        {
+          "id": 3,
+          "position": [
+            -2.265248,
+            -1.645799,
+            0.33287
+          ],
+          "fidelity_to_ideal": null,
+          "local_decoherence": null,
+          "purity": null,
+          "topology_support": 0.50563109,
+          "psig": 0.50563109,
+          "degree": 4,
+          "criticality": 0.370776683,
+          "criticality_terms": {
+            "structural_support_deficit": 0.49436891,
+            "link_break_ratio": 0.0
+          }
+        },
+        {
+          "id": 4,
+          "position": [
+            0.865248,
+            -2.662958,
+            -0.205725
+          ],
+          "fidelity_to_ideal": null,
+          "local_decoherence": null,
+          "purity": null,
+          "topology_support": 0.592724179,
+          "psig": 0.592724179,
+          "degree": 4,
+          "criticality": 0.305456866,
+          "criticality_terms": {
+            "structural_support_deficit": 0.407275821,
+            "link_break_ratio": 0.0
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": 0,
+          "target": 1,
+          "mutual_information": 0.497251673,
+          "pauli_correlation": 0.0,
+          "concurrence": 0.0,
+          "correlation": 0.497251673,
+          "type": "declared_association",
+          "stability": 1.0,
+          "active": true
+        },
+        {
+          "source": 0,
+          "target": 2,
+          "mutual_information": 0.484661884,
+          "pauli_correlation": 0.0,
+          "concurrence": 0.0,
+          "correlation": 0.484661884,
+          "type": "declared_association",
+          "stability": 1.0,
+          "active": true
+        },
+        {
+          "source": 0,
+          "target": 3,
+          "mutual_information": 0.504714538,
+          "pauli_correlation": 0.0,
+          "concurrence": 0.0,
+          "correlation": 0.504714538,
+          "type": "declared_association",
+          "stability": 1.0,
+          "active": true
+        },
+        {
+          "source": 0,
+          "target": 4,
+          "mutual_information": 0.9110041,
+          "pauli_correlation": 0.0,
+          "concurrence": 0.0,
+          "correlation": 0.9110041,
+          "type": "declared_association",
+          "stability": 1.0,
+          "active": true
+        },
+        {
+          "source": 1,
+          "target": 2,
+          "mutual_information": 0.966657176,
+          "pauli_correlation": 0.0,
+          "concurrence": 0.0,
+          "correlation": 0.966657176,
+          "type": "declared_association",
+          "stability": 1.0,
+          "active": true
+        },
+        {
+          "source": 1,
+          "target": 3,
+          "mutual_information": 0.506485027,
+          "pauli_correlation": 0.0,
+          "concurrence": 0.0,
+          "correlation": 0.506485027,
+          "type": "declared_association",
+          "stability": 1.0,
+          "active": true
+        },
+        {
+          "source": 1,
+          "target": 4,
+          "mutual_information": 0.477671912,
+          "pauli_correlation": 0.0,
+          "concurrence": 0.0,
+          "correlation": 0.477671912,
+          "type": "declared_association",
+          "stability": 1.0,
+          "active": true
+        },
+        {
+          "source": 2,
+          "target": 3,
+          "mutual_information": 0.504105102,
+          "pauli_correlation": 0.0,
+          "concurrence": 0.0,
+          "correlation": 0.504105102,
+          "type": "declared_association",
+          "stability": 1.0,
+          "active": true
+        },
+        {
+          "source": 2,
+          "target": 4,
+          "mutual_information": 0.475001012,
+          "pauli_correlation": 0.0,
+          "concurrence": 0.0,
+          "correlation": 0.475001012,
+          "type": "declared_association",
+          "stability": 1.0,
+          "active": true
+        },
+        {
+          "source": 3,
+          "target": 4,
+          "mutual_information": 0.507219692,
+          "pauli_correlation": 0.0,
+          "concurrence": 0.0,
+          "correlation": 0.507219692,
+          "type": "declared_association",
+          "stability": 1.0,
+          "active": true
+        }
+      ],
+      "avg_psig": 0.583477211,
+      "decoherence_detected": false,
+      "topology": {
+        "psig": 0.0,
+        "betti": [
+          1,
+          0,
+          0
+        ],
+        "diagrams": {
+          "H0": [
+            [
+              0.0,
+              0.04893657532231316
+            ],
+            [
+              0.0,
+              0.1277635155248748
+            ],
+            [
+              0.0,
+              0.8077210637179206
+            ],
+            [
+              0.0,
+              0.8378527575241246
+            ],
+            [
+              0.0,
+              null
+            ]
+          ],
+          "H1": [
+            [
+              0.80877717601443,
+              0.80877717601443
+            ],
+            [
+              0.8396559169553962,
+              0.8396559169553962
+            ],
+            [
+              0.9620868680881948,
+              0.9620868680881948
+            ],
+            [
+              0.970354233171272,
+              0.970354233171272
+            ],
+            [
+              0.9790662170487158,
+              0.9790662170487158
+            ],
+            [
+              0.9859674685259593,
+              0.9859674685259593
+            ]
+          ]
+        },
+        "n_finite_h1": 0,
+        "max_edge": 0.9859674685259593,
+        "distance_model": "euclidean_distance_between_correlation_profiles",
+        "metric_scope": "Diagonal probability association computed from declared Qiskit counts; not density-matrix tomography or entanglement."
+      },
+      "logical_topology": {
+        "P_sig": null,
+        "scope": "not_applicable_external_non_density_input"
+      },
+      "tsp_inspection": {
+        "path": [],
+        "cost": 0.0,
+        "method": "trivial",
+        "nodes": []
+      },
+      "cube_slice": [
+        [
+          1.0,
+          0.497251673,
+          0.484661884,
+          0.504714538,
+          0.9110041
+        ],
+        [
+          0.497251673,
+          1.0,
+          0.966657176,
+          0.506485027,
+          0.477671912
+        ],
+        [
+          0.484661884,
+          0.966657176,
+          1.0,
+          0.504105102,
+          0.475001012
+        ],
+        [
+          0.504714538,
+          0.506485027,
+          0.504105102,
+          1.0,
+          0.507219692
+        ],
+        [
+          0.9110041,
+          0.477671912,
+          0.475001012,
+          0.507219692,
+          1.0
+        ]
+      ],
+      "metric_scope": {
+        "density_metrics_available": false,
+        "fidelity": "not_available",
+        "purity": "not_available",
+        "concurrence": "not_available",
+        "criticality": "structural_priority_from_declared_association_not_quantum_decoherence",
+        "association": "Diagonal probability association computed from declared Qiskit counts; not density-matrix tomography or entanglement."
+      },
+      "tsp_scope": "criticality_nodes"
+    }
+  ],
+  "design_context": {
+    "source": {
+      "mode": "external_qiskit_counts",
+      "declared_source": {
+        "backend": "ibm_marrakesh",
+        "job_id": "da58ftmaa69c739kic90",
+        "shots": 2048,
+        "circuit": "5q_10g_decoherence"
+      }
+    },
+    "labels": null,
+    "compilation": {
+      "kind": "external_association_import",
+      "hardware_calibrated": false,
+      "scope": "Diagonal probability association computed from declared Qiskit counts; not density-matrix tomography or entanglement."
+    }
+  }
+}

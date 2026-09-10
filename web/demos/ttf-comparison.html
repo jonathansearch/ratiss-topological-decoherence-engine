@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>RATISS Cloud Demo — Ablation TTF</title>
+    <link rel="stylesheet" href="demo.css" />
+  </head>
+  <body data-baseline="/artifacts/ttf_smooth_ablation/timeline_baseline.json" data-regularized="/artifacts/ttf_smooth_ablation/timeline_regularized.json">
+    <header class="top">
+      <div><p class="eyebrow">WEBGL DEMO 02 · STUDIO CLOUD</p><h1>Qubit topologique RATISS + ablation de graphe</h1></div>
+      <div class="tag">frontière de variation · phase logique simulée · provenance préservée</div>
+    </header>
+    <main class="shell">
+      <aside class="design-panel">
+        <p class="eyebrow">DESIGN DE RÉFÉRENCE</p><h2 id="design-name">Chargement du design…</h2>
+        <p>La comparaison de graphes conserve le circuit complet visible. Une régularisation de relation ne masque jamais le design qui l’a produite.</p>
+        <svg id="design-schematic" class="design-schematic" viewBox="0 0 100 100" role="img" aria-label="Schéma complet Quantum Circuit Studio"></svg>
+        <div class="design-grid"><div class="design-card"><strong id="component-count">—</strong><span>composants / liens</span></div><div class="design-card"><strong id="design-status">—</strong><span>validation locale</span></div></div>
+        <div id="design-layers" class="mini-list"></div><div id="design-frequency" class="mini-list"></div><div id="design-crosstalk" class="mini-list"></div>
+        <pre id="design-console" class="mini-console">Ablation de graphe sur design Studio : en attente</pre>
+      </aside>
+      <section class="stage"><div id="scene"></div><div class="scene-title"><span>COUCHE LOGIQUE DISTRIBUÉE</span><strong>Graphe inspecté + qubit topologique simulé</strong></div><div class="overlay"><span id="step-label">Chargement…</span><span>Frontière de variation → TSP ciblé</span></div></section>
+      <aside class="panel">
+        <p class="eyebrow">COMPARAISON CALCULÉE</p><h2>Régularisation de graphe bornée</h2>
+        <p>Le scénario régularisé applique un profil lisse aux relations de la frontière exportée. La scène conserve séparément l’état de qubit topologique logiciel : l’ablation agit sur le graphe, elle ne répare ni ne fabrique un qubit physique.</p>
+        <div class="controls"><button id="baseline" class="active">Référence</button><button id="regularized">Régularisation</button><button id="play">Pause</button></div>
+        <div class="metric"><span>Étape / frontière</span><strong id="gate">—</strong></div><div class="metric primary"><span>Signature logique RATISS</span><strong id="logical">—</strong></div><div class="metric"><span>Phase / torsion</span><strong id="phase">—</strong></div><div class="metric"><span>Cohérence logique</span><strong id="coherence">—</strong></div><div class="metric"><span>Support topologique (somme)</span><strong id="support">—</strong></div><div class="metric"><span>P<sub>sig</sub> graphe</span><strong id="psig">—</strong></div><div class="metric"><span>Activation lisse moyenne</span><strong id="activation">—</strong></div>
+        <input id="step" class="progress" type="range" min="0" max="0" value="0" />
+        <p class="notice">Les valeurs TTF enregistrées ne forcent aucune cible, ne « réparent » pas un état quantique et ne concluent pas à une protection de qubit physique. L’anneau visualise uniquement les paramètres logiques s’ils sont présents dans l’artefact.</p>
+      </aside>
+    </main>
+    <script src="../vendor/three.min.js"></script><script src="trajectory-demo.js"></script>
+  </body>
+</html>

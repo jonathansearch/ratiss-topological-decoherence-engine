@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ratiss-topological-decoherence-engine"
+version = "0.1.0"
+description = "Local RATISS SDK for simulating and inspecting topological logical-state decoherence trajectories."
+requires-python = ">=3.11"
+dependencies = [
+  "flask>=3.0",
+  "numpy>=1.26",
+  "scipy>=1.11",
+  "qiskit==2.5.2",
+  "qiskit-aer==0.17.2",
+]
+
+[project.optional-dependencies]
+photonics = ["perceval-quandela>=1.2,<2"]
+
+[project.scripts]
+ratiss-topo-demo = "ratiss_topological_decoherence.cli:main"
+ratiss-studio-cloud = "ratiss_topological_decoherence.cloud_server:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-q"

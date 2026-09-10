@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark" />
+    <title>RATISS Quantum Topology Studio Cloud</title>
+    <link rel="stylesheet" href="studio.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div><p class="eyebrow">RATISS · STUDIO CLOUD</p><h1>Quantum Topology Studio</h1></div>
+      <div class="top-status"><span class="status-dot"></span><span>Conception locale · calcul extensible · aucune validation matérielle déclarée</span></div>
+    </header>
+    <main class="shell">
+      <aside class="sidebar">
+        <section>
+          <p class="eyebrow">CIRCUIT INTERNE</p>
+          <h2 id="circuit-name">Chargement…</h2>
+          <p class="body-muted">Le modèle Studio est la source de vérité. La simulation RATISS produit un artefact séparé, traçable et rejouable.</p>
+          <div class="button-grid"><button id="demo">Démo Studio</button><button id="add-qubit">+ Transmon</button><button id="optimize">Optimiser</button><button id="export">Exporter JSON</button></div>
+        </section>
+        <section>
+          <p class="eyebrow">VALIDATION DE CONCEPTION</p>
+          <div id="validation" class="stack"></div>
+        </section>
+        <section>
+          <p class="eyebrow">COUCHES CONCEPTUELLES</p>
+          <div id="layers" class="stack"></div>
+        </section>
+        <section>
+          <p class="eyebrow">CARTE DE FRÉQUENCE</p>
+          <div id="frequency" class="stack"></div>
+        </section>
+      </aside>
+      <section class="workspace">
+        <div class="workspace-head"><div><p class="eyebrow">SCHÉMA + TOPOLOGIE</p><h2>Design → simulation topologique</h2></div><button id="simulate" class="primary">Simuler avec RATISS</button></div>
+        <div class="view-grid">
+          <section class="card"><div class="card-head"><span>Schéma Studio</span><span id="component-count">—</span></div><svg id="schematic" viewBox="0 0 100 100" role="img" aria-label="Schéma de conception quantique"></svg></section>
+          <section class="card topology-card"><div class="card-head"><span>Topologie de simulation</span><span id="timeline-step">En attente</span></div><div id="topology-view"></div><p id="topology-caption" class="caption">Lance une simulation pour visualiser la trajectoire topologique calculée.</p></section>
+        </div>
+        <section class="card timeline-card"><div class="card-head"><span>Timeline RATISS</span><output id="timeline-output">—</output></div><input id="timeline" type="range" min="0" max="0" value="0" disabled /><div class="metrics"><div><span>P<sub>sig</sub> graphe</span><strong id="graph-psig">—</strong></div><div><span>P<sub>sig</sub> logique</span><strong id="logical-psig">—</strong></div><div><span>Décorrélation</span><strong id="decoherence">—</strong></div><div><span>Zones critiques</span><strong id="critical">—</strong></div><div><span>Route TSP</span><strong id="route">—</strong></div></div></section>
+        <section class="lower-grid"><section class="card"><div class="card-head"><span>Diaphonie nominale Studio</span><span>Overlay, non EM</span></div><div id="crosstalk" class="table-wrap"></div></section><section class="card"><div class="card-head"><span>Console de compilation</span><span>Traçabilité</span></div><pre id="console">Prêt : sélectionne un design puis lance la simulation.</pre></section></section>
+      </section>
+    </main>
+    <script src="vendor/three.min.js"></script>
+    <script type="module" src="studio-app.mjs"></script>
+  </body>
+</html>

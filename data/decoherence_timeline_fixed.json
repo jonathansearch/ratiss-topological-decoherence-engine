@@ -1,0 +1,6254 @@
+{
+  "schema": "ratiss.topological-decoherence.timeline.v1",
+  "provenance": {
+    "mode": "local",
+    "engine": "ratiss-topological-decoherence-engine",
+    "simulation": "density_matrix",
+    "validated_on_hardware": false,
+    "claim_boundary": "Simulation and topological post-processing only; not a hardware topological-qubit certification or an error-correction command."
+  },
+  "encoding": {
+    "profile": "h1_distributed_logical_state",
+    "description": "Five-qubit distributed logical-state demonstration with cycle-like correlation couplings.",
+    "hardware_claim": "none",
+    "logical_core": {
+      "source": "RATISS Experimental IA/decoherence-map:c67d2e7:ratis_net/lct_modules/topo_qubit.py",
+      "interpretation": "Algorithmic topological-logical-qubit sidecar; separate from the density-matrix circuit layer."
+    }
+  },
+  "config": {
+    "n_qubits": 5,
+    "scenario": "accelerated_decoherence_stress_demo",
+    "t1_seconds": 0.0001,
+    "t2_seconds": 5e-05,
+    "single_gate_seconds": 4e-06,
+    "two_gate_seconds": 1.2e-05,
+    "one_qubit_depolarizing": 0.001,
+    "two_qubit_depolarizing": 0.01,
+    "edge_threshold": 0.04,
+    "criticality_threshold": 0.38,
+    "rips_max_edge": null
+  },
+  "cube": {
+    "axes": [
+      "step",
+      "source_qubit",
+      "target_qubit"
+    ],
+    "metric": "normalized_mutual_information",
+    "normalization": "min(1, I(rho_ij)/2)"
+  },
+  "steps": [
+    {
+      "step": 0,
+      "gate": "initial",
+      "qubits": [
+        {
+          "id": 0,
+          "position": [
+            2.8,
+            0.0,
+            0.0
+          ],
+          "fidelity_to_ideal": 1.0,
+          "local_decoherence": 0.0,
+          "purity": 1.0,
+          "topology_support": 0.14735209,
+          "psig": 0.14735209,
+          "degree": 4,
+          "criticality": 0.213161978,
+          "criticality_terms": {
+            "fidelity_loss": 0.0,
+            "topology_deficit": 0.85264791,
+            "link_break_ratio": 0.0
+          }
+        },
+        {
+          "id": 1,
+          "position": [
+            0.865248,
+            2.662958,
+            0.205725
+          ],
+          "fidelity_to_ideal": 1.0,
+          "local_decoherence": 0.0,
+          "purity": 1.0,
+          "topology_support": 0.070534725,
+          "psig": 0.070534725,
+          "degree": 3,
+          "criticality": 0.232366319,
+          "criticality_terms": {
+            "fidelity_loss": 0.0,
+            "topology_deficit": 0.929465275,
+            "link_break_ratio": 0.0
+          }
+        },
+        {
+          "id": 2,
+          "position": [
+            -2.265248,
+            1.645799,
+            -0.33287
+          ],
+          "fidelity_to_ideal": 1.0,
+          "local_decoherence": 0.0,
+          "purity": 1.0,
+          "topology_support": 0.151402694,
+          "psig": 0.151402694,
+          "degree": 3,
+          "criticality": 0.212149327,
+          "criticality_terms": {
+            "fidelity_loss": 0.0,
+            "topology_deficit": 0.848597306,
+            "link_break_ratio": 0.0
+          }
+        },
+        {
+          "id": 3,
+          "position": [
+            -2.265248,
+            -1.645799,
+            0.33287
+          ],
+          "fidelity_to_ideal": 1.0,
+          "local_decoherence": 0.0,
+          "purity": 1.0,
+          "topology_support": 0.169472987,
+          "psig": 0.169472987,
+          "degree": 4,
+          "criticality": 0.207631753,
+          "criticality_terms": {
+            "fidelity_loss": 0.0,
+            "topology_deficit": 0.830527013,
+            "link_break_ratio": 0.0
+          }
+        },
+        {
+          "id": 4,
+          "position": [
+            0.865248,
+            -2.662958,
+            -0.205725
+          ],
+          "fidelity_to_ideal": 1.0,
+          "local_decoherence": 0.0,
+          "purity": 1.0,
+          "topology_support": 0.196894118,
+          "psig": 0.196894118,
+          "degree": 4,
+          "criticality": 0.200776471,
+          "criticality_terms": {
+            "fidelity_loss": 0.0,
+            "topology_deficit": 0.803105882,
+            "link_break_ratio": 0.0
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": 0,
+          "target": 1,
+          "mutual_information": -0.045410253,
+          "pauli_correlation": 0.333333333,
+          "concurrence": 0.0,
+          "correlation": 0.087150002,
+          "type": "classical_or_mixed",
+          "stability": 1.0,
+          "active": true
+        },
+        {
+          "source": 0,
+          "target": 2,
+          "mutual_information": 0.016546133,
+          "pauli_correlation": 0.333333333,
+          "concurrence": 0.0,
+          "correlation": 0.127421653,
+          "type": "classical_or_mixed",
+          "stability": 1.0,
+          "active": true
+        },
+        {
+          "source": 0,
+          "target": 3,
+          "mutual_information": 0.061955042,
+          "pauli_correlation": 0.333333333,
+          "concurrence": 0.0,
+          "correlation": 0.156937444,
+          "type": "classical_or_mixed",
+          "stability": 1.0,
+          "active": true
+        },
+        {
+          "source": 0,
+          "target": 4,
+          "mutual_information": 0.155742451,
+          "pauli_correlation": 0.333333333,
+          "concurrence": 0.0,
+          "correlation": 0.21789926,
+          "type": "classical_or_mixed",
+          "stability": 1.0,
+          "active": true
+        },
+        {
+          "source": 1,
+          "target": 3,
+          "mutual_information": -0.084396694,
+          "pauli_correlation": 0.333333333,
+          "concurrence": 0.0,
+          "correlation": 0.061808815,
+          "type": "classical_or_mixed",
+          "stability": 1.0,
+          "active": true
+        },
+        {
+          "source": 1,
+          "target": 4,
+          "mutual_information": 0.025405253,
+          "pauli_correlation": 0.333333333,
+          "concurrence": 0.0,
+          "correlation": 0.133180081,
+          "type": "classical_or_mixed",
+          "stability": 1.0,
+          "active": true
+        },
+        {
+          "source": 2,
+          "target": 3,
+          "mutual_information": 0.205772575,
+          "pauli_correlation": 0.333333333,
+          "concurrence": 0.0,
+          "correlation": 0.25041884,
+          "type": "classical_or_mixed",
+          "stability": 1.0,
+          "active": true
+        },
+        {
+          "source": 2,
+          "target": 4,
+          "mutual_information": 0.170928636,
+          "pauli_correlation": 0.333333333,
+          "concurrence": 0.0,
+          "correlation": 0.22777028,
+          "type": "classical_or_mixed",
+          "stability": 1.0,
+          "active": true
+        },
+        {
+          "source": 3,
+          "target": 4,
+          "mutual_information": 0.141631051,
+          "pauli_correlation": 0.333333333,
+          "concurrence": 0.0,
+          "correlation": 0.20872685,
+          "type": "classical_or_mixed",
+          "stability": 1.0,
+          "active": true
+        }
+      ],
+      "avg_psig": 0.147131323,
+      "decoherence_detected": false,
+      "topology": {
+        "psig": 0.0,
+        "betti": [
+          1,
+          0,
+          0
+        ],
+        "diagrams": {
+          "H0": [
+            [
+              0.0,
+              1.1261416800888455
+            ],
+            [
+              0.0,
+              1.1946831027901132
+            ],
+            [
+              0.0,
+              1.2086102257331628
+            ],
+            [
+              0.0,
+              1.4460537000696085
+            ],
+            [
+              0.0,
+              null
+            ]
+          ],
+          "H1": [
+            [
+              1.2229722615219247,
+              1.2229722615219247
+            ],
+            [
+              1.3406649117842762,
+              1.3406649117842762
+            ],
+            [
+              1.4018586677044387,
+              1.4018586677044387
+            ],
+            [
+              1.5000964019405851,
+              1.5000964019405851
+            ],
+            [
+              1.5811241240625897,
+              1.5811241240625897
+            ],
+            [
+              1.6527404242528723,
+              1.6527404242528723
+            ]
+          ]
+        },
+        "n_finite_h1": 0,
+        "max_edge": 1.6527404242528723,
+        "distance_model": "euclidean_distance_between_correlation_profiles"
+      },
+      "logical_topology": {
+        "P_sig": 0.18216190760457532,
+        "n_cycles": 1,
+        "betti": [
+          1,
+          0,
+          0
+        ],
+        "diagrams": {
+          "H0": [
+            [
+              0.0,
+              0.07764571353075614
+            ],
+            [
+              0.0,
+              0.0776457135307562
+            ],
+            [
+              0.0,
+              0.0776457135307562
+            ],
+            [
+              0.0,
+              0.0776457135307562
+            ],
+            [
+              0.0,
+              0.07764571353075621
+            ],
+            [
+              0.0,
+              0.07764571353075621
+            ],
+            [
+              0.0,
+              0.07764571353075622
+            ],
+            [
+              0.0,
+              0.07764571353075624
+            ],
+            [
+              0.0,
+              0.07764571353075626
+            ],
+            [
+              0.0,
+              0.07764571353075628
+            ],
+            [
+              0.0,
+              0.07764571353075628
+            ],
+            [
+              0.0,
+              null
+            ]
+          ],
+          "H1": [
+            [
+              0.14999999999999994,
+              0.14999999999999994
+            ],
+            [
+              0.14999999999999994,
+              0.14999999999999994
+            ],
+            [
+              0.14999999999999994,
+              0.14999999999999994
+            ],
+            [
+              0.14999999999999997,
+              0.14999999999999997
+            ],
+            [
+              0.15,
+              0.15
+            ],
+            [
+              0.15,
+              0.15
+            ],
+            [
+              0.15000000000000002,
+              0.15000000000000002
+            ],
+            [
+              0.15000000000000002,
+              0.15000000000000002
+            ],
+            [
+              0.15000000000000002,
+              0.15000000000000002
+            ],
+            [
+              0.15000000000000002,
+              0.15000000000000002
+            ],
+            [
+              0.15000000000000005,
+              0.15000000000000005
+            ],
+            [
+              0.15000000000000008,
+              0.15000000000000008
+            ],
+            [
+              0.2121320343559642,
+              0.2121320343559642
+            ],
+            [
+              0.21213203435596423,
+              0.21213203435596423
+            ],
+            [
+              0.21213203435596423,
+              0.21213203435596423
+            ],
+            [
+              0.21213203435596423,
+              0.21213203435596423
+            ],
+            [
+              0.21213203435596423,
+              0.21213203435596423
+            ],
+            [
+              0.21213203435596426,
+              0.21213203435596426
+            ],
+            [
+              0.21213203435596426,
+              0.21213203435596426
+            ],
+            [
+              0.21213203435596426,
+              0.21213203435596426
+            ],
+            [
+              0.21213203435596428,
+              0.21213203435596428
+            ],
+            [
+              0.21213203435596428,
+              0.21213203435596428
+            ],
+            [
+              0.21213203435596428,
+              0.21213203435596428
+            ],
+            [
+              0.2121320343559643,
+              0.2121320343559643
+            ],
+            [
+              0.25980762113533157,
+              0.25980762113533157
+            ],
+            [
+              0.25980762113533157,
+              0.25980762113533157
+            ],
+            [
+              0.25980762113533157,
+              0.25980762113533157
+            ],
+            [
+              0.25980762113533157,
+              0.25980762113533157
+            ],
+            [
+              0.25980762113533157,
+              0.25980762113533157
+            ],
+            [
+              0.25980762113533157,
+              0.25980762113533157
+            ],
+            [
+              0.25980762113533157,
+              0.25980762113533157
+            ],
+            [
+              0.2598076211353316,
+              0.2598076211353316
+            ],
+            [
+              0.2598076211353316,
+              0.2598076211353316
+            ],
+            [
+              0.2598076211353316,
+              0.2598076211353316
+            ],
+            [
+              0.0776457135307563,
+              0.2598076211353316
+            ],
+            [
+              0.2598076211353316,
+              0.2598076211353316
+            ],
+            [
+              0.2598076211353316,
+              0.2598076211353316
+            ],
+            [
+              0.28977774788672045,
+              0.28977774788672045
+            ],
+            [
+              0.28977774788672045,
+              0.28977774788672045
+            ],
+            [
+              0.28977774788672045,
+              0.28977774788672045
+            ],
+            [
+              0.28977774788672045,
+              0.28977774788672045
+            ],
+            [
+              0.28977774788672045,
+              0.28977774788672045
+            ],
+            [
+              0.28977774788672045,
+              0.28977774788672045
+            ],
+            [
+              0.28977774788672045,
+              0.28977774788672045
+            ],
+            [
+              0.2897777478867205,
+              0.2897777478867205
+            ],
+            [
+              0.2897777478867205,
+              0.2897777478867205
+            ],
+            [
+              0.2897777478867205,
+              0.2897777478867205
+            ],
+            [
+              0.2897777478867205,
+              0.2897777478867205
+            ],
+            [
+              0.2897777478867205,
+              0.2897777478867205
+            ],
+            [
+              0.3,
+              0.3
+            ],
+            [
+              0.3,
+              0.3
+            ],
+            [
+              0.3,
+              0.3
+            ],
+            [
+              0.3,
+              0.3
+            ],
+            [
+              0.30000000000000004,
+              0.30000000000000004
+            ],
+            [
+              0.30000000000000004,
+              0.30000000000000004
+            ]
+          ]
+        },
+        "twist": 0.0,
+        "phase": 0.0,
+        "coherence": 1.0,
+        "protected": false,
+        "logical_bit": 0,
+        "scope": "algorithmic_topological_logical_qubit_simulation",
+        "circuit_coupling": {
+          "event": "initial",
+          "mapping": "source_topological_qubit_sidecar"
+        }
+      },
+      "tsp_inspection": {
+        "path": [],
+        "cost": 0.0,
+        "method": "trivial",
+        "nodes": []
+      },
+      "cube_slice": [
+        [
+          1.0,
+          -0.045410253,
+          0.016546133,
+          0.061955042,
+          0.155742451
+        ],
+        [
+          -0.045410253,
+          1.0,
+          -0.145062674,
+          -0.084396694,
+          0.025405253
+        ],
+        [
+          0.016546133,
+          -0.145062674,
+          1.0,
+          0.205772575,
+          0.170928636
+        ],
+        [
+          0.061955042,
+          -0.084396694,
+          0.205772575,
+          1.0,
+          0.141631051
+        ],
+        [
+          0.155742451,
+          0.025405253,
+          0.170928636,
+          0.141631051,
+          1.0
+        ]
+      ]
+    },
+    {
+      "step": 1,
+      "gate": "h(0)",
+      "qubits": [
+        {
+          "id": 0,
+          "position": [
+            2.8,
+            0.0,
+            0.0
+          ],
+          "fidelity_to_ideal": 0.961096615,
+          "local_decoherence": 0.038903385,
+          "purity": 0.925987374,
+          "topology_support": 0.0,
+          "psig": 0.0,
+          "degree": 0,
+          "criticality": 0.423342031,
+          "criticality_terms": {
+            "fidelity_loss": 0.038903385,
+            "topology_deficit": 1.0,
+            "link_break_ratio": 1.0
+          }
+        },
+        {
+          "id": 1,
+          "position": [
+            0.865248,
+            2.662958,
+            0.205725
+          ],
+          "fidelity_to_ideal": 1.0,
+          "local_decoherence": 0.0,
+          "purity": 1.0,
+          "topology_support": 0.077524832,
+          "psig": 0.077524832,
+          "degree": 2,
+          "criticality": 0.330618792,
+          "criticality_terms": {
+            "fidelity_loss": 0.0,
+            "topology_deficit": 0.922475168,
+            "link_break_ratio": 0.666666667
+          }
+        },
+        {
+          "id": 2,
+          "position": [
+            -2.265248,
+            1.645799,
+            -0.33287
+          ],
+          "fidelity_to_ideal": 1.0,
+          "local_decoherence": 0.0,
+          "purity": 1.0,
+          "topology_support": 0.05915041,
+          "psig": 0.05915041,
+          "degree": 2,
+          "criticality": 0.335212398,
+          "criticality_terms": {
+            "fidelity_loss": 0.0,
+            "topology_deficit": 0.94084959,
+            "link_break_ratio": 0.666666667
+          }
+        },
+        {
+          "id": 3,
+          "position": [
+            -2.265248,
+            -1.645799,
+            0.33287
+          ],
+          "fidelity_to_ideal": 1.0,
+          "local_decoherence": 0.0,
+          "purity": 1.0,
+          "topology_support": 0.102587701,
+          "psig": 0.102587701,
+          "degree": 3,
+          "criticality": 0.261853075,
+          "criticality_terms": {
+            "fidelity_loss": 0.0,
+            "topology_deficit": 0.897412299,
+            "link_break_ratio": 0.25
+          }
+        },
+        {
+          "id": 4,
+          "position": [
+            0.865248,
+            -2.662958,
+            -0.205725
+          ],
+          "fidelity_to_ideal": 1.0,
+          "local_decoherence": 0.0,
+          "purity": 1.0,
+          "topology_support": 0.038699193,
+          "psig": 0.038699193,
+          "degree": 1,
+          "criticality": 0.352825202,
+          "criticality_terms": {
+            "fidelity_loss": 0.0,
+            "topology_deficit": 0.961300807,
+            "link_break_ratio": 0.75
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": 1,
+          "target": 2,
+          "mutual_information": 0.044472002,
+          "pauli_correlation": 0.333333333,
+          "concurrence": 0.0,
+          "correlation": 0.145573468,
+          "type": "classical_or_mixed",
+          "stability": 1.0,
+          "active": true
+        },
+        {
+          "source": 1,
+          "target": 3,
+          "mutual_information": 0.073629527,
+          "pauli_correlation": 0.333333333,
+          "concurrence": 0.0,
+          "correlation": 0.164525859,
+          "type": "classical_or_mixed",
+          "stability": 1.0,
+          "active": true
+        },
+        {
+          "source": 2,
+          "target": 3,
+          "mutual_information": -0.039443839,
+          "pauli_correlation": 0.333333333,
+          "concurrence": 0.0,
+          "correlation": 0.091028171,
+          "type": "classical_or_mixed",
+          "stability": 1.0,
+          "active": true
+        },
+        {
+          "source": 3,
+          "target": 4,
+          "mutual_information": 0.058661701,
+          "pauli_correlation": 0.333333333,
+          "concurrence": 0.0,
+          "correlation": 0.154796772,
+          "type": "classical_or_mixed",
+          "stability": 1.0,
+          "active": true
+        }
+      ],
+      "avg_psig": 0.055592427,
+      "decoherence_detected": true,
+      "topology": {
+        "psig": 0.026198389,
+        "betti": [
+          1,
+          0,
+          0
+        ],
+        "diagrams": {
+          "H0": [
+            [
+              0.0,
+              1.3302136573414878
+            ],
+            [
+              0.0,
+              1.3532816265580268
+            ],
+            [
+              0.0,
+              1.3562750388756823
+            ],
+            [
+              0.0,
+              1.4033148315330048
+            ],
+            [
+              0.0,
+              null
+            ]
+          ],
+          "H1": [
+            [
+              1.4464493498287199,
+              1.4464493498287199
+            ],
+            [
+              1.4802904143837103,
+              1.4802904143837103
+            ],
+            [
+              1.4540920250101887,
+              1.4802904143837103
+            ],
+            [
+              1.4830004671374308,
+              1.4830004671374308
+            ],
+            [
+              1.6154877477543315,
+              1.6154877477543315
+            ],
+            [
+              1.6352947086830913,
+              1.6352947086830913
+            ]
+          ]
+        },
+        "n_finite_h1": 1,
+        "max_edge": 1.6352947086830913,
+        "distance_model": "euclidean_distance_between_correlation_profiles"
+      },
+      "logical_topology": {
+        "P_sig": 0.6541568599682558,
+        "n_cycles": 1,
+        "betti": [
+          1,
+          0,
+          0
+        ],
+        "diagrams": {
+          "H0": [
+            [
+              0.0,
+              0.357610831384988
+            ],
+            [
+              0.0,
+              0.3589577758099353
+            ],
+            [
+              0.0,
+              0.3593995348598792
+            ],
+            [
+              0.0,
+              0.3596321704276435
+            ],
+            [
+              0.0,
+              0.3604825026008418
+            ],
+            [
+              0.0,
+              0.3611340755893227
+            ],
+            [
+              0.0,
+              0.381757672000058
+            ],
+            [
+              0.0,
+              0.3824520767974232
+            ],
+            [
+              0.0,
+              0.3831538618677354
+            ],
+            [
+              0.0,
+              0.3835385496080764
+            ],
+            [
+              0.0,
+              0.3844262338455834
+            ],
+            [
+              0.0,
+              null
+            ]
+          ],
+          "H1": [
+            [
+              0.654946794337097,
+              0.654946794337097
+            ],
+            [
+              0.6549524707442124,
+              0.6549524707442124
+            ],
+            [
+              0.6555623846195802,
+              0.6555623846195802
+            ],
+            [
+              0.6558733013703387,
+              0.6558733013703387
+            ],
+            [
+              0.6560575241962264,
+              0.6560575241962264
+            ],
+            [
+              0.6561330369793325,
+              0.6561330369793325
+            ],
+            [
+              0.7135639984296447,
+              0.7135639984296447
+            ],
+            [
+              0.7143389091737895,
+              0.7143389091737895
+            ],
+            [
+              0.7156963147429176,
+              0.7156963147429176
+            ],
+            [
+              0.7159572518689821,
+              0.7159572518689821
+            ],
+            [
+              0.7161642242335805,
+              0.7161642242335805
+            ],
+            [
+              0.7171028970212517,
+              0.7171028970212517
+            ],
+            [
+              0.895633154505697,
+              0.895633154505697
+            ],
+            [
+              0.8957139639879297,
+              0.8957139639879297
+            ],
+            [
+              0.8968700611722501,
+              0.8968700611722501
+            ],
+            [
+              0.8970232429779109,
+              0.8970232429779109
+            ],
+            [
+              0.8973213777009165,
+              0.8973213777009165
+            ],
+            [
+              0.8982416622341169,
+              0.8982416622341169
+            ],
+            [
+              0.9657758255353579,
+              0.9657758255353579
+            ],
+            [
+              0.9661003512916577,
+              0.9661003512916577
+            ],
+            [
+              0.9663487043959543,
+              0.9663487043959543
+            ],
+            [
+              0.9664211532812172,
+              0.9664211532812172
+            ],
+            [
+              0.9667927673112876,
+              0.9667927673112876
+            ],
+            [
+              0.9674885280973817,
+              0.9674885280973817
+            ],
+            [
+              1.0385175884204878,
+              1.0385175884204878
+            ],
+            [
+              1.0386909931774575,
+              1.0386909931774575
+            ],
+            [
+              1.0389618563680578,
+              1.0389618563680578
+            ],
+            [
+              0.38480499639980204,
+              1.0389618563680578
+            ],
+            [
+              1.1245458362227871,
+              1.1245458362227871
+            ],
+            [
+              1.1245718948385974,
+              1.1245718948385974
+            ],
+            [
+              1.124790279547273,
+              1.124790279547273
+            ],
+            [
+              1.1250404144739157,
+              1.1250404144739157
+            ],
+            [
+              1.125601126233109,
+              1.125601126233109
+            ],
+            [
+              1.1258191081386226,
+              1.1258191081386226
+            ],
+            [
+              1.2110793427921511,
+              1.2110793427921511
+            ],
+            [
+              1.212901699797857,
+              1.212901699797857
+            ],
+            [
+              1.2129422609982237,
+              1.2129422609982237
+            ],
+            [
+              1.2148842007956924,
+              1.2148842007956924
+            ],
+            [
+              1.2158177740767353,
+              1.2158177740767353
+            ],
+            [
+              1.215845886824816,
+              1.215845886824816
+            ],
+            [
+              1.216284042558654,
+              1.216284042558654
+            ],
+            [
+              1.216480052437676,
+              1.216480052437676
+            ],
+            [
+              1.2167503510453912,
+              1.2167503510453912
+            ],
+            [
+              1.2989815462676393,
+              1.2989815462676393
+            ],
+            [
+              1.2994048707475794,
+              1.2994048707475794
+            ],
+            [
+              1.3005136609089942,
+              1.3005136609089942
+            ],
+            [
+              1.3102811820815552,
+              1.3102811820815552
+            ],
+            [
+              1.3119287002356248,
+              1.3119287002356248
+            ],
+            [
+              1.3120755428766955,
+              1.3120755428766955
+            ],
+            [
+              1.312281128734456,
+              1.312281128734456
+            ],
+            [
+              1.3132149013944434,
+              1.3132149013944434
+            ],
+            [
+              1.31344411746964,
+              1.31344411746964
+            ],
+            [
+              1.33213032866325,
+              1.33213032866325
+            ],
+            [
+              1.33343960749512,
+              1.33343960749512
+            ],
+            [
+              1.3342971723567718,
+              1.3342971723567718
+            ]
+          ]
+        },
+        "twist": 1.5707963267948966,
+        "phase": 0.7853981633974483,
+        "coherence": 0.996,
+        "protected": true,
+        "logical_bit": 1,
+        "scope": "algorithmic_topological_logical_qubit_simulation",
+        "circuit_coupling": {
+          "event": "h(0)",
+          "mapping": "h_gate_to_topological_h_analogue",
+          "software_noise_budget": 0.004
+        }
+      },
+      "tsp_inspection": {
+        "path": [
+          0
+        ],
+        "cost": 0.0,
+        "method": "trivial",
+        "nodes": [
+          0
+        ]
+      },
+      "cube_slice": [
+        [
+          1.0,
+          -0.040516859,
+          -0.022526688,
+          0.01249348,
+          -0.016429411
+        ],
+        [
+          -0.040516859,
+          1.0,
+          0.044472002,
+          0.073629527,
+          -0.149405362
+        ],
+        [
+          -0.022526688,
+          0.044472002,
+          1.0,
+          -0.039443839,
+          -0.131934264
+        ],
+        [
+          0.01249348,
+          0.073629527,
+          -0.039443839,
+          1.0,
+          0.058661701
+        ],
+        [
+          -0.016429411,
+          -0.149405362,
+          -0.131934264,
+          0.058661701,
+          1.0
+        ]
+      ]
+    },
+    {
+      "step": 2,
+      "gate": "cx(0,1)",
+      "qubits": [
+        {
+          "id": 0,
+          "position": [
+            2.8,
+            0.0,
+            0.0
+          ],
+          "fidelity_to_ideal": 0.994616938,
+          "local_decoherence": 0.005383062,
+          "purity": 0.510708169,
+          "topology_support": 0.143110001,
+          "psig": 0.143110001,
+          "degree": 3,
+          "criticality": 0.217452337,
+          "criticality_terms": {
+            "fidelity_loss": 0.005383062,
+            "topology_deficit": 0.856889999,
+            "link_break_ratio": 0.0
+          }
+        },
+        {
+          "id": 1,
+          "position": [
+            0.865248,
+            2.662958,
+            0.205725
+          ],
+          "fidelity_to_ideal": 0.994616938,
+          "local_decoherence": 0.005383062,
+          "purity": 0.510708169,
+          "topology_support": 0.181062538,
+          "psig": 0.181062538,
+          "degree": 4,
+          "criticality": 0.207964203,
+          "criticality_terms": {
+            "fidelity_loss": 0.005383062,
+            "topology_deficit": 0.818937462,
+            "link_break_ratio": 0.0
+          }
+        },
+        {
+          "id": 2,
+          "position": [
+            -2.265248,
+            1.645799,
+            -0.33287
+          ],
+          "fidelity_to_ideal": 1.0,
+          "local_decoherence": 0.0,
+          "purity": 1.0,
+          "topology_support": 0.098336102,
+          "psig": 0.098336102,
+          "degree": 4,
+          "criticality": 0.225415974,
+          "criticality_terms": {
+            "fidelity_loss": 0.0,
+            "topology_deficit": 0.901663898,
+            "link_break_ratio": 0.0
+          }
+        },
+        {
+          "id": 3,
+          "position": [
+            -2.265248,
+            -1.645799,
+            0.33287
+          ],
+          "fidelity_to_ideal": 1.0,
+          "local_decoherence": 0.0,
+          "purity": 1.0,
+          "topology_support": 0.112821619,
+          "psig": 0.112821619,
+          "degree": 3,
+          "criticality": 0.221794595,
+          "criticality_terms": {
+            "fidelity_loss": 0.0,
+            "topology_deficit": 0.887178381,
+            "link_break_ratio": 0.0
+          }
+        },
+        {
+          "id": 4,
+          "position": [
+            0.865248,
+            -2.662958,
+            -0.205725
+          ],
+          "fidelity_to_ideal": 1.0,
+          "local_decoherence": 0.0,
+          "purity": 1.0,
+          "topology_support": 0.164950439,
+          "psig": 0.164950439,
+          "degree": 4,
+          "criticality": 0.20876239,
+          "criticality_terms": {
+            "fidelity_loss": 0.0,
+            "topology_deficit": 0.835049561,
+            "link_break_ratio": 0.0
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": 0,
+          "target": 1,
+          "mutual_information": 0.393255408,
+          "pauli_correlation": 0.266399773,
+          "concurrence": 0.464531136,
+          "correlation": 0.348855936,
+          "type": "quantum_candidate",
+          "stability": 0.989262854,
+          "active": true
+        },
+        {
+          "source": 0,
+          "target": 2,
+          "mutual_information": 0.099991387,
+          "pauli_correlation": 0.048781073,
+          "concurrence": 0.0,
+          "correlation": 0.082067777,
+          "type": "classical_or_mixed",
+          "stability": 0.994616938,
+          "active": true
+        },
+        {
+          "source": 0,
+          "target": 4,
+          "mutual_information": 0.191450641,
+          "pauli_correlation": 0.048781073,
+          "concurrence": 0.0,
+          "correlation": 0.141516292,
+          "type": "classical_or_mixed",
+          "stability": 0.994616938,
+          "active": true
+        },
+        {
+          "source": 1,
+          "target": 2,
+          "mutual_information": 0.0390323,
+          "pauli_correlation": 0.048781073,
+          "concurrence": 0.0,
+          "correlation": 0.042444371,
+          "type": "classical_or_mixed",
+          "stability": 0.994616938,
+          "active": true
+        },
+        {
+          "source": 1,
+          "target": 3,
+          "mutual_information": 0.170233866,
+          "pauli_correlation": 0.048781073,
+          "concurrence": 0.0,
+          "correlation": 0.127725389,
+          "type": "classical_or_mixed",
+          "stability": 0.994616938,
+          "active": true
+        },
+        {
+          "source": 1,
+          "target": 4,
+          "mutual_information": 0.289463199,
+          "pauli_correlation": 0.048781073,
+          "concurrence": 0.0,
+          "correlation": 0.205224455,
+          "type": "classical_or_mixed",
+          "stability": 0.994616938,
+          "active": true
+        },
+        {
+          "source": 2,
+          "target": 3,
+          "mutual_information": 0.035383851,
+          "pauli_correlation": 0.333333333,
+          "concurrence": 0.0,
+          "correlation": 0.13966617,
+          "type": "classical_or_mixed",
+          "stability": 1.0,
+          "active": true
+        },
+        {
+          "source": 2,
+          "target": 4,
+          "mutual_information": 0.019229882,
+          "pauli_correlation": 0.333333333,
+          "concurrence": 0.0,
+          "correlation": 0.12916609,
+          "type": "classical_or_mixed",
+          "stability": 1.0,
+          "active": true
+        },
+        {
+          "source": 3,
+          "target": 4,
+          "mutual_information": 0.103428079,
+          "pauli_correlation": 0.333333333,
+          "concurrence": 0.0,
+          "correlation": 0.183894918,
+          "type": "classical_or_mixed",
+          "stability": 1.0,
+          "active": true
+        }
+      ],
+      "avg_psig": 0.14005614,
+      "decoherence_detected": false,
+      "topology": {
+        "psig": 0.038274965,
+        "betti": [
+          1,
+          0,
+          0
+        ],
+        "diagrams": {
+          "H0": [
+            [
+              0.0,
+              0.8798646029260369
+            ],
+            [
+              0.0,
+              1.0272805867232475
+            ],
+            [
+              0.0,
+              1.247337124692806
+            ],
+            [
+              0.0,
+              1.3325326690248425
+            ],
+            [
+              0.0,
+              null
+            ]
+          ],
+          "H1": [
+            [
+              1.1545059514517377,
+              1.1545059514517377
+            ],
+            [
+              1.2860095640261626,
+              1.2860095640261626
+            ],
+            [
+              1.4140475575784592,
+              1.4140475575784592
+            ],
+            [
+              1.3757725928014568,
+              1.4140475575784592
+            ],
+            [
+              1.4170291501465806,
+              1.4170291501465806
+            ],
+            [
+              1.4227199996021098,
+              1.4227199996021098
+            ]
+          ]
+        },
+        "n_finite_h1": 1,
+        "max_edge": 1.4227199996021098,
+        "distance_model": "euclidean_distance_between_correlation_profiles"
+      },
+      "logical_topology": {
+        "P_sig": 0.6701338902072207,
+        "n_cycles": 1,
+        "betti": [
+          1,
+          0,
+          0
+        ],
+        "diagrams": {
+          "H0": [
+            [
+              0.0,
+              0.34647319239050073
+            ],
+            [
+              0.0,
+              0.3611069683367932
+            ],
+            [
+              0.0,
+              0.3628640617971535
+            ],
+            [
+              0.0,
+              0.3643099723722621
+            ],
+            [
+              0.0,
+              0.36592661212778566
+            ],
+            [
+              0.0,
+              0.37598680568080456
+            ],
+            [
+              0.0,
+              0.3765797101823052
+            ],
+            [
+              0.0,
+              0.3775810874495611
+            ],
+            [
+              0.0,
+              0.37805029810655105
+            ],
+            [
+              0.0,
+              0.38209522201535634
+            ],
+            [
+              0.0,
+              0.38357280848274794
+            ],
+            [
+              0.0,
+              null
+            ]
+          ],
+          "H1": [
+            [
+              0.6405749747457112,
+              0.6405749747457112
+            ],
+            [
+              0.6540353176845665,
+              0.6540353176845665
+            ],
+            [
+              0.6619825817274244,
+              0.6619825817274244
+            ],
+            [
+              0.6629712503513719,
+              0.6629712503513719
+            ],
+            [
+              0.6642657813795827,
+              0.6642657813795827
+            ],
+            [
+              0.6782231101817571,
+              0.6782231101817571
+            ],
+            [
+              0.6821505473029605,
+              0.6821505473029605
+            ],
+            [
+              0.7083262454445374,
+              0.7083262454445374
+            ],
+            [
+              0.7114714508456779,
+              0.7114714508456779
+            ],
+            [
+              0.7241983544196151,
+              0.7241983544196151
+            ],
+            [
+              0.725006062285217,
+              0.725006062285217
+            ],
+            [
+              0.7274101973920423,
+              0.7274101973920423
+            ],
+            [
+              0.865713659800509,
+              0.865713659800509
+            ],
+            [
+              0.8912885854445076,
+              0.8912885854445076
+            ],
+            [
+              0.8963150756235866,
+              0.8963150756235866
+            ],
+            [
+              0.8991246836471584,
+              0.8991246836471584
+            ],
+            [
+              0.9021449951687619,
+              0.9021449951687619
+            ],
+            [
+              0.9021555810594293,
+              0.9021555810594293
+            ],
+            [
+              0.9596140812087997,
+              0.9596140812087997
+            ],
+            [
+              0.9632229531749343,
+              0.9632229531749343
+            ],
+            [
+              0.9771680650110905,
+              0.9771680650110905
+            ],
+            [
+              0.9807010400856663,
+              0.9807010400856663
+            ],
+            [
+              0.9813601636753677,
+              0.9813601636753677
+            ],
+            [
+              0.984503554065191,
+              0.984503554065191
+            ],
+            [
+              1.0363455854770036,
+              1.0363455854770036
+            ],
+            [
+              1.0459610828932133,
+              1.0459610828932133
+            ],
+            [
+              1.0565318552037217,
+              1.0565318552037217
+            ],
+            [
+              0.38639796499650103,
+              1.0565318552037217
+            ],
+            [
+              1.113020826923886,
+              1.113020826923886
+            ],
+            [
+              1.1154091296641113,
+              1.1154091296641113
+            ],
+            [
+              1.1191911598229807,
+              1.1191911598229807
+            ],
+            [
+              1.1232235535793291,
+              1.1232235535793291
+            ],
+            [
+              1.1293327963464106,
+              1.1293327963464106
+            ],
+            [
+              1.130388769005148,
+              1.130388769005148
+            ],
+            [
+              1.2081186422205805,
+              1.2081186422205805
+            ],
+            [
+              1.2102940981901606,
+              1.2102940981901606
+            ],
+            [
+              1.2167614548426544,
+              1.2167614548426544
+            ],
+            [
+              1.2168083994964796,
+              1.2168083994964796
+            ],
+            [
+              1.2183680166648596,
+              1.2183680166648596
+            ],
+            [
+              1.2223719403560531,
+              1.2223719403560531
+            ],
+            [
+              1.227710076381222,
+              1.227710076381222
+            ],
+            [
+              1.2285353925262448,
+              1.2285353925262448
+            ],
+            [
+              1.2339666953795447,
+              1.2339666953795447
+            ],
+            [
+              1.2900833071055562,
+              1.2900833071055562
+            ],
+            [
+              1.3019062797762238,
+              1.3019062797762238
+            ],
+            [
+              1.3083338831365838,
+              1.3083338831365838
+            ],
+            [
+              1.3108445833715203,
+              1.3108445833715203
+            ],
+            [
+              1.310909951461812,
+              1.310909951461812
+            ],
+            [
+              1.3151951706251588,
+              1.3151951706251588
+            ],
+            [
+              1.3170770574104405,
+              1.3170770574104405
+            ],
+            [
+              1.3171391102853967,
+              1.3171391102853967
+            ],
+            [
+              1.3230376405413395,
+              1.3230376405413395
+            ],
+            [
+              1.3254712360352683,
+              1.3254712360352683
+            ],
+            [
+              1.3293409707969577,
+              1.3293409707969577
+            ],
+            [
+              1.3405527584559243,
+              1.3405527584559243
+            ]
+          ]
+        },
+        "twist": 1.5707963267948966,
+        "phase": 0.9817477042468103,
+        "coherence": 0.956,
+        "protected": true,
+        "logical_bit": 1,
+        "scope": "algorithmic_topological_logical_qubit_simulation",
+        "circuit_coupling": {
+          "event": "cx(0,1)",
+          "mapping": "two_qubit_gate_to_inspection_phase_marker",
+          "software_noise_budget": 0.04
+        }
+      },
+      "tsp_inspection": {
+        "path": [],
+        "cost": 0.0,
+        "method": "trivial",
+        "nodes": []
+      },
+      "cube_slice": [
+        [
+          1.0,
+          0.393255408,
+          0.099991387,
+          0.013513584,
+          0.191450641
+        ],
+        [
+          0.393255408,
+          1.0,
+          0.0390323,
+          0.170233866,
+          0.289463199
+        ],
+        [
+          0.099991387,
+          0.0390323,
+          1.0,
+          0.035383851,
+          0.019229882
+        ],
+        [
+          0.013513584,
+          0.170233866,
+          0.035383851,
+          1.0,
+          0.103428079
+        ],
+        [
+          0.191450641,
+          0.289463199,
+          0.019229882,
+          0.103428079,
+          1.0
+        ]
+      ]
+    },
+    {
+      "step": 3,
+      "gate": "cx(1,2)",
+      "qubits": [
+        {
+          "id": 0,
+          "position": [
+            2.8,
+            0.0,
+            0.0
+          ],
+          "fidelity_to_ideal": 0.994616938,
+          "local_decoherence": 0.005383062,
+          "purity": 0.510708169,
+          "topology_support": 0.1404261,
+          "psig": 0.1404261,
+          "degree": 2,
+          "criticality": 0.268123312,
+          "criticality_terms": {
+            "fidelity_loss": 0.005383062,
+            "topology_deficit": 0.8595739,
+            "link_break_ratio": 0.333333333
+          }
+        },
+        {
+          "id": 1,
+          "position": [
+            0.865248,
+            2.662958,
+            0.205725
+          ],
+          "fidelity_to_ideal": 0.985331306,
+          "local_decoherence": 0.014668694,
+          "purity": 0.528907046,
+          "topology_support": 0.173543658,
+          "psig": 0.173543658,
+          "degree": 2,
+          "criticality": 0.290415302,
+          "criticality_terms": {
+            "fidelity_loss": 0.014668694,
+            "topology_deficit": 0.826456342,
+            "link_break_ratio": 0.5
+          }
+        },
+        {
+          "id": 2,
+          "position": [
+            -2.265248,
+            1.645799,
+            -0.33287
+          ],
+          "fidelity_to_ideal": 0.985331306,
+          "local_decoherence": 0.014668694,
+          "purity": 0.528907046,
+          "topology_support": 0.196054727,
+          "psig": 0.196054727,
+          "degree": 2,
+          "criticality": 0.284787535,
+          "criticality_terms": {
+            "fidelity_loss": 0.014668694,
+            "topology_deficit": 0.803945273,
+            "link_break_ratio": 0.5
+          }
+        },
+        {
+          "id": 3,
+          "position": [
+            -2.265248,
+            -1.645799,
+            0.33287
+          ],
+          "fidelity_to_ideal": 1.0,
+          "local_decoherence": 0.0,
+          "purity": 1.0,
+          "topology_support": 0.040105074,
+          "psig": 0.040105074,
+          "degree": 1,
+          "criticality": 0.339973732,
+          "criticality_terms": {
+            "fidelity_loss": 0.0,
+            "topology_deficit": 0.959894926,
+            "link_break_ratio": 0.666666667
+          }
+        },
+        {
+          "id": 4,
+          "position": [
+            0.865248,
+            -2.662958,
+            -0.205725
+          ],
+          "fidelity_to_ideal": 1.0,
+          "local_decoherence": 0.0,
+          "purity": 1.0,
+          "topology_support": 0.040105074,
+          "psig": 0.040105074,
+          "degree": 1,
+          "criticality": 0.352473732,
+          "criticality_terms": {
+            "fidelity_loss": 0.0,
+            "topology_deficit": 0.959894926,
+            "link_break_ratio": 0.75
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": 0,
+          "target": 1,
+          "mutual_information": 0.233921988,
+          "pauli_correlation": 0.23937363,
+          "concurrence": 0.0,
+          "correlation": 0.235830063,
+          "type": "classical_or_mixed",
+          "stability": 0.980027207,
+          "active": true
+        },
+        {
+          "source": 0,
+          "target": 2,
+          "mutual_information": 0.372451642,
+          "pauli_correlation": 0.23937363,
+          "concurrence": 0.0,
+          "correlation": 0.325874338,
+          "type": "classical_or_mixed",
+          "stability": 0.980027207,
+          "active": true
+        },
+        {
+          "source": 1,
+          "target": 2,
+          "mutual_information": 0.557879593,
+          "pauli_correlation": 0.273493811,
+          "concurrence": 0.0,
+          "correlation": 0.458344569,
+          "type": "classical_or_mixed",
+          "stability": 0.970877783,
+          "active": true
+        },
+        {
+          "source": 3,
+          "target": 4,
+          "mutual_information": 0.067313274,
+          "pauli_correlation": 0.333333333,
+          "concurrence": 0.0,
+          "correlation": 0.160420295,
+          "type": "classical_or_mixed",
+          "stability": 1.0,
+          "active": true
+        }
+      ],
+      "avg_psig": 0.118046927,
+      "decoherence_detected": false,
+      "topology": {
+        "psig": 0.0,
+        "betti": [
+          1,
+          0,
+          0
+        ],
+        "diagrams": {
+          "H0": [
+            [
+              0.0,
+              0.6545475683676713
+            ],
+            [
+              0.0,
+              0.9486057226992898
+            ],
+            [
+              0.0,
+              1.3296841530049992
+            ],
+            [
+              0.0,
+              1.5460719096818352
+            ],
+            [
+              0.0,
+              null
+            ]
+          ],
+          "H1": [
+            [
+              1.100731046023439,
+              1.100731046023439
+            ],
+            [
+              1.6449753408608474,
+              1.6449753408608474
+            ],
+            [
+              1.6470521133434524,
+              1.6470521133434524
+            ],
+            [
+              1.7079697904213,
+              1.7079697904213
+            ],
+            [
+              1.7345630232713904,
+              1.7345630232713904
+            ],
+            [
+              1.819558600796415,
+              1.819558600796415
+            ]
+          ]
+        },
+        "n_finite_h1": 0,
+        "max_edge": 1.819558600796415,
+        "distance_model": "euclidean_distance_between_correlation_profiles"
+      },
+      "logical_topology": {
+        "P_sig": 0.6750789302969336,
+        "n_cycles": 1,
+        "betti": [
+          1,
+          0,
+          0
+        ],
+        "diagrams": {
+          "H0": [
+            [
+              0.0,
+              0.3232713980813716
+            ],
+            [
+              0.0,
+              0.3410714369701869
+            ],
+            [
+              0.0,
+              0.35957540025784385
+            ],
+            [
+              0.0,
+              0.36328613894487
+            ],
+            [
+              0.0,
+              0.363704119329158
+            ],
+            [
+              0.0,
+              0.366522522057771
+            ],
+            [
+              0.0,
+              0.3764842563429135
+            ],
+            [
+              0.0,
+              0.38186113625436297
+            ],
+            [
+              0.0,
+              0.3938622866201496
+            ],
+            [
+              0.0,
+              0.40569118777432256
+            ],
+            [
+              0.0,
+              0.4148101046056637
+            ],
+            [
+              0.0,
+              null
+            ]
+          ],
+          "H1": [
+            [
+              0.6441772066470914,
+              0.6441772066470914
+            ],
+            [
+              0.6634050284807239,
+              0.6634050284807239
+            ],
+            [
+              0.6759704044115645,
+              0.6759704044115645
+            ],
+            [
+              0.6810902787450731,
+              0.6810902787450731
+            ],
+            [
+              0.6821250041708533,
+              0.6821250041708533
+            ],
+            [
+              0.6943239084447586,
+              0.6943239084447586
+            ],
+            [
+              0.6945324409028782,
+              0.6945324409028782
+            ],
+            [
+              0.711780963937741,
+              0.711780963937741
+            ],
+            [
+              0.7118867868703431,
+              0.7118867868703431
+            ],
+            [
+              0.7130442405563303,
+              0.7130442405563303
+            ],
+            [
+              0.734853422253027,
+              0.734853422253027
+            ],
+            [
+              0.7376256870803853,
+              0.7376256870803853
+            ],
+            [
+              0.9161193259341676,
+              0.9161193259341676
+            ],
+            [
+              0.9164094313398721,
+              0.9164094313398721
+            ],
+            [
+              0.9164464106263849,
+              0.9164464106263849
+            ],
+            [
+              0.9220813731461538,
+              0.9220813731461538
+            ],
+            [
+              0.9227377647451962,
+              0.9227377647451962
+            ],
+            [
+              0.93431155487129,
+              0.93431155487129
+            ],
+            [
+              0.9475811134757517,
+              0.9475811134757517
+            ],
+            [
+              0.9574606228378142,
+              0.9574606228378142
+            ],
+            [
+              0.963729549009652,
+              0.963729549009652
+            ],
+            [
+              0.9899567970376656,
+              0.9899567970376656
+            ],
+            [
+              0.9918924860677982,
+              0.9918924860677982
+            ],
+            [
+              0.997670434684353,
+              0.997670434684353
+            ],
+            [
+              1.069651077174296,
+              1.069651077174296
+            ],
+            [
+              1.0733785519494898,
+              1.0733785519494898
+            ],
+            [
+              1.100159343000764,
+              1.100159343000764
+            ],
+            [
+              0.4250804127038303,
+              1.100159343000764
+            ],
+            [
+              1.1037282098209191,
+              1.1037282098209191
+            ],
+            [
+              1.1124846266400938,
+              1.1124846266400938
+            ],
+            [
+              1.1407151850739188,
+              1.1407151850739188
+            ],
+            [
+              1.1447533002588697,
+              1.1447533002588697
+            ],
+            [
+              1.1517099460361397,
+              1.1517099460361397
+            ],
+            [
+              1.1576779540399647,
+              1.1576779540399647
+            ],
+            [
+              1.21274043834895,
+              1.21274043834895
+            ],
+            [
+              1.2239207861243702,
+              1.2239207861243702
+            ],
+            [
+              1.2317324269257306,
+              1.2317324269257306
+            ],
+            [
+              1.2337577645517708,
+              1.2337577645517708
+            ],
+            [
+              1.2355814050861313,
+              1.2355814050861313
+            ],
+            [
+              1.2427996865382938,
+              1.2427996865382938
+            ],
+            [
+              1.2582658172309784,
+              1.2582658172309784
+            ],
+            [
+              1.2583791065700847,
+              1.2583791065700847
+            ],
+            [
+              1.2650355748222224,
+              1.2650355748222224
+            ],
+            [
+              1.3150453578420898,
+              1.3150453578420898
+            ],
+            [
+              1.3174664971000052,
+              1.3174664971000052
+            ],
+            [
+              1.3212265280632174,
+              1.3212265280632174
+            ],
+            [
+              1.3228203362589228,
+              1.3228203362589228
+            ],
+            [
+              1.333262764005259,
+              1.333262764005259
+            ],
+            [
+              1.3356707661281186,
+              1.3356707661281186
+            ],
+            [
+              1.336040330565682,
+              1.336040330565682
+            ],
+            [
+              1.3363598013972442,
+              1.3363598013972442
+            ],
+            [
+              1.343472542733508,
+              1.343472542733508
+            ],
+            [
+              1.3475268132022278,
+              1.3475268132022278
+            ],
+            [
+              1.3582952576423664,
+              1.3582952576423664
+            ],
+            [
+              1.3643515617530075,
+              1.3643515617530075
+            ]
+          ]
+        },
+        "twist": 1.5707963267948966,
+        "phase": 1.1780972450961724,
+        "coherence": 0.9159999999999999,
+        "protected": true,
+        "logical_bit": 1,
+        "scope": "algorithmic_topological_logical_qubit_simulation",
+        "circuit_coupling": {
+          "event": "cx(1,2)",
+          "mapping": "two_qubit_gate_to_inspection_phase_marker",
+          "software_noise_budget": 0.04
+        }
+      },
+      "tsp_inspection": {
+        "path": [],
+        "cost": 0.0,
+        "method": "trivial",
+        "nodes": []
+      },
+      "cube_slice": [
+        [
+          1.0,
+          0.233921988,
+          0.372451642,
+          -0.131140406,
+          -0.024037875
+        ],
+        [
+          0.233921988,
+          1.0,
+          0.557879593,
+          -0.182444572,
+          -0.05305775
+        ],
+        [
+          0.372451642,
+          0.557879593,
+          1.0,
+          -0.047664325,
+          -0.04142029
+        ],
+        [
+          -0.131140406,
+          -0.182444572,
+          -0.047664325,
+          1.0,
+          0.067313274
+        ],
+        [
+          -0.024037875,
+          -0.05305775,
+          -0.04142029,
+          0.067313274,
+          1.0
+        ]
+      ]
+    },
+    {
+      "step": 4,
+      "gate": "h(3)",
+      "qubits": [
+        {
+          "id": 0,
+          "position": [
+            2.8,
+            0.0,
+            0.0
+          ],
+          "fidelity_to_ideal": 0.994616938,
+          "local_decoherence": 0.005383062,
+          "purity": 0.510708169,
+          "topology_support": 0.139413186,
+          "psig": 0.139413186,
+          "degree": 3,
+          "criticality": 0.218376541,
+          "criticality_terms": {
+            "fidelity_loss": 0.005383062,
+            "topology_deficit": 0.860586814,
+            "link_break_ratio": 0.0
+          }
+        },
+        {
+          "id": 1,
+          "position": [
+            0.865248,
+            2.662958,
+            0.205725
+          ],
+          "fidelity_to_ideal": 0.985331306,
+          "local_decoherence": 0.014668694,
+          "purity": 0.528907046,
+          "topology_support": 0.116500082,
+          "psig": 0.116500082,
+          "degree": 2,
+          "criticality": 0.229676196,
+          "criticality_terms": {
+            "fidelity_loss": 0.014668694,
+            "topology_deficit": 0.883499918,
+            "link_break_ratio": 0.0
+          }
+        },
+        {
+          "id": 2,
+          "position": [
+            -2.265248,
+            1.645799,
+            -0.33287
+          ],
+          "fidelity_to_ideal": 0.985331306,
+          "local_decoherence": 0.014668694,
+          "purity": 0.528907046,
+          "topology_support": 0.09252386,
+          "psig": 0.09252386,
+          "degree": 2,
+          "criticality": 0.235670251,
+          "criticality_terms": {
+            "fidelity_loss": 0.014668694,
+            "topology_deficit": 0.90747614,
+            "link_break_ratio": 0.0
+          }
+        },
+        {
+          "id": 3,
+          "position": [
+            -2.265248,
+            -1.645799,
+            0.33287
+          ],
+          "fidelity_to_ideal": 0.961096615,
+          "local_decoherence": 0.038903385,
+          "purity": 0.925987374,
+          "topology_support": 0.026351628,
+          "psig": 0.026351628,
+          "degree": 1,
+          "criticality": 0.416754124,
+          "criticality_terms": {
+            "fidelity_loss": 0.038903385,
+            "topology_deficit": 0.973648372,
+            "link_break_ratio": 1.0
+          }
+        },
+        {
+          "id": 4,
+          "position": [
+            0.865248,
+            -2.662958,
+            -0.205725
+          ],
+          "fidelity_to_ideal": 1.0,
+          "local_decoherence": 0.0,
+          "purity": 1.0,
+          "topology_support": 0.0,
+          "psig": 0.0,
+          "degree": 0,
+          "criticality": 0.4,
+          "criticality_terms": {
+            "fidelity_loss": 0.0,
+            "topology_deficit": 1.0,
+            "link_break_ratio": 1.0
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": 0,
+          "target": 1,
+          "mutual_information": 0.292761211,
+          "pauli_correlation": 0.23937363,
+          "concurrence": 0.0,
+          "correlation": 0.274075558,
+          "type": "classical_or_mixed",
+          "stability": 0.980027207,
+          "active": true
+        },
+        {
+          "source": 0,
+          "target": 2,
+          "mutual_information": 0.145215233,
+          "pauli_correlation": 0.23937363,
+          "concurrence": 0.0,
+          "correlation": 0.178170672,
+          "type": "classical_or_mixed",
+          "stability": 0.980027207,
+          "active": true
+        },
+        {
+          "source": 0,
+          "target": 3,
+          "mutual_information": 0.161134964,
+          "pauli_correlation": 0.001910821,
+          "concurrence": 0.0,
+          "correlation": 0.105406514,
+          "type": "classical_or_mixed",
+          "stability": 0.955922972,
+          "active": true
+        },
+        {
+          "source": 1,
+          "target": 2,
+          "mutual_information": 0.148002978,
+          "pauli_correlation": 0.273493811,
+          "concurrence": 0.0,
+          "correlation": 0.19192477,
+          "type": "classical_or_mixed",
+          "stability": 0.970877783,
+          "active": true
+        }
+      ],
+      "avg_psig": 0.074957751,
+      "decoherence_detected": true,
+      "topology": {
+        "psig": 0.052283552,
+        "betti": [
+          1,
+          0,
+          0
+        ],
+        "diagrams": {
+          "H0": [
+            [
+              0.0,
+              1.035651844346432
+            ],
+            [
+              0.0,
+              1.2188753641814374
+            ],
+            [
+              0.0,
+              1.269441650617402
+            ],
+            [
+              0.0,
+              1.4800017693424272
+            ],
+            [
+              0.0,
+              null
+            ]
+          ],
+          "H1": [
+            [
+              1.239993509928608,
+              1.239993509928608
+            ],
+            [
+              1.5361397412229507,
+              1.5361397412229507
+            ],
+            [
+              1.577718291559923,
+              1.577718291559923
+            ],
+            [
+              1.525434739637835,
+              1.577718291559923
+            ],
+            [
+              1.6012405079921401,
+              1.6012405079921401
+            ],
+            [
+              1.6249538249324746,
+              1.6249538249324746
+            ]
+          ]
+        },
+        "n_finite_h1": 1,
+        "max_edge": 1.6249538249324746,
+        "distance_model": "euclidean_distance_between_correlation_profiles"
+      },
+      "logical_topology": {
+        "P_sig": 0.6526553217895099,
+        "n_cycles": 1,
+        "betti": [
+          1,
+          0,
+          0
+        ],
+        "diagrams": {
+          "H0": [
+            [
+              0.0,
+              0.3300993688710477
+            ],
+            [
+              0.0,
+              0.3390227430906892
+            ],
+            [
+              0.0,
+              0.34613601937292726
+            ],
+            [
+              0.0,
+              0.35801029127110207
+            ],
+            [
+              0.0,
+              0.3598044929215636
+            ],
+            [
+              0.0,
+              0.36240874242866244
+            ],
+            [
+              0.0,
+              0.3691602396026463
+            ],
+            [
+              0.0,
+              0.37359720407482144
+            ],
+            [
+              0.0,
+              0.37869529211271064
+            ],
+            [
+              0.0,
+              0.3805519171377706
+            ],
+            [
+              0.0,
+              0.4020103410930116
+            ],
+            [
+              0.0,
+              null
+            ]
+          ],
+          "H1": [
+            [
+              0.6241372306474248,
+              0.6241372306474248
+            ],
+            [
+              0.6292318542361977,
+              0.6292318542361977
+            ],
+            [
+              0.6493506999683533,
+              0.6493506999683533
+            ],
+            [
+              0.6582963354784104,
+              0.6582963354784104
+            ],
+            [
+              0.6662846528769596,
+              0.6662846528769596
+            ],
+            [
+              0.6863216861585226,
+              0.6863216861585226
+            ],
+            [
+              0.6871869183882341,
+              0.6871869183882341
+            ],
+            [
+              0.6908117210367231,
+              0.6908117210367231
+            ],
+            [
+              0.7058713062015577,
+              0.7058713062015577
+            ],
+            [
+              0.7061827699575842,
+              0.7061827699575842
+            ],
+            [
+              0.7183491623587572,
+              0.7183491623587572
+            ],
+            [
+              0.7249822029477154,
+              0.7249822029477154
+            ],
+            [
+              0.8897846574838866,
+              0.8897846574838866
+            ],
+            [
+              0.8903422098297511,
+              0.8903422098297511
+            ],
+            [
+              0.8944223556039894,
+              0.8944223556039894
+            ],
+            [
+              0.9010871010065997,
+              0.9010871010065997
+            ],
+            [
+              0.9089399200313747,
+              0.9089399200313747
+            ],
+            [
+              0.9197723348935384,
+              0.9197723348935384
+            ],
+            [
+              0.9240680418046594,
+              0.9240680418046594
+            ],
+            [
+              0.9325862707996627,
+              0.9325862707996627
+            ],
+            [
+              0.9545979202451309,
+              0.9545979202451309
+            ],
+            [
+              0.9548427333770686,
+              0.9548427333770686
+            ],
+            [
+              0.9698432876017694,
+              0.9698432876017694
+            ],
+            [
+              0.9868139439502963,
+              0.9868139439502963
+            ],
+            [
+              1.0306058830564306,
+              1.0306058830564306
+            ],
+            [
+              1.057819944925432,
+              1.057819944925432
+            ],
+            [
+              1.0602919020235448,
+              1.0602919020235448
+            ],
+            [
+              0.4076365802340349,
+              1.0602919020235448
+            ],
+            [
+              1.09815434596585,
+              1.09815434596585
+            ],
+            [
+              1.0986864633451399,
+              1.0986864633451399
+            ],
+            [
+              1.1174387542485313,
+              1.1174387542485313
+            ],
+            [
+              1.122931073859674,
+              1.122931073859674
+            ],
+            [
+              1.147220270388836,
+              1.147220270388836
+            ],
+            [
+              1.1480519722920677,
+              1.1480519722920677
+            ],
+            [
+              1.1779663134175788,
+              1.1779663134175788
+            ],
+            [
+              1.1859129561136357,
+              1.1859129561136357
+            ],
+            [
+              1.2064646537748511,
+              1.2064646537748511
+            ],
+            [
+              1.2084219259294098,
+              1.2084219259294098
+            ],
+            [
+              1.2144889061237487,
+              1.2144889061237487
+            ],
+            [
+              1.2153061314596363,
+              1.2153061314596363
+            ],
+            [
+              1.217194605456872,
+              1.217194605456872
+            ],
+            [
+              1.223570814087714,
+              1.223570814087714
+            ],
+            [
+              1.236248172657298,
+              1.236248172657298
+            ],
+            [
+              1.2712975682556635,
+              1.2712975682556635
+            ],
+            [
+              1.2763559280612318,
+              1.2763559280612318
+            ],
+            [
+              1.2876538715402368,
+              1.2876538715402368
+            ],
+            [
+              1.2944068858846556,
+              1.2944068858846556
+            ],
+            [
+              1.3064642580122547,
+              1.3064642580122547
+            ],
+            [
+              1.3067773217296428,
+              1.3067773217296428
+            ],
+            [
+              1.3083787504932336,
+              1.3083787504932336
+            ],
+            [
+              1.3107954816093548,
+              1.3107954816093548
+            ],
+            [
+              1.3107980027485295,
+              1.3107980027485295
+            ],
+            [
+              1.3129624986242998,
+              1.3129624986242998
+            ],
+            [
+              1.3267377253391406,
+              1.3267377253391406
+            ],
+            [
+              1.3539563527812875,
+              1.3539563527812875
+            ]
+          ]
+        },
+        "twist": 1.5707963267948966,
+        "phase": 0.7853981633974483,
+        "coherence": 0.9119999999999999,
+        "protected": true,
+        "logical_bit": 1,
+        "scope": "algorithmic_topological_logical_qubit_simulation",
+        "circuit_coupling": {
+          "event": "h(3)",
+          "mapping": "h_gate_to_topological_h_analogue",
+          "software_noise_budget": 0.004
+        }
+      },
+      "tsp_inspection": {
+        "path": [
+          3,
+          4,
+          3
+        ],
+        "cost": 6.670742751,
+        "method": "held_karp_exact",
+        "nodes": [
+          3,
+          4
+        ]
+      },
+      "cube_slice": [
+        [
+          1.0,
+          0.292761211,
+          0.145215233,
+          0.161134964,
+          -0.084054366
+        ],
+        [
+          0.292761211,
+          1.0,
+          0.148002978,
+          -0.101040297,
+          -0.025252194
+        ],
+        [
+          0.145215233,
+          0.148002978,
+          1.0,
+          -0.069413126,
+          -0.130557503
+        ],
+        [
+          0.161134964,
+          -0.101040297,
+          -0.069413126,
+          1.0,
+          -0.029758457
+        ],
+        [
+          -0.084054366,
+          -0.025252194,
+          -0.130557503,
+          -0.029758457,
+          1.0
+        ]
+      ]
+    },
+    {
+      "step": 5,
+      "gate": "cx(3,4)",
+      "qubits": [
+        {
+          "id": 0,
+          "position": [
+            2.8,
+            0.0,
+            0.0
+          ],
+          "fidelity_to_ideal": 0.994616938,
+          "local_decoherence": 0.005383062,
+          "purity": 0.510708169,
+          "topology_support": 0.108999133,
+          "psig": 0.108999133,
+          "degree": 2,
+          "criticality": 0.275980054,
+          "criticality_terms": {
+            "fidelity_loss": 0.005383062,
+            "topology_deficit": 0.891000867,
+            "link_break_ratio": 0.333333333
+          }
+        },
+        {
+          "id": 1,
+          "position": [
+            0.865248,
+            2.662958,
+            0.205725
+          ],
+          "fidelity_to_ideal": 0.985331306,
+          "local_decoherence": 0.014668694,
+          "purity": 0.528907046,
+          "topology_support": 0.119004127,
+          "psig": 0.119004127,
+          "degree": 2,
+          "criticality": 0.229050184,
+          "criticality_terms": {
+            "fidelity_loss": 0.014668694,
+            "topology_deficit": 0.880995873,
+            "link_break_ratio": 0.0
+          }
+        },
+        {
+          "id": 2,
+          "position": [
+            -2.265248,
+            1.645799,
+            -0.33287
+          ],
+          "fidelity_to_ideal": 0.985331306,
+          "local_decoherence": 0.014668694,
+          "purity": 0.528907046,
+          "topology_support": 0.111115182,
+          "psig": 0.111115182,
+          "degree": 2,
+          "criticality": 0.231022421,
+          "criticality_terms": {
+            "fidelity_loss": 0.014668694,
+            "topology_deficit": 0.888884818,
+            "link_break_ratio": 0.0
+          }
+        },
+        {
+          "id": 3,
+          "position": [
+            -2.265248,
+            -1.645799,
+            0.33287
+          ],
+          "fidelity_to_ideal": 0.994616938,
+          "local_decoherence": 0.005383062,
+          "purity": 0.510708169,
+          "topology_support": 0.090956271,
+          "psig": 0.090956271,
+          "degree": 1,
+          "criticality": 0.380490769,
+          "criticality_terms": {
+            "fidelity_loss": 0.005383062,
+            "topology_deficit": 0.909043729,
+            "link_break_ratio": 1.0
+          }
+        },
+        {
+          "id": 4,
+          "position": [
+            0.865248,
+            -2.662958,
+            -0.205725
+          ],
+          "fidelity_to_ideal": 0.994616938,
+          "local_decoherence": 0.005383062,
+          "purity": 0.510708169,
+          "topology_support": 0.090956271,
+          "psig": 0.090956271,
+          "degree": 1,
+          "criticality": 0.230490769,
+          "criticality_terms": {
+            "fidelity_loss": 0.005383062,
+            "topology_deficit": 0.909043729,
+            "link_break_ratio": 0.0
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": 0,
+          "target": 1,
+          "mutual_information": 0.23076213,
+          "pauli_correlation": 0.23937363,
+          "concurrence": 0.0,
+          "correlation": 0.233776155,
+          "type": "classical_or_mixed",
+          "stability": 0.980027207,
+          "active": true
+        },
+        {
+          "source": 0,
+          "target": 2,
+          "mutual_information": 0.182214778,
+          "pauli_correlation": 0.23937363,
+          "concurrence": 0.0,
+          "correlation": 0.202220376,
+          "type": "classical_or_mixed",
+          "stability": 0.980027207,
+          "active": true
+        },
+        {
+          "source": 1,
+          "target": 2,
+          "mutual_information": 0.225411568,
+          "pauli_correlation": 0.273493811,
+          "concurrence": 0.0,
+          "correlation": 0.242240353,
+          "type": "classical_or_mixed",
+          "stability": 0.970877783,
+          "active": true
+        },
+        {
+          "source": 3,
+          "target": 4,
+          "mutual_information": 0.416284867,
+          "pauli_correlation": 0.266399773,
+          "concurrence": 0.464531136,
+          "correlation": 0.363825084,
+          "type": "quantum_candidate",
+          "stability": 0.989262854,
+          "active": true
+        }
+      ],
+      "avg_psig": 0.104206197,
+      "decoherence_detected": true,
+      "topology": {
+        "psig": 0.0,
+        "betti": [
+          1,
+          0,
+          0
+        ],
+        "diagrams": {
+          "H0": [
+            [
+              0.0,
+              0.8460302232058158
+            ],
+            [
+              0.0,
+              1.0994408927781025
+            ],
+            [
+              0.0,
+              1.101412725908749
+            ],
+            [
+              0.0,
+              1.5111326136217573
+            ],
+            [
+              0.0,
+              null
+            ]
+          ],
+          "H1": [
+            [
+              1.1783672931111364,
+              1.1783672931111364
+            ],
+            [
+              1.535974992298615,
+              1.535974992298615
+            ],
+            [
+              1.6063052583663038,
+              1.6063052583663038
+            ],
+            [
+              1.6339024031814997,
+              1.6339024031814997
+            ],
+            [
+              1.6377106108928507,
+              1.6377106108928507
+            ],
+            [
+              1.772649050336519,
+              1.772649050336519
+            ]
+          ]
+        },
+        "n_finite_h1": 0,
+        "max_edge": 1.772649050336519,
+        "distance_model": "euclidean_distance_between_correlation_profiles"
+      },
+      "logical_topology": {
+        "P_sig": 0.640658222691231,
+        "n_cycles": 1,
+        "betti": [
+          1,
+          0,
+          0
+        ],
+        "diagrams": {
+          "H0": [
+            [
+              0.0,
+              0.3157285488272109
+            ],
+            [
+              0.0,
+              0.32823675340747577
+            ],
+            [
+              0.0,
+              0.3306644771722192
+            ],
+            [
+              0.0,
+              0.3326904944360887
+            ],
+            [
+              0.0,
+              0.37226342584675887
+            ],
+            [
+              0.0,
+              0.37518164316743075
+            ],
+            [
+              0.0,
+              0.38373192714561194
+            ],
+            [
+              0.0,
+              0.38841686897677213
+            ],
+            [
+              0.0,
+              0.39190404543743773
+            ],
+            [
+              0.0,
+              0.40285269213107233
+            ],
+            [
+              0.0,
+              0.4237167113211531
+            ],
+            [
+              0.0,
+              null
+            ]
+          ],
+          "H1": [
+            [
+              0.6069644388784952,
+              0.6069644388784952
+            ],
+            [
+              0.6159831185103039,
+              0.6159831185103039
+            ],
+            [
+              0.6506865017059826,
+              0.6506865017059826
+            ],
+            [
+              0.6558716774781265,
+              0.6558716774781265
+            ],
+            [
+              0.6575194849320994,
+              0.6575194849320994
+            ],
+            [
+              0.667629633789255,
+              0.667629633789255
+            ],
+            [
+              0.6974989101086029,
+              0.6974989101086029
+            ],
+            [
+              0.7012836459818073,
+              0.7012836459818073
+            ],
+            [
+              0.7136817423471301,
+              0.7136817423471301
+            ],
+            [
+              0.7311983059961992,
+              0.7311983059961992
+            ],
+            [
+              0.733770074910823,
+              0.733770074910823
+            ],
+            [
+              0.7589713537690602,
+              0.7589713537690602
+            ],
+            [
+              0.8342867951515595,
+              0.8342867951515595
+            ],
+            [
+              0.8831622996353291,
+              0.8831622996353291
+            ],
+            [
+              0.8974992929014899,
+              0.8974992929014899
+            ],
+            [
+              0.9119034600977325,
+              0.9119034600977325
+            ],
+            [
+              0.9321264085760923,
+              0.9321264085760923
+            ],
+            [
+              0.9325310829978063,
+              0.9325310829978063
+            ],
+            [
+              0.937868441482133,
+              0.937868441482133
+            ],
+            [
+              0.9498649864638473,
+              0.9498649864638473
+            ],
+            [
+              0.9576208435698077,
+              0.9576208435698077
+            ],
+            [
+              0.9630794463674377,
+              0.9630794463674377
+            ],
+            [
+              0.9661376531026594,
+              0.9661376531026594
+            ],
+            [
+              0.9781663167212142,
+              0.9781663167212142
+            ],
+            [
+              0.9791216024813145,
+              0.9791216024813145
+            ],
+            [
+              1.0421923195370804,
+              1.0421923195370804
+            ],
+            [
+              1.0652118578294298,
+              1.0652118578294298
+            ],
+            [
+              0.4245536351381989,
+              1.0652118578294298
+            ],
+            [
+              1.0958710671895961,
+              1.0958710671895961
+            ],
+            [
+              1.109608181863895,
+              1.109608181863895
+            ],
+            [
+              1.1187270674349739,
+              1.1187270674349739
+            ],
+            [
+              1.1305178507889757,
+              1.1305178507889757
+            ],
+            [
+              1.1492934693772114,
+              1.1492934693772114
+            ],
+            [
+              1.172226220185609,
+              1.172226220185609
+            ],
+            [
+              1.1870310387473846,
+              1.1870310387473846
+            ],
+            [
+              1.1936311549245704,
+              1.1936311549245704
+            ],
+            [
+              1.1983906694925606,
+              1.1983906694925606
+            ],
+            [
+              1.2014533385432993,
+              1.2014533385432993
+            ],
+            [
+              1.2015383173631613,
+              1.2015383173631613
+            ],
+            [
+              1.2061176605169728,
+              1.2061176605169728
+            ],
+            [
+              1.21512500982252,
+              1.21512500982252
+            ],
+            [
+              1.226823399157697,
+              1.226823399157697
+            ],
+            [
+              1.2276704692782896,
+              1.2276704692782896
+            ],
+            [
+              1.2636929847073926,
+              1.2636929847073926
+            ],
+            [
+              1.2784792510558605,
+              1.2784792510558605
+            ],
+            [
+              1.2787436038017828,
+              1.2787436038017828
+            ],
+            [
+              1.281874982803348,
+              1.281874982803348
+            ],
+            [
+              1.2832830440292209,
+              1.2832830440292209
+            ],
+            [
+              1.2988121224559048,
+              1.2988121224559048
+            ],
+            [
+              1.3151728660864255,
+              1.3151728660864255
+            ],
+            [
+              1.3172658857186625,
+              1.3172658857186625
+            ],
+            [
+              1.3305410834876412,
+              1.3305410834876412
+            ],
+            [
+              1.3406818279639983,
+              1.3406818279639983
+            ],
+            [
+              1.3587721688974317,
+              1.3587721688974317
+            ],
+            [
+              1.384314807349134,
+              1.384314807349134
+            ]
+          ]
+        },
+        "twist": 1.5707963267948966,
+        "phase": 0.9817477042468103,
+        "coherence": 0.8719999999999999,
+        "protected": true,
+        "logical_bit": 1,
+        "scope": "algorithmic_topological_logical_qubit_simulation",
+        "circuit_coupling": {
+          "event": "cx(3,4)",
+          "mapping": "two_qubit_gate_to_inspection_phase_marker",
+          "software_noise_budget": 0.04
+        }
+      },
+      "tsp_inspection": {
+        "path": [
+          3
+        ],
+        "cost": 0.0,
+        "method": "trivial",
+        "nodes": [
+          3
+        ]
+      },
+      "cube_slice": [
+        [
+          1.0,
+          0.23076213,
+          0.182214778,
+          -0.0177052,
+          -0.193858426
+        ],
+        [
+          0.23076213,
+          1.0,
+          0.225411568,
+          -0.078721868,
+          -0.053403885
+        ],
+        [
+          0.182214778,
+          0.225411568,
+          1.0,
+          -0.019561464,
+          0.031911512
+        ],
+        [
+          -0.0177052,
+          -0.078721868,
+          -0.019561464,
+          1.0,
+          0.416284867
+        ],
+        [
+          -0.193858426,
+          -0.053403885,
+          0.031911512,
+          0.416284867,
+          1.0
+        ]
+      ]
+    },
+    {
+      "step": 6,
+      "gate": "cx(4,0)",
+      "qubits": [
+        {
+          "id": 0,
+          "position": [
+            2.8,
+            0.0,
+            0.0
+          ],
+          "fidelity_to_ideal": 0.995707461,
+          "local_decoherence": 0.004292539,
+          "purity": 0.508548227,
+          "topology_support": 0.026039578,
+          "psig": 0.026039578,
+          "degree": 2,
+          "criticality": 0.321065629,
+          "criticality_terms": {
+            "fidelity_loss": 0.004292539,
+            "topology_deficit": 0.973960422,
+            "link_break_ratio": 0.5
+          }
+        },
+        {
+          "id": 1,
+          "position": [
+            0.865248,
+            2.662958,
+            0.205725
+          ],
+          "fidelity_to_ideal": 0.985331306,
+          "local_decoherence": 0.014668694,
+          "purity": 0.528907046,
+          "topology_support": 0.078352311,
+          "psig": 0.078352311,
+          "degree": 2,
+          "criticality": 0.239213139,
+          "criticality_terms": {
+            "fidelity_loss": 0.014668694,
+            "topology_deficit": 0.921647689,
+            "link_break_ratio": 0.0
+          }
+        },
+        {
+          "id": 2,
+          "position": [
+            -2.265248,
+            1.645799,
+            -0.33287
+          ],
+          "fidelity_to_ideal": 0.985331306,
+          "local_decoherence": 0.014668694,
+          "purity": 0.528907046,
+          "topology_support": 0.066809239,
+          "psig": 0.066809239,
+          "degree": 1,
+          "criticality": 0.317098906,
+          "criticality_terms": {
+            "fidelity_loss": 0.014668694,
+            "topology_deficit": 0.933190761,
+            "link_break_ratio": 0.5
+          }
+        },
+        {
+          "id": 3,
+          "position": [
+            -2.265248,
+            -1.645799,
+            0.33287
+          ],
+          "fidelity_to_ideal": 0.994616938,
+          "local_decoherence": 0.005383062,
+          "purity": 0.510708169,
+          "topology_support": 0.076574895,
+          "psig": 0.076574895,
+          "degree": 2,
+          "criticality": 0.234086113,
+          "criticality_terms": {
+            "fidelity_loss": 0.005383062,
+            "topology_deficit": 0.923425105,
+            "link_break_ratio": 0.0
+          }
+        },
+        {
+          "id": 4,
+          "position": [
+            0.865248,
+            -2.662958,
+            -0.205725
+          ],
+          "fidelity_to_ideal": 0.985331306,
+          "local_decoherence": 0.014668694,
+          "purity": 0.528907046,
+          "topology_support": 0.062078389,
+          "psig": 0.062078389,
+          "degree": 1,
+          "criticality": 0.243281619,
+          "criticality_terms": {
+            "fidelity_loss": 0.014668694,
+            "topology_deficit": 0.937921611,
+            "link_break_ratio": 0.0
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": 0,
+          "target": 1,
+          "mutual_information": 0.049640516,
+          "pauli_correlation": 0.039731286,
+          "concurrence": 0.0,
+          "correlation": 0.046172285,
+          "type": "classical_or_mixed",
+          "stability": 0.981101733,
+          "active": true
+        },
+        {
+          "source": 0,
+          "target": 3,
+          "mutual_information": 0.067836383,
+          "pauli_correlation": 0.039692511,
+          "concurrence": 0.0,
+          "correlation": 0.057986028,
+          "type": "classical_or_mixed",
+          "stability": 0.990347506,
+          "active": true
+        },
+        {
+          "source": 1,
+          "target": 2,
+          "mutual_information": 0.263867882,
+          "pauli_correlation": 0.273493811,
+          "concurrence": 0.0,
+          "correlation": 0.267236958,
+          "type": "classical_or_mixed",
+          "stability": 0.970877783,
+          "active": true
+        },
+        {
+          "source": 3,
+          "target": 4,
+          "mutual_information": 0.253127359,
+          "pauli_correlation": 0.23937363,
+          "concurrence": 0.0,
+          "correlation": 0.248313554,
+          "type": "classical_or_mixed",
+          "stability": 0.980027207,
+          "active": true
+        }
+      ],
+      "avg_psig": 0.061970882,
+      "decoherence_detected": false,
+      "topology": {
+        "psig": 0.058207535,
+        "betti": [
+          1,
+          0,
+          0
+        ],
+        "diagrams": {
+          "H0": [
+            [
+              0.0,
+              1.0561271171098006
+            ],
+            [
+              0.0,
+              1.0721937175109515
+            ],
+            [
+              0.0,
+              1.360733275637519
+            ],
+            [
+              0.0,
+              1.383052285293028
+            ],
+            [
+              0.0,
+              null
+            ]
+          ],
+          "H1": [
+            [
+              1.5020839186090968,
+              1.5020839186090968
+            ],
+            [
+              1.4438763832167147,
+              1.5020839186090968
+            ],
+            [
+              1.506057191690908,
+              1.506057191690908
+            ],
+            [
+              1.5211636321948094,
+              1.5211636321948094
+            ],
+            [
+              1.5350229619199387,
+              1.5350229619199387
+            ],
+            [
+              1.6961449932879988,
+              1.6961449932879988
+            ]
+          ]
+        },
+        "n_finite_h1": 1,
+        "max_edge": 1.6961449932879988,
+        "distance_model": "euclidean_distance_between_correlation_profiles"
+      },
+      "logical_topology": {
+        "P_sig": 0.5993678037165697,
+        "n_cycles": 1,
+        "betti": [
+          1,
+          0,
+          0
+        ],
+        "diagrams": {
+          "H0": [
+            [
+              0.0,
+              0.29199539308260974
+            ],
+            [
+              0.0,
+              0.3241691032601722
+            ],
+            [
+              0.0,
+              0.3299282302648935
+            ],
+            [
+              0.0,
+              0.3500718860456904
+            ],
+            [
+              0.0,
+              0.3518975737147921
+            ],
+            [
+              0.0,
+              0.36146106598274497
+            ],
+            [
+              0.0,
+              0.3728635668980247
+            ],
+            [
+              0.0,
+              0.38466648358708716
+            ],
+            [
+              0.0,
+              0.41846398850181554
+            ],
+            [
+              0.0,
+              0.42783862315063176
+            ],
+            [
+              0.0,
+              0.4547817089095924
+            ],
+            [
+              0.0,
+              null
+            ]
+          ],
+          "H1": [
+            [
+              0.598943680567082,
+              0.598943680567082
+            ],
+            [
+              0.643658732669976,
+              0.643658732669976
+            ],
+            [
+              0.6579181346587323,
+              0.6579181346587323
+            ],
+            [
+              0.6810598601596797,
+              0.6810598601596797
+            ],
+            [
+              0.6833173188021416,
+              0.6833173188021416
+            ],
+            [
+              0.6860276352581772,
+              0.6860276352581772
+            ],
+            [
+              0.6945423816559327,
+              0.6945423816559327
+            ],
+            [
+              0.6992919453608272,
+              0.6992919453608272
+            ],
+            [
+              0.7093628816470957,
+              0.7093628816470957
+            ],
+            [
+              0.7384374379450364,
+              0.7384374379450364
+            ],
+            [
+              0.7594311844307077,
+              0.7594311844307077
+            ],
+            [
+              0.7794919077204361,
+              0.7794919077204361
+            ],
+            [
+              0.8638291873898414,
+              0.8638291873898414
+            ],
+            [
+              0.8649485543562645,
+              0.8649485543562645
+            ],
+            [
+              0.8715173919309169,
+              0.8715173919309169
+            ],
+            [
+              0.8929379495685057,
+              0.8929379495685057
+            ],
+            [
+              0.9229575135192071,
+              0.9229575135192071
+            ],
+            [
+              0.9278005963801328,
+              0.9278005963801328
+            ],
+            [
+              0.9546376296303739,
+              0.9546376296303739
+            ],
+            [
+              0.9695947667814538,
+              0.9695947667814538
+            ],
+            [
+              0.9706964064011672,
+              0.9706964064011672
+            ],
+            [
+              0.9890126523312551,
+              0.9890126523312551
+            ],
+            [
+              0.9956713352669824,
+              0.9956713352669824
+            ],
+            [
+              1.0467688817101737,
+              1.0467688817101737
+            ],
+            [
+              1.047772677300468,
+              1.047772677300468
+            ],
+            [
+              1.056493460055272,
+              1.056493460055272
+            ],
+            [
+              1.069237896347522,
+              1.069237896347522
+            ],
+            [
+              1.0775651858542257,
+              1.0775651858542257
+            ],
+            [
+              0.47819738213765595,
+              1.0775651858542257
+            ],
+            [
+              1.0818686345573034,
+              1.0818686345573034
+            ],
+            [
+              1.096872613137724,
+              1.096872613137724
+            ],
+            [
+              1.1248541549535296,
+              1.1248541549535296
+            ],
+            [
+              1.1399197359085136,
+              1.1399197359085136
+            ],
+            [
+              1.1532727794279993,
+              1.1532727794279993
+            ],
+            [
+              1.1846720473629626,
+              1.1846720473629626
+            ],
+            [
+              1.1953789320051302,
+              1.1953789320051302
+            ],
+            [
+              1.2110062972296287,
+              1.2110062972296287
+            ],
+            [
+              1.2125832009243807,
+              1.2125832009243807
+            ],
+            [
+              1.2191117328710066,
+              1.2191117328710066
+            ],
+            [
+              1.2483571521649206,
+              1.2483571521649206
+            ],
+            [
+              1.2527451008373882,
+              1.2527451008373882
+            ],
+            [
+              1.2596432955773698,
+              1.2596432955773698
+            ],
+            [
+              1.2641787233757051,
+              1.2641787233757051
+            ],
+            [
+              1.2840290403054946,
+              1.2840290403054946
+            ],
+            [
+              1.284178153810496,
+              1.284178153810496
+            ],
+            [
+              1.2983823617549652,
+              1.2983823617549652
+            ],
+            [
+              1.3051344200284494,
+              1.3051344200284494
+            ],
+            [
+              1.3061452916197116,
+              1.3061452916197116
+            ],
+            [
+              1.3255324628189726,
+              1.3255324628189726
+            ],
+            [
+              1.3289382309219149,
+              1.3289382309219149
+            ],
+            [
+              1.3427429639846915,
+              1.3427429639846915
+            ],
+            [
+              1.3529463063206073,
+              1.3529463063206073
+            ],
+            [
+              1.3601950120515105,
+              1.3601950120515105
+            ],
+            [
+              1.3856964814541108,
+              1.3856964814541108
+            ],
+            [
+              1.4016530301854844,
+              1.4016530301854844
+            ]
+          ]
+        },
+        "twist": 1.5707963267948966,
+        "phase": 1.1780972450961724,
+        "coherence": 0.8319999999999999,
+        "protected": true,
+        "logical_bit": 1,
+        "scope": "algorithmic_topological_logical_qubit_simulation",
+        "circuit_coupling": {
+          "event": "cx(4,0)",
+          "mapping": "two_qubit_gate_to_inspection_phase_marker",
+          "software_noise_budget": 0.04
+        }
+      },
+      "tsp_inspection": {
+        "path": [],
+        "cost": 0.0,
+        "method": "trivial",
+        "nodes": []
+      },
+      "cube_slice": [
+        [
+          1.0,
+          0.049640516,
+          -0.04129334,
+          0.067836383,
+          -0.05381339
+        ],
+        [
+          0.049640516,
+          1.0,
+          0.263867882,
+          -0.019343878,
+          0.02197286
+        ],
+        [
+          -0.04129334,
+          0.263867882,
+          1.0,
+          -0.162806958,
+          -0.030685254
+        ],
+        [
+          0.067836383,
+          -0.019343878,
+          -0.162806958,
+          1.0,
+          0.253127359
+        ],
+        [
+          -0.05381339,
+          0.02197286,
+          -0.030685254,
+          0.253127359,
+          1.0
+        ]
+      ]
+    },
+    {
+      "step": 7,
+      "gate": "cz(2,3)",
+      "qubits": [
+        {
+          "id": 0,
+          "position": [
+            2.8,
+            0.0,
+            0.0
+          ],
+          "fidelity_to_ideal": 0.995707461,
+          "local_decoherence": 0.004292539,
+          "purity": 0.508548227,
+          "topology_support": 0.0,
+          "psig": 0.0,
+          "degree": 0,
+          "criticality": 0.402575524,
+          "criticality_terms": {
+            "fidelity_loss": 0.004292539,
+            "topology_deficit": 1.0,
+            "link_break_ratio": 1.0
+          }
+        },
+        {
+          "id": 1,
+          "position": [
+            0.865248,
+            2.662958,
+            0.205725
+          ],
+          "fidelity_to_ideal": 0.985331306,
+          "local_decoherence": 0.014668694,
+          "purity": 0.528907046,
+          "topology_support": 0.05334644,
+          "psig": 0.05334644,
+          "degree": 1,
+          "criticality": 0.320464606,
+          "criticality_terms": {
+            "fidelity_loss": 0.014668694,
+            "topology_deficit": 0.94665356,
+            "link_break_ratio": 0.5
+          }
+        },
+        {
+          "id": 2,
+          "position": [
+            -2.265248,
+            1.645799,
+            -0.33287
+          ],
+          "fidelity_to_ideal": 0.973187137,
+          "local_decoherence": 0.026812863,
+          "purity": 0.552187866,
+          "topology_support": 0.065280859,
+          "psig": 0.065280859,
+          "degree": 2,
+          "criticality": 0.249767503,
+          "criticality_terms": {
+            "fidelity_loss": 0.026812863,
+            "topology_deficit": 0.934719141,
+            "link_break_ratio": 0.0
+          }
+        },
+        {
+          "id": 3,
+          "position": [
+            -2.265248,
+            -1.645799,
+            0.33287
+          ],
+          "fidelity_to_ideal": 0.985331306,
+          "local_decoherence": 0.014668694,
+          "purity": 0.528907046,
+          "topology_support": 0.047389769,
+          "psig": 0.047389769,
+          "degree": 1,
+          "criticality": 0.321953774,
+          "criticality_terms": {
+            "fidelity_loss": 0.014668694,
+            "topology_deficit": 0.952610231,
+            "link_break_ratio": 0.5
+          }
+        },
+        {
+          "id": 4,
+          "position": [
+            0.865248,
+            -2.662958,
+            -0.205725
+          ],
+          "fidelity_to_ideal": 0.985331306,
+          "local_decoherence": 0.014668694,
+          "purity": 0.528907046,
+          "topology_support": 0.059324189,
+          "psig": 0.059324189,
+          "degree": 2,
+          "criticality": 0.243970169,
+          "criticality_terms": {
+            "fidelity_loss": 0.014668694,
+            "topology_deficit": 0.940675811,
+            "link_break_ratio": 0.0
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": 1,
+          "target": 2,
+          "mutual_information": 0.194147416,
+          "pauli_correlation": 0.249114108,
+          "concurrence": 0.0,
+          "correlation": 0.213385758,
+          "type": "classical_or_mixed",
+          "stability": 0.958911753,
+          "active": true
+        },
+        {
+          "source": 2,
+          "target": 4,
+          "mutual_information": 0.059499781,
+          "pauli_correlation": 0.025893775,
+          "concurrence": 0.0,
+          "correlation": 0.047737679,
+          "type": "classical_or_mixed",
+          "stability": 0.958911753,
+          "active": true
+        },
+        {
+          "source": 3,
+          "target": 4,
+          "mutual_information": 0.173622896,
+          "pauli_correlation": 0.219154841,
+          "concurrence": 0.0,
+          "correlation": 0.189559077,
+          "type": "classical_or_mixed",
+          "stability": 0.970877783,
+          "active": true
+        }
+      ],
+      "avg_psig": 0.045068251,
+      "decoherence_detected": true,
+      "topology": {
+        "psig": 0.155219985,
+        "betti": [
+          1,
+          0,
+          0
+        ],
+        "diagrams": {
+          "H0": [
+            [
+              0.0,
+              1.188107266246169
+            ],
+            [
+              0.0,
+              1.2412836259918048
+            ],
+            [
+              0.0,
+              1.390757732521037
+            ],
+            [
+              0.0,
+              1.460882358381718
+            ],
+            [
+              0.0,
+              null
+            ]
+          ],
+          "H1": [
+            [
+              1.499677178453056,
+              1.499677178453056
+            ],
+            [
+              1.5779998432837805,
+              1.5779998432837805
+            ],
+            [
+              1.6439511288571236,
+              1.6439511288571236
+            ],
+            [
+              1.4887311437565713,
+              1.6439511288571236
+            ],
+            [
+              1.6929737272588257,
+              1.6929737272588257
+            ],
+            [
+              1.8595939511575545,
+              1.8595939511575545
+            ]
+          ]
+        },
+        "n_finite_h1": 1,
+        "max_edge": 1.8595939511575545,
+        "distance_model": "euclidean_distance_between_correlation_profiles"
+      },
+      "logical_topology": {
+        "P_sig": 0.4948611575456062,
+        "n_cycles": 1,
+        "betti": [
+          1,
+          0,
+          0
+        ],
+        "diagrams": {
+          "H0": [
+            [
+              0.0,
+              0.31406705901899956
+            ],
+            [
+              0.0,
+              0.3233012365011215
+            ],
+            [
+              0.0,
+              0.3430196831544792
+            ],
+            [
+              0.0,
+              0.3462668758657029
+            ],
+            [
+              0.0,
+              0.3481549300479353
+            ],
+            [
+              0.0,
+              0.39732649682329585
+            ],
+            [
+              0.0,
+              0.407553243271573
+            ],
+            [
+              0.0,
+              0.4127953798602385
+            ],
+            [
+              0.0,
+              0.4243605951773706
+            ],
+            [
+              0.0,
+              0.42530379865213586
+            ],
+            [
+              0.0,
+              0.4316621803808788
+            ],
+            [
+              0.0,
+              null
+            ]
+          ],
+          "H1": [
+            [
+              0.5920015215098899,
+              0.5920015215098899
+            ],
+            [
+              0.5981766900170419,
+              0.5981766900170419
+            ],
+            [
+              0.6155260752995186,
+              0.6155260752995186
+            ],
+            [
+              0.6468622213125544,
+              0.6468622213125544
+            ],
+            [
+              0.6782361973075279,
+              0.6782361973075279
+            ],
+            [
+              0.6884391782751145,
+              0.6884391782751145
+            ],
+            [
+              0.7018739070425208,
+              0.7018739070425208
+            ],
+            [
+              0.7262353843367475,
+              0.7262353843367475
+            ],
+            [
+              0.7325411998225791,
+              0.7325411998225791
+            ],
+            [
+              0.7398701029444731,
+              0.7398701029444731
+            ],
+            [
+              0.7580658562100633,
+              0.7580658562100633
+            ],
+            [
+              0.7900825126235188,
+              0.7900825126235188
+            ],
+            [
+              0.7957982845056639,
+              0.7957982845056639
+            ],
+            [
+              0.8160846400818887,
+              0.8160846400818887
+            ],
+            [
+              0.8623992980477841,
+              0.8623992980477841
+            ],
+            [
+              0.866078560408328,
+              0.866078560408328
+            ],
+            [
+              0.8910991707876058,
+              0.8910991707876058
+            ],
+            [
+              0.8937815788740411,
+              0.8937815788740411
+            ],
+            [
+              0.9311392858161072,
+              0.9311392858161072
+            ],
+            [
+              0.9537973793768635,
+              0.9537973793768635
+            ],
+            [
+              0.9582341910409591,
+              0.9582341910409591
+            ],
+            [
+              0.9593971849109986,
+              0.9593971849109986
+            ],
+            [
+              0.46453602736539235,
+              0.9593971849109986
+            ],
+            [
+              0.960323549996741,
+              0.960323549996741
+            ],
+            [
+              0.994569508468044,
+              0.994569508468044
+            ],
+            [
+              1.036143946708227,
+              1.036143946708227
+            ],
+            [
+              1.057107437300506,
+              1.057107437300506
+            ],
+            [
+              1.0608832777793327,
+              1.0608832777793327
+            ],
+            [
+              1.0650882492738414,
+              1.0650882492738414
+            ],
+            [
+              1.100975557537285,
+              1.100975557537285
+            ],
+            [
+              1.1161934339351316,
+              1.1161934339351316
+            ],
+            [
+              1.1276959377428393,
+              1.1276959377428393
+            ],
+            [
+              1.142093902740272,
+              1.142093902740272
+            ],
+            [
+              1.143613610818007,
+              1.143613610818007
+            ],
+            [
+              1.1491875553958721,
+              1.1491875553958721
+            ],
+            [
+              1.1626388953740203,
+              1.1626388953740203
+            ],
+            [
+              1.1786819664784196,
+              1.1786819664784196
+            ],
+            [
+              1.2154206297766337,
+              1.2154206297766337
+            ],
+            [
+              1.2171585953873887,
+              1.2171585953873887
+            ],
+            [
+              1.2309960860031453,
+              1.2309960860031453
+            ],
+            [
+              1.2535300025678022,
+              1.2535300025678022
+            ],
+            [
+              1.2542827646458803,
+              1.2542827646458803
+            ],
+            [
+              1.2623118832666154,
+              1.2623118832666154
+            ],
+            [
+              1.2658222221159783,
+              1.2658222221159783
+            ],
+            [
+              1.2753423704579272,
+              1.2753423704579272
+            ],
+            [
+              1.289723618801559,
+              1.289723618801559
+            ],
+            [
+              1.3164679369459742,
+              1.3164679369459742
+            ],
+            [
+              1.3329733565954929,
+              1.3329733565954929
+            ],
+            [
+              1.3455435002092573,
+              1.3455435002092573
+            ],
+            [
+              1.3526087078488103,
+              1.3526087078488103
+            ],
+            [
+              1.3568776322549645,
+              1.3568776322549645
+            ],
+            [
+              1.368314783645413,
+              1.368314783645413
+            ],
+            [
+              1.3971365212705946,
+              1.3971365212705946
+            ],
+            [
+              1.4199139270546437,
+              1.4199139270546437
+            ],
+            [
+              1.4356841312067532,
+              1.4356841312067532
+            ]
+          ]
+        },
+        "twist": 1.5707963267948966,
+        "phase": 1.3744467859455345,
+        "coherence": 0.7919999999999998,
+        "protected": false,
+        "logical_bit": 0,
+        "scope": "algorithmic_topological_logical_qubit_simulation",
+        "circuit_coupling": {
+          "event": "cz(2,3)",
+          "mapping": "two_qubit_gate_to_inspection_phase_marker",
+          "software_noise_budget": 0.04
+        }
+      },
+      "tsp_inspection": {
+        "path": [
+          0
+        ],
+        "cost": 0.0,
+        "method": "trivial",
+        "nodes": [
+          0
+        ]
+      },
+      "cube_slice": [
+        [
+          1.0,
+          0.02888727,
+          -0.017797276,
+          -0.000915331,
+          -0.183526071
+        ],
+        [
+          0.02888727,
+          1.0,
+          0.194147416,
+          -0.035584397,
+          -0.139201082
+        ],
+        [
+          -0.017797276,
+          0.194147416,
+          1.0,
+          -0.302306391,
+          0.059499781
+        ],
+        [
+          -0.000915331,
+          -0.035584397,
+          -0.302306391,
+          1.0,
+          0.173622896
+        ],
+        [
+          -0.183526071,
+          -0.139201082,
+          0.059499781,
+          0.173622896,
+          1.0
+        ]
+      ]
+    },
+    {
+      "step": 8,
+      "gate": "ry(0.449; 0)",
+      "qubits": [
+        {
+          "id": 0,
+          "position": [
+            2.8,
+            0.0,
+            0.0
+          ],
+          "fidelity_to_ideal": 0.99347865,
+          "local_decoherence": 0.00652135,
+          "purity": 0.512957645,
+          "topology_support": 0.040853655,
+          "psig": 0.040853655,
+          "degree": 2,
+          "criticality": 0.243699397,
+          "criticality_terms": {
+            "fidelity_loss": 0.00652135,
+            "topology_deficit": 0.959146345,
+            "link_break_ratio": 0.0
+          }
+        },
+        {
+          "id": 1,
+          "position": [
+            0.865248,
+            2.662958,
+            0.205725
+          ],
+          "fidelity_to_ideal": 0.985331306,
+          "local_decoherence": 0.014668694,
+          "purity": 0.528907046,
+          "topology_support": 0.04809228,
+          "psig": 0.04809228,
+          "degree": 2,
+          "criticality": 0.246778146,
+          "criticality_terms": {
+            "fidelity_loss": 0.014668694,
+            "topology_deficit": 0.95190772,
+            "link_break_ratio": 0.0
+          }
+        },
+        {
+          "id": 2,
+          "position": [
+            -2.265248,
+            1.645799,
+            -0.33287
+          ],
+          "fidelity_to_ideal": 0.973187137,
+          "local_decoherence": 0.026812863,
+          "purity": 0.552187866,
+          "topology_support": 0.059219685,
+          "psig": 0.059219685,
+          "degree": 2,
+          "criticality": 0.326282796,
+          "criticality_terms": {
+            "fidelity_loss": 0.026812863,
+            "topology_deficit": 0.940780315,
+            "link_break_ratio": 0.5
+          }
+        },
+        {
+          "id": 3,
+          "position": [
+            -2.265248,
+            -1.645799,
+            0.33287
+          ],
+          "fidelity_to_ideal": 0.985331306,
+          "local_decoherence": 0.014668694,
+          "purity": 0.528907046,
+          "topology_support": 0.043270676,
+          "psig": 0.043270676,
+          "degree": 2,
+          "criticality": 0.247983547,
+          "criticality_terms": {
+            "fidelity_loss": 0.014668694,
+            "topology_deficit": 0.956729324,
+            "link_break_ratio": 0.0
+          }
+        },
+        {
+          "id": 4,
+          "position": [
+            0.865248,
+            -2.662958,
+            -0.205725
+          ],
+          "fidelity_to_ideal": 0.985331306,
+          "local_decoherence": 0.014668694,
+          "purity": 0.528907046,
+          "topology_support": 0.046493615,
+          "psig": 0.046493615,
+          "degree": 2,
+          "criticality": 0.322177812,
+          "criticality_terms": {
+            "fidelity_loss": 0.014668694,
+            "topology_deficit": 0.953506385,
+            "link_break_ratio": 0.5
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": 0,
+          "target": 2,
+          "mutual_information": 0.12923688,
+          "pauli_correlation": 0.038606488,
+          "concurrence": 0.0,
+          "correlation": 0.097516243,
+          "type": "classical_or_mixed",
+          "stability": 0.966840643,
+          "active": true
+        },
+        {
+          "source": 0,
+          "target": 4,
+          "mutual_information": 0.077451864,
+          "pauli_correlation": 0.044441902,
+          "concurrence": 0.0,
+          "correlation": 0.065898377,
+          "type": "classical_or_mixed",
+          "stability": 0.978905616,
+          "active": true
+        },
+        {
+          "source": 1,
+          "target": 2,
+          "mutual_information": 0.080265478,
+          "pauli_correlation": 0.249114108,
+          "concurrence": 0.0,
+          "correlation": 0.139362499,
+          "type": "classical_or_mixed",
+          "stability": 0.958911753,
+          "active": true
+        },
+        {
+          "source": 1,
+          "target": 3,
+          "mutual_information": 0.07117176,
+          "pauli_correlation": 0.019271364,
+          "concurrence": 0.0,
+          "correlation": 0.053006622,
+          "type": "classical_or_mixed",
+          "stability": 0.970877783,
+          "active": true
+        },
+        {
+          "source": 3,
+          "target": 4,
+          "mutual_information": 0.066725981,
+          "pauli_correlation": 0.219154841,
+          "concurrence": 0.0,
+          "correlation": 0.120076082,
+          "type": "classical_or_mixed",
+          "stability": 0.970877783,
+          "active": true
+        }
+      ],
+      "avg_psig": 0.047585982,
+      "decoherence_detected": false,
+      "topology": {
+        "psig": 0.122796546,
+        "betti": [
+          1,
+          0,
+          0
+        ],
+        "diagrams": {
+          "H0": [
+            [
+              0.0,
+              1.2539991553365943
+            ],
+            [
+              0.0,
+              1.314525967307017
+            ],
+            [
+              0.0,
+              1.3226800603068904
+            ],
+            [
+              0.0,
+              1.329989360221231
+            ],
+            [
+              0.0,
+              null
+            ]
+          ],
+          "H1": [
+            [
+              1.363577587785753,
+              1.363577587785753
+            ],
+            [
+              1.3812342111328044,
+              1.3812342111328044
+            ],
+            [
+              1.4538397587087155,
+              1.4538397587087155
+            ],
+            [
+              1.3310432131999106,
+              1.4538397587087155
+            ],
+            [
+              1.540299418768817,
+              1.540299418768817
+            ],
+            [
+              1.5595329422070405,
+              1.5595329422070405
+            ]
+          ]
+        },
+        "n_finite_h1": 1,
+        "max_edge": 1.5595329422070405,
+        "distance_model": "euclidean_distance_between_correlation_profiles"
+      },
+      "logical_topology": {
+        "P_sig": 0.6873277768380404,
+        "n_cycles": 1,
+        "betti": [
+          1,
+          0,
+          0
+        ],
+        "diagrams": {
+          "H0": [
+            [
+              0.0,
+              0.33391418632302106
+            ],
+            [
+              0.0,
+              0.3396749446357313
+            ],
+            [
+              0.0,
+              0.3403367347998401
+            ],
+            [
+              0.0,
+              0.35420828161901574
+            ],
+            [
+              0.0,
+              0.3605337487471094
+            ],
+            [
+              0.0,
+              0.36930084718718353
+            ],
+            [
+              0.0,
+              0.3747211021187618
+            ],
+            [
+              0.0,
+              0.37722716674304463
+            ],
+            [
+              0.0,
+              0.3900692496552334
+            ],
+            [
+              0.0,
+              0.3907896648206522
+            ],
+            [
+              0.0,
+              0.3970242158804272
+            ],
+            [
+              0.0,
+              null
+            ]
+          ],
+          "H1": [
+            [
+              0.6437647390424629,
+              0.6437647390424629
+            ],
+            [
+              0.6476339856915346,
+              0.6476339856915346
+            ],
+            [
+              0.6506605866521943,
+              0.6506605866521943
+            ],
+            [
+              0.6587734366141831,
+              0.6587734366141831
+            ],
+            [
+              0.6617154935260731,
+              0.6617154935260731
+            ],
+            [
+              0.6630405349671792,
+              0.6630405349671792
+            ],
+            [
+              0.6761716904085177,
+              0.6761716904085177
+            ],
+            [
+              0.6848972067654566,
+              0.6848972067654566
+            ],
+            [
+              0.6932838080287769,
+              0.6932838080287769
+            ],
+            [
+              0.6936123041183495,
+              0.6936123041183495
+            ],
+            [
+              0.7213133630974073,
+              0.7213133630974073
+            ],
+            [
+              0.7593420624197371,
+              0.7593420624197371
+            ],
+            [
+              0.8649357049134561,
+              0.8649357049134561
+            ],
+            [
+              0.8753636590078061,
+              0.8753636590078061
+            ],
+            [
+              0.8867395277768321,
+              0.8867395277768321
+            ],
+            [
+              0.9106436360388328,
+              0.9106436360388328
+            ],
+            [
+              0.9143084845930535,
+              0.9143084845930535
+            ],
+            [
+              0.9250981516493618,
+              0.9250981516493618
+            ],
+            [
+              0.9332218148375262,
+              0.9332218148375262
+            ],
+            [
+              0.936154859215811,
+              0.936154859215811
+            ],
+            [
+              0.9445279370669503,
+              0.9445279370669503
+            ],
+            [
+              0.9457896452252541,
+              0.9457896452252541
+            ],
+            [
+              0.9460110115146725,
+              0.9460110115146725
+            ],
+            [
+              0.9802965840419602,
+              0.9802965840419602
+            ],
+            [
+              1.0701523387358531,
+              1.0701523387358531
+            ],
+            [
+              1.074166656019711,
+              1.074166656019711
+            ],
+            [
+              1.0780949925424563,
+              1.0780949925424563
+            ],
+            [
+              1.081212164295917,
+              1.081212164295917
+            ],
+            [
+              1.0880591065622616,
+              1.0880591065622616
+            ],
+            [
+              1.0900958288610676,
+              1.0900958288610676
+            ],
+            [
+              1.102497931065139,
+              1.102497931065139
+            ],
+            [
+              0.41517015422709863,
+              1.102497931065139
+            ],
+            [
+              1.1072247258852899,
+              1.1072247258852899
+            ],
+            [
+              1.1559314012157533,
+              1.1559314012157533
+            ],
+            [
+              1.166315136824578,
+              1.166315136824578
+            ],
+            [
+              1.1688118238035712,
+              1.1688118238035712
+            ],
+            [
+              1.174291857657357,
+              1.174291857657357
+            ],
+            [
+              1.2014371038907712,
+              1.2014371038907712
+            ],
+            [
+              1.2149309612817725,
+              1.2149309612817725
+            ],
+            [
+              1.2203893816857734,
+              1.2203893816857734
+            ],
+            [
+              1.2268991126618665,
+              1.2268991126618665
+            ],
+            [
+              1.2341809867070557,
+              1.2341809867070557
+            ],
+            [
+              1.2426476723161637,
+              1.2426476723161637
+            ],
+            [
+              1.2553666606668656,
+              1.2553666606668656
+            ],
+            [
+              1.2581111707540267,
+              1.2581111707540267
+            ],
+            [
+              1.2614648273160556,
+              1.2614648273160556
+            ],
+            [
+              1.2749347970086453,
+              1.2749347970086453
+            ],
+            [
+              1.277895858843442,
+              1.277895858843442
+            ],
+            [
+              1.2815073791071387,
+              1.2815073791071387
+            ],
+            [
+              1.285973134272616,
+              1.285973134272616
+            ],
+            [
+              1.3048959771571562,
+              1.3048959771571562
+            ],
+            [
+              1.3062150415203522,
+              1.3062150415203522
+            ],
+            [
+              1.3074277842526056,
+              1.3074277842526056
+            ],
+            [
+              1.3193376775223082,
+              1.3193376775223082
+            ],
+            [
+              1.3500122835049635,
+              1.3500122835049635
+            ]
+          ]
+        },
+        "twist": 1.5707963267948966,
+        "phase": 1.823245736458362,
+        "coherence": 0.7879999999999998,
+        "protected": true,
+        "logical_bit": 1,
+        "scope": "algorithmic_topological_logical_qubit_simulation",
+        "circuit_coupling": {
+          "event": "ry(0.449; 0)",
+          "mapping": "rotation_to_topological_phase_analogue",
+          "software_noise_budget": 0.004
+        }
+      },
+      "tsp_inspection": {
+        "path": [],
+        "cost": 0.0,
+        "method": "trivial",
+        "nodes": []
+      },
+      "cube_slice": [
+        [
+          1.0,
+          -0.096755323,
+          0.12923688,
+          -0.080669285,
+          0.077451864
+        ],
+        [
+          -0.096755323,
+          1.0,
+          0.080265478,
+          0.07117176,
+          0.046717195
+        ],
+        [
+          0.12923688,
+          0.080265478,
+          1.0,
+          0.036957178,
+          -0.026877959
+        ],
+        [
+          -0.080669285,
+          0.07117176,
+          0.036957178,
+          1.0,
+          0.066725981
+        ],
+        [
+          0.077451864,
+          0.046717195,
+          -0.026877959,
+          0.066725981,
+          1.0
+        ]
+      ]
+    },
+    {
+      "step": 9,
+      "gate": "rz(0.349; 3)",
+      "qubits": [
+        {
+          "id": 0,
+          "position": [
+            2.8,
+            0.0,
+            0.0
+          ],
+          "fidelity_to_ideal": 0.99347865,
+          "local_decoherence": 0.00652135,
+          "purity": 0.512957645,
+          "topology_support": 0.0,
+          "psig": 0.0,
+          "degree": 0,
+          "criticality": 0.40391281,
+          "criticality_terms": {
+            "fidelity_loss": 0.00652135,
+            "topology_deficit": 1.0,
+            "link_break_ratio": 1.0
+          }
+        },
+        {
+          "id": 1,
+          "position": [
+            0.865248,
+            2.662958,
+            0.205725
+          ],
+          "fidelity_to_ideal": 0.985331306,
+          "local_decoherence": 0.014668694,
+          "purity": 0.528907046,
+          "topology_support": 0.035549257,
+          "psig": 0.035549257,
+          "degree": 1,
+          "criticality": 0.324913902,
+          "criticality_terms": {
+            "fidelity_loss": 0.014668694,
+            "topology_deficit": 0.964450743,
+            "link_break_ratio": 0.5
+          }
+        },
+        {
+          "id": 2,
+          "position": [
+            -2.265248,
+            1.645799,
+            -0.33287
+          ],
+          "fidelity_to_ideal": 0.973187137,
+          "local_decoherence": 0.026812863,
+          "purity": 0.552187866,
+          "topology_support": 0.035549257,
+          "psig": 0.035549257,
+          "degree": 1,
+          "criticality": 0.332200403,
+          "criticality_terms": {
+            "fidelity_loss": 0.026812863,
+            "topology_deficit": 0.964450743,
+            "link_break_ratio": 0.5
+          }
+        },
+        {
+          "id": 3,
+          "position": [
+            -2.265248,
+            -1.645799,
+            0.33287
+          ],
+          "fidelity_to_ideal": 0.981436058,
+          "local_decoherence": 0.018563942,
+          "purity": 0.536438644,
+          "topology_support": 0.037923403,
+          "psig": 0.037923403,
+          "degree": 1,
+          "criticality": 0.326657514,
+          "criticality_terms": {
+            "fidelity_loss": 0.018563942,
+            "topology_deficit": 0.962076597,
+            "link_break_ratio": 0.5
+          }
+        },
+        {
+          "id": 4,
+          "position": [
+            0.865248,
+            -2.662958,
+            -0.205725
+          ],
+          "fidelity_to_ideal": 0.985331306,
+          "local_decoherence": 0.014668694,
+          "purity": 0.528907046,
+          "topology_support": 0.037923403,
+          "psig": 0.037923403,
+          "degree": 1,
+          "criticality": 0.324320365,
+          "criticality_terms": {
+            "fidelity_loss": 0.014668694,
+            "topology_deficit": 0.962076597,
+            "link_break_ratio": 0.5
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": 1,
+          "target": 2,
+          "mutual_information": 0.084626294,
+          "pauli_correlation": 0.249114108,
+          "concurrence": 0.0,
+          "correlation": 0.142197029,
+          "type": "classical_or_mixed",
+          "stability": 0.958911753,
+          "active": true
+        },
+        {
+          "source": 3,
+          "target": 4,
+          "mutual_information": 0.118418299,
+          "pauli_correlation": 0.213490622,
+          "concurrence": 0.0,
+          "correlation": 0.151693612,
+          "type": "classical_or_mixed",
+          "stability": 0.967039673,
+          "active": true
+        }
+      ],
+      "avg_psig": 0.029389064,
+      "decoherence_detected": true,
+      "topology": {
+        "psig": 0.0,
+        "betti": [
+          1,
+          0,
+          0
+        ],
+        "diagrams": {
+          "H0": [
+            [
+              0.0,
+              1.2481030174848504
+            ],
+            [
+              0.0,
+              1.2980797609278314
+            ],
+            [
+              0.0,
+              1.395978427925578
+            ],
+            [
+              0.0,
+              1.437004692105455
+            ],
+            [
+              0.0,
+              null
+            ]
+          ],
+          "H1": [
+            [
+              1.42267157977683,
+              1.42267157977683
+            ],
+            [
+              1.4573337223904819,
+              1.4573337223904819
+            ],
+            [
+              1.5123834109649559,
+              1.5123834109649559
+            ],
+            [
+              1.5512616857627968,
+              1.5512616857627968
+            ],
+            [
+              1.5629230969330865,
+              1.5629230969330865
+            ],
+            [
+              1.618105396320145,
+              1.618105396320145
+            ]
+          ]
+        },
+        "n_finite_h1": 0,
+        "max_edge": 1.618105396320145,
+        "distance_model": "euclidean_distance_between_correlation_profiles"
+      },
+      "logical_topology": {
+        "P_sig": 0.6507838259419076,
+        "n_cycles": 1,
+        "betti": [
+          1,
+          0,
+          0
+        ],
+        "diagrams": {
+          "H0": [
+            [
+              0.0,
+              0.30290692204613634
+            ],
+            [
+              0.0,
+              0.3431958318686744
+            ],
+            [
+              0.0,
+              0.3464633998976222
+            ],
+            [
+              0.0,
+              0.38066100458146646
+            ],
+            [
+              0.0,
+              0.38202874845914525
+            ],
+            [
+              0.0,
+              0.38579816972539144
+            ],
+            [
+              0.0,
+              0.386294504006158
+            ],
+            [
+              0.0,
+              0.3895109993084564
+            ],
+            [
+              0.0,
+              0.3906568132213246
+            ],
+            [
+              0.0,
+              0.3984246872470895
+            ],
+            [
+              0.0,
+              0.46202959420615286
+            ],
+            [
+              0.0,
+              null
+            ]
+          ],
+          "H1": [
+            [
+              0.5826574745885456,
+              0.5826574745885456
+            ],
+            [
+              0.6494940506355203,
+              0.6494940506355203
+            ],
+            [
+              0.6791993634252024,
+              0.6791993634252024
+            ],
+            [
+              0.6849954302797053,
+              0.6849954302797053
+            ],
+            [
+              0.6914503780719228,
+              0.6914503780719228
+            ],
+            [
+              0.7031891733648599,
+              0.7031891733648599
+            ],
+            [
+              0.7137746102472871,
+              0.7137746102472871
+            ],
+            [
+              0.7197497415723221,
+              0.7197497415723221
+            ],
+            [
+              0.7210359498866032,
+              0.7210359498866032
+            ],
+            [
+              0.7295747527669733,
+              0.7295747527669733
+            ],
+            [
+              0.7500639718849849,
+              0.7500639718849849
+            ],
+            [
+              0.7543048173343642,
+              0.7543048173343642
+            ],
+            [
+              0.8379347350000882,
+              0.8379347350000882
+            ],
+            [
+              0.8427137769467987,
+              0.8427137769467987
+            ],
+            [
+              0.8732954422789194,
+              0.8732954422789194
+            ],
+            [
+              0.9165829012748071,
+              0.9165829012748071
+            ],
+            [
+              0.9309092203443833,
+              0.9309092203443833
+            ],
+            [
+              0.940658850485136,
+              0.940658850485136
+            ],
+            [
+              0.9515528216330005,
+              0.9515528216330005
+            ],
+            [
+              0.9639844973757956,
+              0.9639844973757956
+            ],
+            [
+              0.9654431127980682,
+              0.9654431127980682
+            ],
+            [
+              0.9903516970901076,
+              0.9903516970901076
+            ],
+            [
+              1.0199177386987237,
+              1.0199177386987237
+            ],
+            [
+              1.0254572114258662,
+              1.0254572114258662
+            ],
+            [
+              1.0480121720513857,
+              1.0480121720513857
+            ],
+            [
+              1.0724326827873152,
+              1.0724326827873152
+            ],
+            [
+              1.0945161635326717,
+              1.0945161635326717
+            ],
+            [
+              1.1080681518321964,
+              1.1080681518321964
+            ],
+            [
+              1.1149329271792536,
+              1.1149329271792536
+            ],
+            [
+              0.464149101237346,
+              1.1149329271792536
+            ],
+            [
+              1.1211882745306276,
+              1.1211882745306276
+            ],
+            [
+              1.1270918296357124,
+              1.1270918296357124
+            ],
+            [
+              1.1303882858594823,
+              1.1303882858594823
+            ],
+            [
+              1.1394296916544493,
+              1.1394296916544493
+            ],
+            [
+              1.1842745306390132,
+              1.1842745306390132
+            ],
+            [
+              1.1874115765631004,
+              1.1874115765631004
+            ],
+            [
+              1.1895953542603692,
+              1.1895953542603692
+            ],
+            [
+              1.199054946934091,
+              1.199054946934091
+            ],
+            [
+              1.2203689377816556,
+              1.2203689377816556
+            ],
+            [
+              1.2214370700506945,
+              1.2214370700506945
+            ],
+            [
+              1.2234165115953146,
+              1.2234165115953146
+            ],
+            [
+              1.268876548578966,
+              1.268876548578966
+            ],
+            [
+              1.2726316688211312,
+              1.2726316688211312
+            ],
+            [
+              1.2873167394235128,
+              1.2873167394235128
+            ],
+            [
+              1.2959742733547253,
+              1.2959742733547253
+            ],
+            [
+              1.300201655801745,
+              1.300201655801745
+            ],
+            [
+              1.3042216975561254,
+              1.3042216975561254
+            ],
+            [
+              1.3054344505135282,
+              1.3054344505135282
+            ],
+            [
+              1.3083830057375583,
+              1.3083830057375583
+            ],
+            [
+              1.3270814426870639,
+              1.3270814426870639
+            ],
+            [
+              1.3361405996001972,
+              1.3361405996001972
+            ],
+            [
+              1.3550174301866076,
+              1.3550174301866076
+            ],
+            [
+              1.3700884734461025,
+              1.3700884734461025
+            ],
+            [
+              1.3802747042586518,
+              1.3802747042586518
+            ],
+            [
+              1.3828539745596284,
+              1.3828539745596284
+            ]
+          ]
+        },
+        "twist": 1.5707963267948966,
+        "phase": 2.172311586857228,
+        "coherence": 0.7839999999999998,
+        "protected": true,
+        "logical_bit": 1,
+        "scope": "algorithmic_topological_logical_qubit_simulation",
+        "circuit_coupling": {
+          "event": "rz(0.349; 3)",
+          "mapping": "rotation_to_topological_phase_analogue",
+          "software_noise_budget": 0.004
+        }
+      },
+      "tsp_inspection": {
+        "path": [
+          0
+        ],
+        "cost": 0.0,
+        "method": "trivial",
+        "nodes": [
+          0
+        ]
+      },
+      "cube_slice": [
+        [
+          1.0,
+          -0.00332463,
+          0.020311829,
+          -0.133893743,
+          -0.088951107
+        ],
+        [
+          -0.00332463,
+          1.0,
+          0.084626294,
+          -0.053067806,
+          -0.086802634
+        ],
+        [
+          0.020311829,
+          0.084626294,
+          1.0,
+          -0.016547073,
+          -0.001359218
+        ],
+        [
+          -0.133893743,
+          -0.053067806,
+          -0.016547073,
+          1.0,
+          0.118418299
+        ],
+        [
+          -0.088951107,
+          -0.086802634,
+          -0.001359218,
+          0.118418299,
+          1.0
+        ]
+      ]
+    },
+    {
+      "step": 10,
+      "gate": "cx(2,4)",
+      "qubits": [
+        {
+          "id": 0,
+          "position": [
+            2.8,
+            0.0,
+            0.0
+          ],
+          "fidelity_to_ideal": 0.99347865,
+          "local_decoherence": 0.00652135,
+          "purity": 0.512957645,
+          "topology_support": 0.104202254,
+          "psig": 0.104202254,
+          "degree": 3,
+          "criticality": 0.227862247,
+          "criticality_terms": {
+            "fidelity_loss": 0.00652135,
+            "topology_deficit": 0.895797746,
+            "link_break_ratio": 0.0
+          }
+        },
+        {
+          "id": 1,
+          "position": [
+            0.865248,
+            2.662958,
+            0.205725
+          ],
+          "fidelity_to_ideal": 0.985331306,
+          "local_decoherence": 0.014668694,
+          "purity": 0.528907046,
+          "topology_support": 0.157125214,
+          "psig": 0.157125214,
+          "degree": 3,
+          "criticality": 0.219519913,
+          "criticality_terms": {
+            "fidelity_loss": 0.014668694,
+            "topology_deficit": 0.842874786,
+            "link_break_ratio": 0.0
+          }
+        },
+        {
+          "id": 2,
+          "position": [
+            -2.265248,
+            1.645799,
+            -0.33287
+          ],
+          "fidelity_to_ideal": 0.959206538,
+          "local_decoherence": 0.040793462,
+          "purity": 0.578258711,
+          "topology_support": 0.151806659,
+          "psig": 0.151806659,
+          "degree": 3,
+          "criticality": 0.236524413,
+          "criticality_terms": {
+            "fidelity_loss": 0.040793462,
+            "topology_deficit": 0.848193341,
+            "link_break_ratio": 0.0
+          }
+        },
+        {
+          "id": 3,
+          "position": [
+            -2.265248,
+            -1.645799,
+            0.33287
+          ],
+          "fidelity_to_ideal": 0.981436058,
+          "local_decoherence": 0.018563942,
+          "purity": 0.536438644,
+          "topology_support": 0.011988873,
+          "psig": 0.011988873,
+          "degree": 1,
+          "criticality": 0.408141147,
+          "criticality_terms": {
+            "fidelity_loss": 0.018563942,
+            "topology_deficit": 0.988011127,
+            "link_break_ratio": 1.0
+          }
+        },
+        {
+          "id": 4,
+          "position": [
+            0.865248,
+            -2.662958,
+            -0.205725
+          ],
+          "fidelity_to_ideal": 0.991818938,
+          "local_decoherence": 0.008181062,
+          "purity": 0.516228263,
+          "topology_support": 0.059363298,
+          "psig": 0.059363298,
+          "degree": 2,
+          "criticality": 0.390067812,
+          "criticality_terms": {
+            "fidelity_loss": 0.008181062,
+            "topology_deficit": 0.940636702,
+            "link_break_ratio": 1.0
+          }
+        }
+      ],
+      "edges": [
+        {
+          "source": 0,
+          "target": 1,
+          "mutual_information": 0.171028318,
+          "pauli_correlation": 0.037498179,
+          "concurrence": 0.0,
+          "correlation": 0.124292769,
+          "type": "classical_or_mixed",
+          "stability": 0.978905616,
+          "active": true
+        },
+        {
+          "source": 0,
+          "target": 2,
+          "mutual_information": 0.221716008,
+          "pauli_correlation": 0.03957964,
+          "concurrence": 0.0,
+          "correlation": 0.157968279,
+          "type": "classical_or_mixed",
+          "stability": 0.952951216,
+          "active": true
+        },
+        {
+          "source": 0,
+          "target": 4,
+          "mutual_information": 0.132317609,
+          "pauli_correlation": 0.138690067,
+          "concurrence": 0.0,
+          "correlation": 0.134547969,
+          "type": "classical_or_mixed",
+          "stability": 0.98535094,
+          "active": true
+        },
+        {
+          "source": 1,
+          "target": 2,
+          "mutual_information": 0.4947773,
+          "pauli_correlation": 0.22770748,
+          "concurrence": 0.0,
+          "correlation": 0.401302863,
+          "type": "classical_or_mixed",
+          "stability": 0.945136231,
+          "active": true
+        },
+        {
+          "source": 1,
+          "target": 4,
+          "mutual_information": 0.125164595,
+          "pauli_correlation": 0.061566389,
+          "concurrence": 0.0,
+          "correlation": 0.102905223,
+          "type": "classical_or_mixed",
+          "stability": 0.97727025,
+          "active": true
+        },
+        {
+          "source": 2,
+          "target": 3,
+          "mutual_information": 0.054489484,
+          "pauli_correlation": 0.035820939,
+          "concurrence": 0.0,
+          "correlation": 0.047955493,
+          "type": "classical_or_mixed",
+          "stability": 0.941399883,
+          "active": true
+        }
+      ],
+      "avg_psig": 0.09689726,
+      "decoherence_detected": true,
+      "topology": {
+        "psig": 0.0,
+        "betti": [
+          1,
+          0,
+          0
+        ],
+        "diagrams": {
+          "H0": [
+            [
+              0.0,
+              0.767915355244129
+            ],
+            [
+              0.0,
+              1.1717833667629052
+            ],
+            [
+              0.0,
+              1.2763174747523491
+            ],
+            [
+              0.0,
+              1.4246836502321063
+            ],
+            [
+              0.0,
+              null
+            ]
+          ],
+          "H1": [
+            [
+              1.2107651890843008,
+              1.2107651890843008
+            ],
+            [
+              1.3754299008894013,
+              1.3754299008894013
+            ],
+            [
+              1.4757765402527656,
+              1.4757765402527656
+            ],
+            [
+              1.5688638801174664,
+              1.5688638801174664
+            ],
+            [
+              1.6145427750303165,
+              1.6145427750303165
+            ],
+            [
+              1.6363671711737198,
+              1.6363671711737198
+            ]
+          ]
+        },
+        "n_finite_h1": 0,
+        "max_edge": 1.6363671711737198,
+        "distance_model": "euclidean_distance_between_correlation_profiles"
+      },
+      "logical_topology": {
+        "P_sig": 0.5893783933763012,
+        "n_cycles": 1,
+        "betti": [
+          1,
+          0,
+          0
+        ],
+        "diagrams": {
+          "H0": [
+            [
+              0.0,
+              0.28590255095328965
+            ],
+            [
+              0.0,
+              0.3066116367938035
+            ],
+            [
+              0.0,
+              0.3159028516634788
+            ],
+            [
+              0.0,
+              0.35193677269041207
+            ],
+            [
+              0.0,
+              0.36267736703684533
+            ],
+            [
+              0.0,
+              0.36544750015139377
+            ],
+            [
+              0.0,
+              0.4033454840882239
+            ],
+            [
+              0.0,
+              0.414613918610443
+            ],
+            [
+              0.0,
+              0.48801456337318544
+            ],
+            [
+              0.0,
+              0.4926241004441121
+            ],
+            [
+              0.0,
+              0.5095053568649509
+            ],
+            [
+              0.0,
+              null
+            ]
+          ],
+          "H1": [
+            [
+              0.6251013536916102,
+              0.6251013536916102
+            ],
+            [
+              0.640381475889618,
+              0.640381475889618
+            ],
+            [
+              0.6513509603494109,
+              0.6513509603494109
+            ],
+            [
+              0.6593610843791526,
+              0.6593610843791526
+            ],
+            [
+              0.661191798130368,
+              0.661191798130368
+            ],
+            [
+              0.6903952882931501,
+              0.6903952882931501
+            ],
+            [
+              0.7019838166911124,
+              0.7019838166911124
+            ],
+            [
+              0.7150837802519606,
+              0.7150837802519606
+            ],
+            [
+              0.7495887392625722,
+              0.7495887392625722
+            ],
+            [
+              0.8098414317902783,
+              0.8098414317902783
+            ],
+            [
+              0.8178334748093776,
+              0.8178334748093776
+            ],
+            [
+              0.8420399067064073,
+              0.8420399067064073
+            ],
+            [
+              0.8454872934976099,
+              0.8454872934976099
+            ],
+            [
+              0.8581400142593362,
+              0.8581400142593362
+            ],
+            [
+              0.8606641173879984,
+              0.8606641173879984
+            ],
+            [
+              0.894617443600132,
+              0.894617443600132
+            ],
+            [
+              0.8947869291436691,
+              0.8947869291436691
+            ],
+            [
+              0.9486359769748649,
+              0.9486359769748649
+            ],
+            [
+              0.9487964236455665,
+              0.9487964236455665
+            ],
+            [
+              0.9561706231292388,
+              0.9561706231292388
+            ],
+            [
+              1.003289407941546,
+              1.003289407941546
+            ],
+            [
+              1.0058996446566133,
+              1.0058996446566133
+            ],
+            [
+              1.008288405446049,
+              1.008288405446049
+            ],
+            [
+              1.044657805211036,
+              1.044657805211036
+            ],
+            [
+              1.0643124822749759,
+              1.0643124822749759
+            ],
+            [
+              1.0657731875004917,
+              1.0657731875004917
+            ],
+            [
+              1.0760871748827259,
+              1.0760871748827259
+            ],
+            [
+              1.101909445532546,
+              1.101909445532546
+            ],
+            [
+              1.1051770655840658,
+              1.1051770655840658
+            ],
+            [
+              0.5157986722077647,
+              1.1051770655840658
+            ],
+            [
+              1.132998358037081,
+              1.132998358037081
+            ],
+            [
+              1.164664218689306,
+              1.164664218689306
+            ],
+            [
+              1.1759201556946497,
+              1.1759201556946497
+            ],
+            [
+              1.1763821712428482,
+              1.1763821712428482
+            ],
+            [
+              1.1803659767389183,
+              1.1803659767389183
+            ],
+            [
+              1.2074246972189326,
+              1.2074246972189326
+            ],
+            [
+              1.2094435033393633,
+              1.2094435033393633
+            ],
+            [
+              1.2184627519341165,
+              1.2184627519341165
+            ],
+            [
+              1.2438291500075707,
+              1.2438291500075707
+            ],
+            [
+              1.2460941678435764,
+              1.2460941678435764
+            ],
+            [
+              1.2523098748782149,
+              1.2523098748782149
+            ],
+            [
+              1.2611170860932917,
+              1.2611170860932917
+            ],
+            [
+              1.2661620150691721,
+              1.2661620150691721
+            ],
+            [
+              1.2726775673248574,
+              1.2726775673248574
+            ],
+            [
+              1.282791284072346,
+              1.282791284072346
+            ],
+            [
+              1.3212471596959874,
+              1.3212471596959874
+            ],
+            [
+              1.3311703395450862,
+              1.3311703395450862
+            ],
+            [
+              1.3325132652125082,
+              1.3325132652125082
+            ],
+            [
+              1.3417595121807715,
+              1.3417595121807715
+            ],
+            [
+              1.3530950460924687,
+              1.3530950460924687
+            ],
+            [
+              1.356390543132561,
+              1.356390543132561
+            ],
+            [
+              1.366071061276152,
+              1.366071061276152
+            ],
+            [
+              1.3789090360534868,
+              1.3789090360534868
+            ],
+            [
+              1.4100462336013149,
+              1.4100462336013149
+            ],
+            [
+              1.4199090469607558,
+              1.4199090469607558
+            ]
+          ]
+        },
+        "twist": 1.5707963267948966,
+        "phase": 2.3686611277065897,
+        "coherence": 0.7439999999999998,
+        "protected": true,
+        "logical_bit": 1,
+        "scope": "algorithmic_topological_logical_qubit_simulation",
+        "circuit_coupling": {
+          "event": "cx(2,4)",
+          "mapping": "two_qubit_gate_to_inspection_phase_marker",
+          "software_noise_budget": 0.04
+        }
+      },
+      "tsp_inspection": {
+        "path": [
+          3,
+          4,
+          3
+        ],
+        "cost": 6.670742751,
+        "method": "held_karp_exact",
+        "nodes": [
+          3,
+          4
+        ]
+      },
+      "cube_slice": [
+        [
+          1.0,
+          0.171028318,
+          0.221716008,
+          0.030660231,
+          0.132317609
+        ],
+        [
+          0.171028318,
+          1.0,
+          0.4947773,
+          -0.099534275,
+          0.125164595
+        ],
+        [
+          0.221716008,
+          0.4947773,
+          1.0,
+          0.054489484,
+          -0.104838621
+        ],
+        [
+          0.030660231,
+          -0.099534275,
+          0.054489484,
+          1.0,
+          -0.089753326
+        ],
+        [
+          0.132317609,
+          0.125164595,
+          -0.104838621,
+          -0.089753326,
+          1.0
+        ]
+      ]
+    }
+  ]
+}

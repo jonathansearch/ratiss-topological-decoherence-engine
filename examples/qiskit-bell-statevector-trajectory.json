@@ -1,0 +1,8 @@
+{
+  "source": {"framework": "Qiskit Aer", "kind": "statevector", "note": "Local two-qubit Bell-state fixture; no hardware execution."},
+  "trajectory": [
+    {"step": 0, "gate": "initial", "statevector": [[1, 0], [0, 0], [0, 0], [0, 0]]},
+    {"step": 1, "gate": "h q0", "statevector": [[0.7071067811865476, 0], [0.7071067811865476, 0], [0, 0], [0, 0]]},
+    {"step": 2, "gate": "cx q0,q1", "statevector": [[0.7071067811865476, 0], [0, 0], [0, 0], [0.7071067811865476, 0]]}
+  ]
+}
