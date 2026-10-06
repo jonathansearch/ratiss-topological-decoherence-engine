@@ -70,7 +70,7 @@ The Studio does not replace the circuit designer with a decorative view. The des
 The Cloud Studio runs on Python 3.11+ with Qiskit Aer, NumPy and SciPy. Create an isolated environment, install the package, then launch the interface:
 
 ```bash
-git clone https://github.com/evinajonathan13-max/ratiss-topological-decoherence-engine
+git clone https://github.com/jonathansearch/ratiss-topological-decoherence-engine
 cd ratiss-topological-decoherence-engine
 python3 -m venv .venv
 source .venv/bin/activate              # Windows PowerShell: .\.venv\Scripts\Activate.ps1
